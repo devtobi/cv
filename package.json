@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "private": true,
+  "version": "1.0.0",
+  "description": "My resume built with JSONResume schema",
+  "main": "index.js",
+  "scripts": {
+    "build-html": "hackmyresume build src/resume.json dist/resume.html --private",
+    "build-pdf": "pnpm run build-html && node src/generate-pdf.js",
+    "format": "prettier . --write",
+    "validate": "prettier . --check && hackmyresume validate src/resume.json -a",
+    "analyze": "hackmyresume analyze src/resume.json"
+  },
+  "keywords": [],
+  "author": "Tobias Stadler",
+  "license": "MIT",
+  "devDependencies": {
+    "hackmyresume": "1.9.0-beta",
+    "prettier": "^3.2.5",
+    "puppeteer": "^22.9.0"
+  }
+}
