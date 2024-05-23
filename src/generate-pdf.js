@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 const path = require("path");
-const filePath = path.resolve(__dirname, "../dist/resume.html");
+const filePath = path.resolve(__dirname, "../dist/web/index.html");
 
 const generateWithBrowser = async () => {
   console.log("Generating PDF by opening HTML file in Chrome...");
