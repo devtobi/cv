@@ -1,0 +1,49 @@
+name: "Setup tooling"
+description: "This action manages installation of all required tooling and pnpm dependencies, it supports caching"
+inputs:
+  node-version:
+    description: "NodeJS version to use"
+    required: true
+    default: "lts/*"
+  pnpm-version:
+    description: "PNPM version to use"
+    required: true
+    default: "9"
+  use-chrome:
+    description: "Whether to install Chrome (for PDF generation) or not"
+    required: true
+    default: "false"
+  chrome-version:
+    description: "Chrome version to use (only when use-chrome is true)"
+    required: true
+    default: "stable"
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: ${{ inputs.pnpm-version }}
+        run_install: false
+    - name: Get pnpm store directory
+      shell: bash
+      run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+    - name: Setup pnpm cache
+      uses: "actions/cache@v4"
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+    - name: Install pnpm dependencies
+      shell: bash
+      run: pnpm install
+    - name: Setup chrome
+      if: ${{ inputs.use-chrome }}
+      uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: ${{ inputs.chrome-version }}
