@@ -43,7 +43,7 @@ runs:
       shell: bash
       run: pnpm install
     - name: Setup chrome
-      if: ${{ inputs.use-chrome }} == "true"
+      if: ${{ inputs.use-chrome == 'true' }}
       uses: browser-actions/setup-chrome@v1
       with:
         chrome-version: ${{ inputs.chrome-version }}
