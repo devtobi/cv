@@ -13,10 +13,10 @@ const generateWithBrowser = async () => {
     printBackground: true,
     displayHeaderFooter: false,
     margin: {
-      top: "10mm",
-      left: "10mm",
-      right: "10mm",
-      bottom: "10mm",
+      top: "0mm",
+      left: "0mm",
+      right: "0mm",
+      bottom: "0mm",
     },
   });
   await browser.close();
