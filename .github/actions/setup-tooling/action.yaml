@@ -17,6 +17,13 @@ inputs:
     description: "Chrome version to use (only when use-chrome is true)"
     required: true
     default: "stable"
+outputs:
+  chrome-version:
+    description: "Chrome version installed"
+    value: ${{ steps.setup-chrome.outputs.chrome-version }}
+  chrome-path:
+    description: "Path to chrome binary"
+    value: ${{ steps.setup-chrome.outputs.chrome-path }}
 runs:
   using: composite
   steps:
@@ -43,6 +50,7 @@ runs:
       shell: bash
       run: pnpm install
     - name: Setup chrome
+      id: setup-chrome
       if: ${{ inputs.use-chrome == 'true' }}
       uses: browser-actions/setup-chrome@v1
       with:

@@ -1,0 +1,3 @@
+skipChromeDownload: true
+skipChromeHeadlessShellDownload: true
+skipDownload: true
