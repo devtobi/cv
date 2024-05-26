@@ -4,8 +4,9 @@ on:
     inputs:
       theme:
         type: string
-        description: "Theme to use for building website and/or PDF document"
+        description: "Theme to use for building website and/or PDF document (jsonresume-theme-<theme>)"
         required: true
+        default: macchiato-plus
       build-website:
         type: boolean
         description: "Whether to build the website and create artifact or not"
@@ -53,9 +54,10 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
           pnpm-version: ${{ inputs.pnpm-version }}
-          chrome-version: ${{ inputs.build-pdf && inputs.chrome-version || '' }}
+          use-chrome: ${{ inputs.build-pdf }}
+          chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
-        run: pnpm install -D ${{ inputs.theme }}
+        run: pnpm install -D jsonresume-theme-${{ inputs.theme }}
       - name: Build website
         if: ${{ inputs.build-website || inputs.build-pdf }}
         env:
