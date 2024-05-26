@@ -7,7 +7,8 @@
   "scripts": {
     "build-html": "mkdir -p dist/web && resumed render src/resume.json -o dist/web/index.html -t $THEME",
     "build-web": "pnpm run build-html && pnpm run minify",
-    "build-pdf": "pnpm run build-web && node src/generate-pdf.js",
+    "build-pdf": "pnpm run build-web && pnpm run create-pdf",
+    "create-pdf": "node src/generate-pdf.js",
     "format": "prettier . --write",
     "minify": "html-minifier -c minifier-config.json dist/web/index.html -o dist/web/index.html",
     "validate": "prettier . --check && resumed validate src/resume.json"

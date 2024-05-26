@@ -23,12 +23,12 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout code"
-        uses: "actions/checkout@v4"
-      - name: "Setup tooling"
-        uses: "./.github/actions/setup-tooling"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup tooling
+        uses: ./.github/actions/setup-tooling
         with:
           node-version: ${{ env.NODE_VERSION }}
           pnpm-version: ${{ env.PNPM_VERSION }}
-      - name: "Validate resume"
-        run: "pnpm run validate"
+      - name: Validate resume
+        run: pnpm run validate

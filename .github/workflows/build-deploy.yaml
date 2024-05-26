@@ -1,0 +1,78 @@
+name: "Build and Deploy"
+on:
+  workflow_dispatch:
+    inputs:
+      theme:
+        type: string
+        description: "Theme to use for building website and/or PDF document"
+        required: true
+      build-website:
+        type: boolean
+        description: "Whether to build the website and create artifact or not"
+        required: true
+        default: true
+      deploy-website:
+        type: boolean
+        description: "Whether to deploy the website or not"
+        required: true
+        default: false
+      build-pdf:
+        type: boolean
+        description: "Whether to build PDF document and create artifact or not"
+        required: true
+        default: true
+      node-version:
+        type: string
+        description: "NodeJS version to use"
+        required: false
+        default: "lts/*"
+      pnpm-version:
+        type: string
+        description: "PNPM version to use"
+        required: false
+        default: "9"
+      chrome-version:
+        type: string
+        description: "Chrome version to use"
+        required: false
+        default: "stable"
+env:
+  website-key: website-${{ github.sha }}
+  pdf-key: pdf-${{ github.sha }}
+  web-directory: dist/web
+  pdf-path: dist/resume.pdf
+jobs:
+  build:
+    if: ${{ inputs.build-website || inputs.build-pdf }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup tooling
+        uses: ./.github/actions/setup-tooling
+        with:
+          node-version: ${{ inputs.node-version }}
+          pnpm-version: ${{ inputs.pnpm-version }}
+          chrome-version: ${{ inputs.build-pdf && inputs.chrome-version || '' }}
+      - name: Install selected theme
+        run: pnpm install -D ${{ inputs.theme }}
+      - name: Build website
+        if: ${{ inputs.build-website || inputs.build-pdf }}
+        env:
+          THEME: ${{ inputs.theme }}
+        run: pnpm run build-web
+      - name: Create artifact for web
+        if: ${{ inputs.build-website }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.website-key }}
+          path: ${{ env.web-directory }}
+      - name: Build PDF
+        if: ${{ inputs.build-pdf }}
+        run: pnpm run create-pdf
+      - name: Create artifact for PDF
+        if: ${{ inputs.build-pdf }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.pdf-key }}
+          path: ${{ env.pdf-path }}
