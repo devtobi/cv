@@ -42,6 +42,7 @@ env:
   pdf-key: pdf-${{ github.sha }}
   web-directory: dist/web
   pdf-path: dist/resume.pdf
+  full-theme-name: jsonresume-theme-${{ inputs.theme }}
 jobs:
   build:
     if: ${{ inputs.build-website || inputs.build-pdf }}
@@ -57,11 +58,11 @@ jobs:
           use-chrome: ${{ inputs.build-pdf }}
           chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
-        run: pnpm install -D jsonresume-theme-${{ inputs.theme }}
+        run: pnpm install -D ${{ env.full-theme-name }}
       - name: Build website
         if: ${{ inputs.build-website || inputs.build-pdf }}
         env:
-          THEME: ${{ inputs.theme }}
+          THEME: ${{ env.full-theme-name }}
         run: pnpm run build-web
       - name: Create artifact for web
         if: ${{ inputs.build-website }}
