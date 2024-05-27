@@ -67,7 +67,7 @@ jobs:
         run: pnpm run build-web
       - name: Create artifact for web
         if: ${{ inputs.build-website }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           name: ${{ env.website-key }}
           path: ${{ env.web-directory }}
@@ -83,3 +83,19 @@ jobs:
         with:
           name: ${{ env.pdf-key }}
           path: ${{ env.pdf-path }}
+  deploy:
+    needs: build
+    if: ${{ inputs.deploy-website }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ env.website-key }}
