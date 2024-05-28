@@ -1,4 +1,6 @@
 name: "Build and Deploy"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
 on:
   workflow_dispatch:
     inputs:
