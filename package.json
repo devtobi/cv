@@ -17,9 +17,9 @@
   "author": "Tobias Stadler",
   "license": "MIT",
   "devDependencies": {
-    "html-minifier": "^4.0.0",
-    "prettier": "^3.2.5",
-    "puppeteer": "^22.9.0",
-    "resumed": "^3.0.1"
+    "html-minifier": "4.0.0",
+    "prettier": "3.2.5",
+    "puppeteer": "22.9.0",
+    "resumed": "3.0.1"
   }
 }
