@@ -87,7 +87,7 @@ jobs:
           path: ${{ env.pdf-path }}
   deploy:
     needs: build
-    if: ${{ inputs.deploy-website }}
+    if: ${{ inputs.deploy-website && inputs.build-website }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
