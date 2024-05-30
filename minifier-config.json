@@ -12,6 +12,7 @@
   "minifyCSS": true,
   "minifyJS": true,
   "minifyURLs": true,
+  "noNewlinesBeforeTagClose": false,
   "preserveLineBreaks": false,
   "preventAttributesEscaping": false,
   "processConditionalComments": false,

@@ -10,14 +10,14 @@
     "build-pdf": "pnpm run build-web && pnpm run create-pdf",
     "create-pdf": "node src/generate-pdf.js",
     "format": "prettier . --write",
-    "minify": "html-minifier -c minifier-config.json dist/web/index.html -o dist/web/index.html",
+    "minify": "html-minifier-terser -c minifier-config.json dist/web/index.html -o dist/web/index.html",
     "validate": "prettier . --check && resumed validate src/resume.json"
   },
   "keywords": [],
   "author": "Tobias Stadler",
   "license": "MIT",
   "devDependencies": {
-    "html-minifier": "4.0.0",
+    "html-minifier-terser": "7.2.0",
     "prettier": "3.2.5",
     "puppeteer": "22.9.0",
     "resumed": "3.0.1"
