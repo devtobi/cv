@@ -6,7 +6,7 @@
   <h3 align="center">cv</h3>
 
   <p align="center">
-    My <a href="https://jsonresume.org">JSONResume</a> based CV and automatic generation with <a href="https://github.com/rbardini/resumed">resumed</a> with interchangeble themes.
+    My <a href="https://jsonresume.org">JSONResume</a> based CV and generation with <a href="https://github.com/rbardini/resumed">resumed</a> with interchangeble themes and support for multiple languages.
     <br />
     <br />
     <a href="https://devtobi.de/cv/">View CV</a>
@@ -30,19 +30,20 @@
 
 ## About The Project
 
-This project contains my <a href="https://jsonresume.org">JSONResume</a> based CV and automatic generation as `.html` and `.pdf` with [resumed](https://github.com/rbardini/resumed). Deployment is automated using GitHub Actions to GitHub Pages.
+This project contains my <a href="https://jsonresume.org">JSONResume</a> based CV and automatic generation as `.html` and `.pdf` with [resumed](https://github.com/rbardini/resumed). Tons of themes are supported. Custom build scripts allow generation for multiple languages (which is a missing feature in JSONSchema itself). Deployment is automated using GitHub Actions to GitHub Pages.
 
 You can use this repository as starting point and inspiration to write your own CV with JSONResume.
 
-**Notice**: However please provide your own `resume.json` file and do not reuse my file without modification as it contains personal information.
+**Notice**: However please provide your own `json` files and do not reuse my files without modification as those contains personal information.
 
 ### Built With
 
 - [JSONResume](https://jsonresume.org) (to define JSON content for CV)
-- [resumed](https://github.com/rbardini/resumed) (to generate .html files of CV)
+- [resumed](https://github.com/rbardini/resumed) (to generate .html files of CV and validate JSONSchema confirmity)
 - [html-minifier-terser](https://github.com/terser/html-minifier-terser) (to optimize .html files)
 - [puppeteer](https://pptr.dev/) (to generate .pdf file of CV)
-- [prettier](https://prettier.io) (to format `resume.json` and other files)
+- [prettier](https://prettier.io) (to format `.json` files)
+- [concurrently](https://github.com/open-cli-tools/concurrently) (to allow for parallel build execution and speed increase)
 
 ## Getting Started
 
@@ -50,9 +51,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This project requires [Node.js](https://nodejs.org/) to run. It uses [pnpm](https://pnpm.io) to manage dependencies. You need to have both tools installed
-
-To locally generate the CV as `.pdf` file you additionally need to have a current version of the Chrome browser installed on your system.
+This project requires [Node.js](https://nodejs.org/) to run. It uses [pnpm](https://pnpm.io) to manage dependencies. You need to have both tools installed.
 
 **Info**: If you want to use `npm` as alternative to `pnpm`, just replace all commands in this guide with `npm` instead of `pnpm`.
 
@@ -70,13 +69,23 @@ git clone https://github.com/devtobi/cv.git
 pnpm install
 ```
 
+3. **Optional**: Install puppeteer chrome browser on your machine (only required `.pdf` generation)
+
+```sh
+pnpm run prepare
+```
+
 ## Usage
 
-To get started using this repository, you need to edit the `resume.json` inside the `src` for your own CV.
+To get started using this repository, you need to edit the `.json` files inside the `data` directory for your own CV.
+
+**Tip**: Each file represents the data for generation a CV in a specific language. You can create as many `.json` files as you want. The build tools will automatically handle those. Keep in mind that the filename is used as a path inside the generated assets for web deployment.
+
+**Example**: `es.json` will generate a file `index.html` under the `es` directory and thus be served under `/es/index.html`.
 
 ### Local Usage
 
-**Info**: Please note your `resume.json` file needs to be written in JSONResume schema. You can use `pnpm run format` to format your file and `pnpm run validate` to check if your edits are valid according to JSONResume.
+**Info**: Please note your `.json` files need to be written in JSONResume schema. You can use `pnpm run format` to format your files and `pnpm run validate` to check if your edits are valid according to JSONResume.
 
 If you want to build your CV locally you need to install a theme onto your system, as this repository does not come with one by default. Themes are published as npm packages in the format `jsonresume-theme-*`. Take a look at the available themes [here](https://www.npmjs.com/search?q=jsonresume-theme-).
 
