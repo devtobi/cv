@@ -39,7 +39,7 @@ You can use this repository as starting point and inspiration to write your own 
 ### Built With
 
 - [JSONResume](https://jsonresume.org) (to define JSON content for CV)
-- [resumed](https://github.com/rbardini/resumed) (to generate .html files of CV and validate JSONSchema confirmity)
+- [resumed](https://github.com/rbardini/resumed) (to generate .html files of CV and validate JSON Schema)
 - [html-minifier-terser](https://github.com/terser/html-minifier-terser) (to optimize .html files)
 - [puppeteer](https://pptr.dev/) (to generate .pdf file of CV)
 - [prettier](https://prettier.io) (to format `.json` files)
