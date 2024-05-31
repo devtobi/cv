@@ -12,8 +12,8 @@ if (!args[INPUT_ARG] || !args[OUTPUT_ARG]) {
   process.exit(0);
 }
 
-const filePath = path.join(__dirname, `../${args[INPUT_ARG]}`);
-const outputPath = path.join(__dirname, `../${args[OUTPUT_ARG]}`);
+const filePath = path.join(__dirname, `../../${args[INPUT_ARG]}`);
+const outputPath = path.join(__dirname, `../../${args[OUTPUT_ARG]}`);
 
 const generateWithBrowser = async (filePath, outputPath) => {
   try {

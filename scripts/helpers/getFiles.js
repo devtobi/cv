@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const getFiles = (directory) => {
-  const directoryPath = path.join(__dirname, `../${directory}`);
+  const directoryPath = path.join(__dirname, `../../${directory}`);
 
   try {
     return fs

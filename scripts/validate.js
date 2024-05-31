@@ -1,27 +1,12 @@
-const concurrently = require("concurrently");
-const util = require("util");
-const getFiles = require("./getFiles.js");
-const returnStatusCode = require("./returnStatusCode.js");
+const execConcurrently = require("./helpers/execConcurrently.js");
+const generateTasks = require("./helpers/generateTasks.js");
+const { DATA_DIRECTORY } = require("./helpers/constants.js");
 
-const DATA_DIRECTORY = "data";
-const VALIDATE_CMD = "resumed validate %s";
+const VALIDATE_CMD = `resumed validate ${DATA_DIRECTORY}/%s.json`;
 
-const buildValidateTasks = () => {
-  const files = getFiles(DATA_DIRECTORY);
-  return files.map((file) => ({
-    command: util.format(VALIDATE_CMD, file),
-    name: "jsonschema",
-  }));
-};
-
-const validateTasks = buildValidateTasks();
-const { result } = concurrently(
-  [
-    { command: `prettier ${DATA_DIRECTORY} --check`, name: "prettier" },
-    ...validateTasks,
-  ],
-  {
-    killOthers: ["failure"],
-  },
-);
-returnStatusCode(result);
+const validateTasks = generateTasks("jsonschema", VALIDATE_CMD);
+const tasks = [
+  { command: `prettier ${DATA_DIRECTORY} --check`, name: "prettier" },
+  ...validateTasks,
+];
+execConcurrently(tasks);
