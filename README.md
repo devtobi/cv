@@ -79,7 +79,7 @@ pnpm run prepare
 
 To get started using this repository, you need to edit the `.json` files inside the `data` directory for your own CV.
 
-**Tip**: Each file represents the data for generation a CV in a specific language. You can create as many `.json` files as you want. The build tools will automatically handle those. Keep in mind that the filename is used as a path inside the generated assets for web deployment.
+**Tip**: Each file represents the data for generation a CV in a specific language. You can create as many `.json` files as you want. The build tools will automatically handle them. Keep in mind that the filename is used as a path inside the generated assets for web deployment.
 
 **Example**: `es.json` will generate a file `index.html` under the `es` directory and thus be served under `/es/index.html`.
 
