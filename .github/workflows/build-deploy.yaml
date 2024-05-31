@@ -78,7 +78,7 @@ jobs:
           PUPPETEER_BROWSER_REVISION: ${{ steps.setup-tooling.outputs.chrome-version }}
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-tooling.outputs.chrome-path }}
         if: ${{ inputs.build-pdf }}
-        run: pnpm run create-pdf
+        run: pnpm run generate-pdf
       - name: Create artifact for PDF
         if: ${{ inputs.build-pdf }}
         uses: actions/upload-artifact@v4
