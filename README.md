@@ -30,7 +30,7 @@
 
 ## About The Project
 
-This project contains my <a href="https://jsonresume.org">JSONResume</a> based CV and automatic generation as `.html` and `.pdf` with [resumed](https://github.com/rbardini/resumed). Tons of themes are supported. Custom build scripts allow generation for multiple languages (which is a missing feature in JSONSchema itself). Deployment is automated using GitHub Actions to GitHub Pages.
+This project contains my CV based on [JSONResume](https://jsonresume.org). Furthermore variants of the CV can be generated automatically as `.html` (using [resumed](https://github.com/rbardini/resumed)) and `.pdf` (using [puppeteer](https://pptr.dev/)). Tons of themes are supported. Custom build scripts allow generation for multiple languages (which is a missing feature in JSONSchema itself). Deployment is automated using GitHub Actions to GitHub Pages.
 
 You can use this repository as starting point and inspiration to write your own CV with JSONResume.
 
