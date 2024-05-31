@@ -43,7 +43,7 @@ env:
   website-key: website-${{ github.sha }}
   pdf-key: pdf-${{ github.sha }}
   web-directory: dist/web
-  pdf-path: dist/resume.pdf
+  pdf-path: dist/pdf
   full-theme-name: jsonresume-theme-${{ inputs.theme }}
 jobs:
   build:
