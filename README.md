@@ -34,7 +34,7 @@ This project contains my <a href="https://jsonresume.org">JSONResume</a> based C
 
 You can use this repository as starting point and inspiration to write your own CV with JSONResume.
 
-**Notice**: However please provide your own `json` files and do not reuse my files without modification as those contains personal information.
+**Notice**: However please provide your own `json` files and do not reuse my files without modification as those contains personal information as described in the `LICENSE`.
 
 ### Built With
 
