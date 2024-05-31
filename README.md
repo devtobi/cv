@@ -122,7 +122,11 @@ You can set run options via the GUI for the workflow execution like:
 
 Distributed under a customized MIT License. See [LICENSE][license-url] for more information.
 
-**Important**: Keep in mind that the license is a modified version of the MIT license as this repository contains personal information that should not be used by third parties. Always modify using your own CV data.
+**Important**: The file `resume.json` located inside the `src` directory contains personal data.
+Permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of this specific file is granted on the condition that users must replace
+the personal data with their own. The `resume.json` file must not be used as is
+without modification using their own personal data.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
