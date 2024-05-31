@@ -1,5 +1,4 @@
 [![Last commit][commit-shield]][commit-url]
-
 [![License][license-shield]][license-url]
 
 <br />
@@ -131,7 +130,7 @@ as is without modification using their own personal data.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[license-shield]: https://img.shields.io/github/license/devtobi/cv.svg?style=for-the-badge&logo=github
+[license-shield]: https://img.shields.io/badge/license-MIT_(customized)-orange?style=for-the-badge&logo=github
 [license-url]: https://github.com/devtobi/cv/blob/main/LICENSE
 [commit-shield]: https://img.shields.io/github/last-commit/devtobi/cv?style=for-the-badge&logo=github
 [commit-url]: https://github.com/devtobi/cv/commit/main
