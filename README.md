@@ -122,11 +122,11 @@ You can set run options via the GUI for the workflow execution like:
 
 Distributed under a customized MIT License. See [LICENSE][license-url] for more information.
 
-**Important**: The file `resume.json` located inside the `src` directory contains personal data.
+**Important**: The files contained in the `data` directory include personal data.
 Permission to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of this specific file is granted on the condition that users must replace
-the personal data with their own. The `resume.json` file must not be used as is
-without modification using their own personal data.
+copies of these specific files is granted on the condition that users must replace
+the personal data with their own. The files in the `data` directory must not be used
+as is without modification using their own personal data.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
