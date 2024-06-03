@@ -1,12 +1,12 @@
 const path = require("path");
 const fs = require("fs");
 const getFiles = require("./getFiles.js");
-const { DATA_DIRECTORY, WEB_DIRECTORY } = require("./constants.js");
+const { DATA_DIRECTORY, DIST_DIRECTORY } = require("./constants.js");
 
-const createWebDirectories = () => {
+const createDirectories = () => {
   const files = getFiles(DATA_DIRECTORY);
   files.forEach((file) => {
-    const dirname = `${WEB_DIRECTORY}/${path.parse(file).name}`;
+    const dirname = `${DIST_DIRECTORY}/${path.parse(file).name}`;
     try {
       fs.mkdirSync(dirname, { recursive: true });
     } catch (err) {
@@ -15,4 +15,4 @@ const createWebDirectories = () => {
   });
 };
 
-module.exports = createWebDirectories;
+module.exports = createDirectories;

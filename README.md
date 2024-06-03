@@ -30,13 +30,17 @@
 
 ## About The Project
 
-This project contains my CV based on [JSONResume](https://jsonresume.org). Furthermore variants of the CV can be generated automatically as `.html` (using [resumed](https://github.com/rbardini/resumed)) and `.pdf` (using [puppeteer](https://pptr.dev/)). Tons of themes are supported. Custom build scripts allow generation for multiple languages (which is a missing feature in JSONSchema itself). Deployment is automated using GitHub Actions to GitHub Pages.
+This project contains my CV application based on [JSONResume](https://jsonresume.org). Furthermore variants of the CV are generated automatically as `.html` (using [resumed](https://github.com/rbardini/resumed)) and `.pdf` (using [puppeteer](https://pptr.dev/)). Tons of themes are supported. Custom build scripts allow generation for multiple languages (which is a missing feature in JSONSchema itself). Deployment is automated using GitHub Actions to GitHub Pages.
 
 You can use this repository as starting point and inspiration to write your own CV with JSONResume.
 
 **Notice**: However please provide your own `json` files and do not reuse my files without modification as those contains personal information as described in the `LICENSE`.
 
 ### Built With
+
+This project is built as a monorepo. Currently it only contains the package `cv-content`, which is responsible for the generation of the static files.
+
+#### `cv-content`:
 
 - [JSONResume](https://jsonresume.org) (to define JSON content for CV)
 - [resumed](https://github.com/rbardini/resumed) (to generate .html files of CV and validate JSON Schema)
@@ -94,11 +98,8 @@ Then set your theme by exporting a environment variable named `THEME` to the nam
 
 **Info**: Keep in note the commands for exporting environment variables might differ depending on your operating system.
 
-The following npm scripts are available for generation:
-
-- `pnpm run build-html`: Builds a `.html` version thats easily readable and can be further manually edited (but not recommended)
-- `pnpm run build-web`: Builds a minified and optimized `.html` version ready to deploy as static website.
-- `pnpm run build-pdf`: Builds a `.pdf` version by launching a headless chrome browser and using its built-in print functionality using puppeteer.
+To build the static files use the command `pnpm run build`.
+The command builds an `.html` version and a `.pdf` version and places those files into specific subdirectories for each language your CV was written in.
 
 ### Usage with GitHub actions
 
