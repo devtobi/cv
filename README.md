@@ -114,9 +114,7 @@ The workflows use a custom action to setup required tooling for running inside C
 You can set run options via the GUI for the workflow execution like:
 
 - `theme`: Theme to use for building website and/or PDF document (`jsonresume-theme-<theme>`), required
-- `build-website`: Whether to build the website and create artifact or not, default `true`
-- `deploy-website`: Whether to deploy the website or not, default `false`
-- `build-pdf`: Whether to build PDF document and create artifact or not, default `true`
+- `deploy`: Whether to deploy the website or not, default `false`
 - `node-version`: NodeJS version to use, default is `lts/*`
 - `pnpm-version`: PNPM version to use, default is `9`
 - `chrome-version`: Chrome version to use, default is `stable`
