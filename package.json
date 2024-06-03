@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "My CV application as a monorepo built using Vue.js and resumed",
   "scripts": {
+    "build": "pnpm run -r build && pnpm run post-build",
+    "post-build": "concurrently --kill-others-on-fail -n copy-content \"ncp packages/cv-content/dist dist\"",
     "setup": "pnpm run --filter=cv-content setup",
     "format": "pnpm run --filter=cv-content format",
     "validate": "pnpm run --filter=cv-content validate",
@@ -11,13 +13,13 @@
     "fix": "pnpm run -r fix"
   },
   "devDependencies": {
-    "globals": "15.3.0",
     "concurrently": "8.2.2",
     "eslint": "9.4.0",
     "eslint-config-prettier": "9.1.0",
     "globals": "15.3.0",
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
+    "ncp": "2.0.0",
     "prettier": "3.3.0",
     "puppeteer": "22.10.0",
     "resumed": "3.0.1"

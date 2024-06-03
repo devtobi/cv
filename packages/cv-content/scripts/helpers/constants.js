@@ -1,11 +1,7 @@
-const DATA_DIRECTORY = "data";
+const DATA_DIRECTORY = "../../data";
 const DIST_DIRECTORY = "dist";
-const WEB_DIRECTORY = `${DIST_DIRECTORY}/web`;
-const PDF_DIRECTORY = `${DIST_DIRECTORY}/pdf`;
 
 module.exports = {
   DATA_DIRECTORY,
   DIST_DIRECTORY,
-  WEB_DIRECTORY,
-  PDF_DIRECTORY,
 };

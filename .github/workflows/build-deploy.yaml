@@ -9,21 +9,11 @@ on:
         description: "Theme to use for building website and/or PDF document (jsonresume-theme-<theme>)"
         required: true
         default: macchiato-plus
-      build-website:
+      deploy:
         type: boolean
-        description: "Whether to build the website and create artifact or not"
-        required: true
-        default: true
-      deploy-website:
-        type: boolean
-        description: "Whether to deploy the website or not"
+        description: "Whether to deploy or not"
         required: true
         default: false
-      build-pdf:
-        type: boolean
-        description: "Whether to build PDF document and create artifact or not"
-        required: true
-        default: true
       node-version:
         type: string
         description: "NodeJS version to use"
@@ -40,14 +30,12 @@ on:
         required: false
         default: "stable"
 env:
-  website-key: website-${{ github.sha }}
-  pdf-key: pdf-${{ github.sha }}
-  web-directory: dist/web
-  pdf-path: dist/pdf
+  artifact-key: deployment-${{ github.sha }}
+  deployment-directory: dist
   full-theme-name: jsonresume-theme-${{ inputs.theme }}
+  content-package-path: packages/cv-content
 jobs:
   build:
-    if: ${{ inputs.build-website || inputs.build-pdf }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -58,36 +46,25 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
           pnpm-version: ${{ inputs.pnpm-version }}
-          use-chrome: ${{ inputs.build-pdf }}
+          use-chrome: "true"
           chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
+        working-directory: ${{ env.content-package-path }}
         run: pnpm install -D ${{ env.full-theme-name }}
       - name: Build website
-        if: ${{ inputs.build-website || inputs.build-pdf }}
         env:
           THEME: ${{ env.full-theme-name }}
-        run: pnpm run build-web
-      - name: Create artifact for web
-        if: ${{ inputs.build-website }}
-        uses: actions/upload-pages-artifact@v3
-        with:
-          name: ${{ env.website-key }}
-          path: ${{ env.web-directory }}
-      - name: Build PDF
-        env:
           PUPPETEER_BROWSER_REVISION: ${{ steps.setup-tooling.outputs.chrome-version }}
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-tooling.outputs.chrome-path }}
-        if: ${{ inputs.build-pdf }}
-        run: pnpm run generate-pdf
-      - name: Create artifact for PDF
-        if: ${{ inputs.build-pdf }}
-        uses: actions/upload-artifact@v4
+        run: pnpm run build
+      - name: Create deployable artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: ${{ env.pdf-key }}
-          path: ${{ env.pdf-path }}
+          name: ${{ env.artifact-key }}
+          path: ${{ env.deployment-directory }}
   deploy:
     needs: build
-    if: ${{ inputs.deploy-website && inputs.build-website }}
+    if: ${{ inputs.deploy }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -100,4 +77,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: ${{ env.website-key }}
+          artifact_name: ${{ env.artifact-key }}
