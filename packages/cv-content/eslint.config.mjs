@@ -6,12 +6,12 @@ export default [
   js.configs.recommended,
   eslintConfigPrettier,
   {
-    ignores: ["node_modules", "eslint.config.mjs"],
     languageOptions: {
       sourceType: "commonjs",
       globals: {
         ...globals.node,
       },
     },
+    ignores: ["node_modules", "eslint.config.mjs"],
   },
 ];
