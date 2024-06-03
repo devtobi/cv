@@ -1,34 +1,16 @@
 {
-  "name": "resume",
+  "name": "cv",
   "private": true,
   "version": "1.0.0",
-  "description": "My resume built with JSONResume schema",
-  "main": "index.js",
+  "description": "My CV application built using Vue.js and resumed",
   "scripts": {
-    "prepare": "puppeteer browsers clear && puppeteer browsers install chrome",
-    "build-html": "node scripts/buildHtml.js",
-    "build-web": "pnpm run build-html && pnpm run minify",
-    "build-pdf": "pnpm run build-web && pnpm run generate-pdf",
-    "generate-pdf": "node scripts/generatePdfs.js",
-    "format": "prettier data --write",
-    "format:all": "prettier . --write",
-    "minify": "node scripts/minify.js",
-    "validate": "node scripts/validate.js",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint \"prettier . --check\" \"eslint\"",
-    "fix": "prettier . --write && eslint --fix"
+    "setup": "pnpm run --filter=cv-content setup",
+    "format": "pnpm run --filter=cv-content format",
+    "validate": "pnpm run --filter=cv-content validate",
+    "lint": "pnpm run -r lint",
+    "fix": "pnpm run -r fix"
   },
   "keywords": [],
   "author": "Tobias Stadler",
-  "license": "MIT",
-  "devDependencies": {
-    "concurrently": "8.2.2",
-    "eslint": "9.3.0",
-    "eslint-config-prettier": "9.1.0",
-    "globals": "15.3.0",
-    "html-minifier-terser": "7.2.0",
-    "minimist": "1.2.8",
-    "prettier": "3.2.5",
-    "puppeteer": "22.10.0",
-    "resumed": "3.0.1"
-  }
+  "license": "MIT"
 }
