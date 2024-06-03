@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "description": "My CV content built with JSONResume schema using resumed and puppeteer",
-  "type": "module",
   "scripts": {
     "setup": "puppeteer browsers clear && puppeteer browsers install chrome",
     "build-html": "node scripts/buildHtml.js",
@@ -23,11 +22,6 @@
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
     "puppeteer": "22.10.0",
-    "resumed": "3.0.1",
-    "globals": "15.3.0",
-    "concurrently": "8.2.2",
-    "prettier": "3.2.5",
-    "eslint": "9.3.0",
-    "eslint-config-prettier": "9.1.0"
+    "resumed": "3.0.1"
   }
 }
