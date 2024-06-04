@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "description": "My CV content built with JSONResume schema using resumed and puppeteer",
   "scripts": {
-    "setup": "puppeteer browsers clear && puppeteer browsers install chrome",
+    "setup": "puppeteer browsers install chrome",
     "build": "node scripts/buildHtml.js && node scripts/minify.js && node scripts/generatePdfs.js",
     "format": "prettier ../../data/ --write",
     "validate": "node scripts/validate.js",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint \"prettier . --check\" \"eslint\"",
+    "lint": "concurrently --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint'",
     "fix": "prettier . --write && eslint --fix"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "html-minifier-terser": "7.2.0",
+    "jsonresume-theme-even": "^0.22.0",
     "minimist": "1.2.8",
     "puppeteer": "22.10.0",
     "resumed": "3.0.1"
