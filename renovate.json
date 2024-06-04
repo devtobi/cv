@@ -3,6 +3,7 @@
   "extends": [
     "config:best-practices",
     "customManagers:githubActionsVersions",
+    "helpers:pinGitHubActionDigestsToSemver",
     "security:openssf-scorecard",
     ":approveMajorUpdates",
     ":assignAndReview(devtobi)",
