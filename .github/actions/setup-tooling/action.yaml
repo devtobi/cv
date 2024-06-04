@@ -1,14 +1,14 @@
 name: "Setup tooling"
-description: "This action manages installation of all required tooling and pnpm dependencies, it supports caching"
+description: "This action manages installation of all required tooling and bun dependencies, it supports caching"
 inputs:
   node-version:
     description: "NodeJS version to use"
     required: true
     default: "lts/*"
-  pnpm-version:
-    description: "PNPM version to use"
+  bun-version:
+    description: "Bun version to use"
     required: true
-    default: "9"
+    default: "latest"
   use-chrome:
     description: "Whether to install Chrome (for PDF generation) or not"
     required: true
@@ -31,24 +31,23 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.node-version }}
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
+    - name: Setup bun
+      uses: oven-sh/setup-bun@v1
       with:
-        version: ${{ inputs.pnpm-version }}
-        run_install: false
-    - name: Get pnpm store directory
+        bun-version: ${{ inputs.bun-version }}
+    - name: Set bun cache directory
       shell: bash
-      run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-    - name: Setup pnpm cache
+      run: echo "STORE_PATH=~/.bun/install/cache" >> $GITHUB_ENV
+    - name: Setup bun cache
       uses: "actions/cache@v4"
       with:
         path: ${{ env.STORE_PATH }}
-        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        key: ${{ runner.os }}-bun-store-${{ hashFiles('**/bun.lockb') }}
         restore-keys: |
-          ${{ runner.os }}-pnpm-store-
-    - name: Install pnpm dependencies
+          ${{ runner.os }}-bun-store-
+    - name: Install bun dependencies
       shell: bash
-      run: pnpm install
+      run: bun install
     - name: Setup chrome
       id: setup-chrome
       if: ${{ inputs.use-chrome == 'true' }}

@@ -2,15 +2,16 @@
   "name": "cv",
   "private": true,
   "version": "1.0.0",
+  "workspaces": ["packages/*"],
   "description": "My CV application as a monorepo built using Vue.js and resumed",
   "scripts": {
-    "build": "pnpm run -r build && pnpm run post-build",
-    "post-build": "concurrently --kill-others-on-fail -n copy-content \"ncp packages/cv-content/dist dist\"",
-    "setup": "pnpm run --filter=cv-content setup",
-    "format": "pnpm run --filter=cv-content format",
-    "validate": "pnpm run --filter=cv-content validate",
-    "lint": "pnpm run -r lint",
-    "fix": "pnpm run -r fix"
+    "build": "bun --filter '*' build && bun post-build",
+    "post-build": "concurrently --kill-others-on-fail -n copy-content 'ncp packages/cv-content/dist dist'",
+    "setup": "bun --filter cv-content setup",
+    "format": "bun --filter cv-content format",
+    "validate": "bun --filter cv-content validate",
+    "lint": "bun --filter '*' lint",
+    "fix": "bun --filter '*' fix"
   },
   "devDependencies": {
     "concurrently": "8.2.2",

@@ -11,14 +11,14 @@ on:
         description: "NodeJS version to use"
         required: false
         default: "lts/*"
-      pnpm-version:
+      bun-version:
         type: string
-        description: "PNPM version to use"
+        description: "Bun version to use"
         required: false
-        default: "9"
+        default: "latest"
 env:
   NODE_VERSION: ${{ inputs.node-version || 'lts/*' }}
-  PNPM_VERSION: ${{ inputs.pnpm-version || '9' }}
+  BUN_VERSION: ${{ inputs.bun-version || 'latest' }}
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -29,6 +29,6 @@ jobs:
         uses: ./.github/actions/setup-tooling
         with:
           node-version: ${{ env.NODE_VERSION }}
-          pnpm-version: ${{ env.PNPM_VERSION }}
+          bun-version: ${{ env.BUN_VERSION }}
       - name: Validate resume
-        run: pnpm run validate
+        run: bun run validate
