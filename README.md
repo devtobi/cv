@@ -38,7 +38,11 @@ You can use this repository as starting point and inspiration to write your own 
 
 ### Built With
 
-This project is built as a monorepo. Currently it only contains the package `cv-content`, which is responsible for the generation of the static files.
+This project is built as a monorepo. Currently it only contains the following packages
+- `cv-content`: Generation for multiple static html files using JSONSchema and resumed
+- `cv-wrapper`: Vue based SPA used as entrypoint to dynamically serve `cv-content` and provide additional features
+
+The following lists contains the important technologies used to implement this application.
 
 #### `cv-content`:
 
@@ -48,6 +52,11 @@ This project is built as a monorepo. Currently it only contains the package `cv-
 - [puppeteer](https://pptr.dev/) (to generate .pdf file of CV)
 - [prettier](https://prettier.io) (to format `.json` files)
 - [concurrently](https://github.com/open-cli-tools/concurrently) (to allow for parallel build execution and speed increase)
+
+#### `cv-wrapper`:
+
+- [Vue](https://vuejs.org) (JavaScript framework used to implement the application)
+
 
 ## Getting Started
 
@@ -98,8 +107,8 @@ Then set your theme by exporting a environment variable named `THEME` to the nam
 
 **Info**: Keep in note the commands for exporting environment variables might differ depending on your operating system.
 
-To build the static files use the command `bun run build`.
-The command builds an `.html` version and a `.pdf` version and places those files into specific subdirectories for each language your CV was written in.
+To build the whole monorepo use the command `bun run build`.
+The command builds an `.html` version and a `.pdf` version and places those files into specific subdirectories for each language your CV was written in. On top of that it builds the Vue based wrapper application. In the end both build folders are combined into a single `dist` folder. This folder can be served as is.
 
 ### Usage with GitHub actions
 
