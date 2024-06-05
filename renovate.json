@@ -7,23 +7,13 @@
     "security:openssf-scorecard",
     ":approveMajorUpdates",
     ":assignAndReview(devtobi)",
-    ":automergeDisabled",
-    ":dependencyDashboardApproval",
     ":disableRateLimiting",
-    ":enableRenovate",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":ignoreUnstable",
     ":labels(renovate,dependency)",
-    ":npm",
     ":pinAllExceptPeerDependencies",
-    ":prConcurrentLimitNone",
-    ":preserveSemverRanges",
-    ":prHourlyLimitNone",
     ":prNotPending",
     ":rebaseStalePrs",
-    ":renovatePrefix",
     ":semanticCommits",
-    ":semanticCommitScope(deps)",
     ":separateMultipleMajorReleases"
   ]
 }
