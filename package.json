@@ -6,7 +6,7 @@
   "description": "My CV application as a monorepo built using Vue.js and resumed",
   "scripts": {
     "build": "bun --filter '*' build && bun post-build",
-    "post-build": "concurrently --kill-others-on-fail -n copy-content 'ncp packages/cv-content/dist dist'",
+    "post-build": "concurrently --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist' 'ncp packages/cv-wrapper/dist dist'",
     "setup": "bun --filter cv-content setup",
     "format": "bun --filter cv-content format",
     "validate": "bun --filter cv-content validate",
@@ -15,8 +15,6 @@
   },
   "devDependencies": {
     "concurrently": "8.2.2",
-    "eslint": "9.4.0",
-    "eslint-config-prettier": "9.1.0",
     "globals": "15.3.0",
     "ncp": "2.0.0",
     "prettier": "3.3.1"
