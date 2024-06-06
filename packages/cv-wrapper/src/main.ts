@@ -1,6 +1,13 @@
-import './assets/main.css'
+import 'primeicons/primeicons.css'
 
 import { createApp } from 'vue'
-import App from './App.vue'
+import PrimeVue from 'primevue/config'
 
-createApp(App).mount('#app')
+import App from './App.vue'
+const app = createApp(App)
+
+app.use(PrimeVue, {
+  ripple: true
+})
+
+app.mount('#app')
