@@ -20,7 +20,7 @@ env:
   NODE_VERSION: ${{ inputs.node-version || 'lts/*' }}
   BUN_VERSION: ${{ inputs.bun-version || 'latest' }}
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
