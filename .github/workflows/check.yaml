@@ -1,4 +1,4 @@
-name: 'Validate resume'
+name: 'Checking files'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 on:
