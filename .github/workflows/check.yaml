@@ -1,4 +1,4 @@
-name: "Validate resume"
+name: 'Checking files'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 on:
@@ -8,19 +8,19 @@ on:
     inputs:
       node-version:
         type: string
-        description: "NodeJS version to use"
+        description: 'NodeJS version to use'
         required: false
-        default: "lts/*"
+        default: 'lts/*'
       bun-version:
         type: string
-        description: "Bun version to use"
+        description: 'Bun version to use'
         required: false
-        default: "latest"
+        default: 'latest'
 env:
   NODE_VERSION: ${{ inputs.node-version || 'lts/*' }}
   BUN_VERSION: ${{ inputs.bun-version || 'latest' }}
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,3 +32,5 @@ jobs:
           bun-version: ${{ env.BUN_VERSION }}
       - name: Validate resume
         run: bun run validate
+      - name: Lint source files
+        run: bun run lint
