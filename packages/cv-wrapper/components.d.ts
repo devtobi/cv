@@ -8,13 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
-    Badge: typeof import('primevue/badge')['default']
     Button: typeof import('primevue/button')['default']
     Menubar: typeof import('primevue/menubar')['default']
-    ScrollTop: typeof import('primevue/scrolltop')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheMenubar: typeof import('./src/components/TheMenubar.vue')['default']
-    TheScrollTop: typeof import('./src/components/TheScrollTop.vue')['default']
-    TheScrollUp: typeof import('@/components/TheScrollTop.vue')['default']
   }
 }
