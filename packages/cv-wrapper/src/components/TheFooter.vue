@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCurrentYear } from '@/composables/useCurrentYear'
+  import { useCurrentYear } from '@/composables/useCurrentYear';
 
-const currentYear = useCurrentYear()
+  const currentYear = useCurrentYear();
 </script>

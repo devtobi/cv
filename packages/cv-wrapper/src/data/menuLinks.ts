@@ -1,5 +1,6 @@
-import { PrimeIcons } from 'primevue/api'
-import type { MenuItem } from 'primevue/menuitem'
+import { PrimeIcons } from 'primevue/api';
+
+import type { MenuItem } from 'primevue/menuitem';
 
 const menuLinks: MenuItem[] = [
   {
@@ -7,22 +8,22 @@ const menuLinks: MenuItem[] = [
     key: 'website',
     label: 'My projects',
     url: 'https://devtobi.de',
-    color: 'primary'
+    color: 'primary',
   },
   {
     icon: PrimeIcons.GITHUB,
     key: 'github',
     label: 'GitHub (@devtobi)',
     url: 'https://github.com/devtobi',
-    color: 'contrast'
+    color: 'contrast',
   },
   {
     icon: PrimeIcons.LINKEDIN,
     key: 'linkedin',
     label: 'LinkedIn',
     url: 'https://www.linkedin.com/in/tobias-stadler/',
-    color: 'info'
-  }
-]
+    color: 'info',
+  },
+];
 
-export default menuLinks
+export default menuLinks;

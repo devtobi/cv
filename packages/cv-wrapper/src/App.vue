@@ -7,15 +7,15 @@
 </template>
 
 <script lang="ts" setup>
-import TheMenubar from '@/components/TheMenubar.vue'
-import TheFooter from '@/components/TheFooter.vue'
+  import TheFooter from '@/components/TheFooter.vue';
+  import TheMenubar from '@/components/TheMenubar.vue';
 </script>
 
 <style>
-html,
-body,
-.app-container {
-  height: 100%;
-  margin: 0;
-}
+  html,
+  body,
+  .app-container {
+    height: 100%;
+    margin: 0;
+  }
 </style>

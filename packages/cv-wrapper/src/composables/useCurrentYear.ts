@@ -1,5 +1,5 @@
-import { useDateFormat, useNow } from '@vueuse/core'
+import { useDateFormat, useNow } from '@vueuse/core';
 
 export const useCurrentYear = () => {
-  return useDateFormat(useNow(), 'YYYY')
-}
+  return useDateFormat(useNow(), 'YYYY');
+};
