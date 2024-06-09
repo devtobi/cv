@@ -7,6 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
+    Menubar: typeof import('primevue/menubar')['default']
+    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
+    TheMenubar: typeof import('./src/components/TheMenubar.vue')['default']
   }
 }
