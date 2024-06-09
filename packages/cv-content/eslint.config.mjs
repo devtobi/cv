@@ -1,17 +1,17 @@
-import eslintConfigPrettier from 'eslint-config-prettier'
-import js from '@eslint/js'
-import globals from 'globals'
+import js from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
   eslintConfigPrettier,
   {
     languageOptions: {
-      sourceType: 'commonjs',
+      sourceType: 'module',
       globals: {
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
-    ignores: ['node_modules', 'eslint.config.mjs']
-  }
-]
+    ignores: ['node_modules', '.eslintrc.cjs'],
+  },
+];
