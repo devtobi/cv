@@ -9,7 +9,7 @@
     ":assignAndReview(devtobi)",
     ":disableRateLimiting",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(renovate,dependency)",
+    ":labels(renovate,dependencies)",
     ":pinAllExceptPeerDependencies",
     ":prNotPending",
     ":rebaseStalePrs",
