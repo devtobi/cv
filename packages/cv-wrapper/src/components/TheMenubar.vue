@@ -7,10 +7,12 @@
           size="large"
           shape="circle"
           role="img"
-          :aria-label="t('TheMenubar.profilePictureAltText')"
+          :aria-label="t('static.TheMenubar.profilePictureAlt')"
           class="mr-3"
         />
-        <p><strong>Tobias Stadler</strong> - {{ t('TheMenubar.cv') }}</p>
+        <p>
+          {{ t('static.TheMenubar.title') }}
+        </p>
       </div>
     </template>
     <template #item="{ item }">
@@ -38,7 +40,7 @@
   import { useI18n } from 'vue-i18n';
 
   import profilePicture from '@/assets/images/profile_picture.png';
-  import menuLinks from '@/data/menuLinks';
+  import menuLinks from '@/helpers/menuLinks';
 
   const { t } = useI18n();
 </script>

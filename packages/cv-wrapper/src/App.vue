@@ -1,7 +1,7 @@
 <template>
   <div class="app-container flex flex-column min-h-screen">
     <the-menubar />
-    <main class="content flex-1">This is my content</main>
+    <main class="flex-1"></main>
     <the-footer />
   </div>
 </template>

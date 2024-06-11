@@ -24,12 +24,12 @@
     }
   },
   "TheMenubar": {
-    "profilePictureAltPrefix": "Profile picture of",
-    "newFeaturesSoon": "New features will be added soon!",
-    "cv": "Curriculum Vitae",
+    "profilePictureAltPrefix": "Profilbild von",
+    "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
+    "cv": "Lebenslauf",
     "links": {
       "projects": {
-        "label": "My projects"
+        "label": "Meine Projekte"
       }
     }
   }

@@ -1,5 +1,6 @@
 import { createI18n } from 'vue-i18n';
 
+import de from '@/locales/de.json';
 import en from '@/locales/en.json';
 
 export const supportedLocales = ['en'];
@@ -12,10 +13,12 @@ type MessageSchema = typeof en;
 
 const i18n = createI18n<[MessageSchema], SupportedLocale>({
   legacy: false,
-  locale: defaultLocale,
+  locale: 'de',
   fallbackLocale: defaultLocale,
+  formatFallbackMessages: true,
   messages: {
     en: Object.assign(en),
+    de: Object.assign(de),
   },
 });
 export default i18n;
