@@ -1,8 +1,15 @@
-const constants = {
-  authorName: 'Tobias Stadler',
-  githubName: 'devtobi',
-  linkedinName: 'tobias-stadler',
-  projectsUrl: 'https://devtobi.de',
-};
+import { SupportedLocale } from '@/types/SupportedLocale';
 
-export default constants;
+const AUTHOR_NAME = 'Tobias Stadler';
+const GITHUB_NAME = 'devtobi';
+const LINKEDIN_NAME = 'tobias-stadler';
+const PROJECTS_URL = 'https://devtobi.de';
+const DEFAULT_LOCALE: SupportedLocale = 'en';
+
+export {
+  AUTHOR_NAME,
+  GITHUB_NAME,
+  LINKEDIN_NAME,
+  PROJECTS_URL,
+  DEFAULT_LOCALE,
+};
