@@ -1,8 +1,20 @@
 {
-  "$schema": "https://json.schemastore.org/prettierrc",
-  "semi": false,
-  "tabWidth": 2,
-  "singleQuote": true,
-  "printWidth": 100,
-  "trailingComma": "none"
+	"$schema": "https://json.schemastore.org/prettierrc",
+	"singleQuote": true,
+	"vueIndentScriptAndStyle": true,
+	"singleAttributePerLine": true,
+	"plugins": ["@ianvs/prettier-plugin-sort-imports"],
+	"importOrder": [
+		"<BUILTIN_MODULES>",
+		"",
+		"<TYPES>",
+		"",
+		",<THIRD_PARTY_MODULES>",
+		"",
+		"<TYPES>^[.]",
+		"",
+		"^@(/.*)$",
+		"^[.]"
+	],
+	"importOrderTypeScriptVersion": "5.4.5"
 }

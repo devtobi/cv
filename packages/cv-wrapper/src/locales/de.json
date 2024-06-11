@@ -1,0 +1,12 @@
+{
+  "TheMenubar": {
+    "profilePictureAltPrefix": "Profilbild von",
+    "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
+    "cv": "Lebenslauf",
+    "links": {
+      "projects": {
+        "label": "Meine Projekte"
+      }
+    }
+  }
+}

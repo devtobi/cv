@@ -1,18 +1,18 @@
-const path = require('path')
-const util = require('util')
+const path = require('path');
+const util = require('util');
 
-const getFiles = require('./getFiles.js')
-const { DATA_DIRECTORY } = require('./constants.js')
+const getFiles = require('./getFiles.js');
+const { DATA_DIRECTORY } = require('./constants.js');
 
 const generateTasks = (taskName, commandString) => {
-  const files = getFiles(`${DATA_DIRECTORY}`)
+  const files = getFiles(`${DATA_DIRECTORY}`);
   return files.map((file) => {
-    const dirname = path.parse(file).name
+    const dirname = path.parse(file).name;
     return {
       command: util.format(commandString, dirname, dirname),
-      name: taskName
-    }
-  })
-}
+      name: taskName,
+    };
+  });
+};
 
-module.exports = generateTasks
+module.exports = generateTasks;

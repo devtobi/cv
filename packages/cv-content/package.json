@@ -8,13 +8,14 @@
     "build": "node scripts/buildHtml.js && node scripts/minify.js && node scripts/generatePdfs.js",
     "format": "prettier ../../data/ --write",
     "validate": "node scripts/validate.js",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint'",
-    "fix": "prettier . --write && eslint --fix"
+    "lint": "concurrently --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint .'",
+    "fix": "prettier . --write && eslint . --fix"
   },
   "keywords": [],
   "author": "Tobias Stadler",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "9.4.0",
     "eslint": "9.4.0",
     "eslint-config-prettier": "9.1.0",
     "html-minifier-terser": "7.2.0",

@@ -61,7 +61,15 @@
     {
       "name": "Webentwicklung",
       "level": "fortgeschritten",
-      "keywords": ["LAMP", "JavaScript", "HTML 5", "Angular.js", "jQuery", "Sass", "LESS"]
+      "keywords": [
+        "LAMP",
+        "JavaScript",
+        "HTML 5",
+        "Angular.js",
+        "jQuery",
+        "Sass",
+        "LESS"
+      ]
     },
     {
       "name": "Ninjitsu",
@@ -131,7 +139,13 @@
     {
       "name": "GitHub",
       "summary": "Regelmäßiger GitHub-Nutzer und Bastler.",
-      "keywords": ["GitHub", "git", "GitHub Desktop (OS X)", "LFS", "GitHub API"]
+      "keywords": [
+        "GitHub",
+        "git",
+        "GitHub Desktop (OS X)",
+        "LFS",
+        "GitHub API"
+      ]
     },
     {
       "name": "Schach",

@@ -1,14 +1,10 @@
-import 'primeicons/primeicons.css'
-import 'primeflex/primeflex.css'
+import { createApp } from 'vue';
 
-import { createApp } from 'vue'
-import PrimeVue from 'primevue/config'
+import { registerPlugins } from '@/plugins';
+import App from './App.vue';
 
-import App from './App.vue'
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(PrimeVue, {
-  ripple: true
-})
+registerPlugins(app);
 
-app.mount('#app')
+app.mount('#app');
