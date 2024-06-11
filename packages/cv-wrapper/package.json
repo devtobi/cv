@@ -6,7 +6,8 @@
   "description": "My Vue based wrapper application for serving the CV content dynamically and providing additional features",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --build --force && vite build",
+    "build": "bun run pre-build && vue-tsc --build --force && vite build",
+    "pre-build": "node scripts/generateSupportedTypes.cjs",
     "lint": "concurrently --kill-others-on-fail -n prettier,eslint,type-check 'prettier . --check' 'eslint .' 'vue-tsc --noEmit'",
     "fix": "prettier . --write && eslint . --fix"
   },

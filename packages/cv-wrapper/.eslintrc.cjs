@@ -13,6 +13,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  env: {
+    node: true,
+  },
   settings: {
     'vue-i18n': {
       localeDir: './src/locales/*.json',
