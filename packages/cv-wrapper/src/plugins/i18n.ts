@@ -16,7 +16,7 @@ const i18n = createI18n<[MessageSchema], SupportedLocale>({
   fallbackLocale: defaultLocale,
   formatFallbackMessages: true,
   messages: {
-    en: Object.assign(en),
+    en,
   },
 });
 export default i18n;

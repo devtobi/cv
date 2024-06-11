@@ -7,11 +7,11 @@
           size="large"
           shape="circle"
           role="img"
-          :aria-label="t('static.TheMenubar.profilePictureAlt')"
+          :aria-label="localizedStrings.TheMenubar.profilePictureAlt"
           class="mr-3"
         />
         <p>
-          {{ t('static.TheMenubar.title') }}
+          {{ localizedStrings.TheMenubar.title }}
         </p>
       </div>
     </template>
@@ -40,6 +40,7 @@
   import { useI18n } from 'vue-i18n';
 
   import profilePicture from '@/assets/images/profile_picture.png';
+  import localizedStrings from '@/helpers/localizedStrings';
   import menuLinks from '@/helpers/menuLinks';
 
   const { t } = useI18n();

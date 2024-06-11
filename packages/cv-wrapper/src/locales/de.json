@@ -1,28 +1,4 @@
 {
-  "static": {
-    "authorName": "Tobias Stadler",
-    "githubName": "devtobi",
-    "TheMenubar": {
-      "title": "@:static.authorName - @:TheMenubar.cv",
-      "profilePictureAlt": "@:TheMenubar.profilePictureAltPrefix @:static.authorName",
-      "links": {
-        "projects": {
-          "url": "https://devtobi.de"
-        },
-        "github": {
-          "label": "GitHub ({'@'}@:static.githubName)",
-          "url": "https://github.com/@:static.githubName"
-        },
-        "linkedin": {
-          "label": "LinkedIn",
-          "url": "https://www.linkedin.com/in/tobias-stadler/"
-        }
-      }
-    },
-    "TheFooter": {
-      "copyright": "© {0} @:static.authorName ({'@'}@:static.githubName)"
-    }
-  },
   "TheMenubar": {
     "profilePictureAltPrefix": "Profilbild von",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
