@@ -7,8 +7,11 @@
 </template>
 
 <script lang="ts" setup>
-  import TheFooter from '@/components/TheFooter.vue';
-  import TheMenubar from '@/components/TheMenubar.vue';
+  import TheFooter from '@/components/CvFooter.vue';
+  import TheMenubar from '@/components/CvMenubar.vue';
+  import { useWatchLanguage } from '@/composables/useWatchLanguage';
+
+  useWatchLanguage();
 </script>
 
 <style>

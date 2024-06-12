@@ -9,8 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
+    CvFooter: typeof import('./src/components/CvFooter.vue')['default']
+    CvLanguageSelector: typeof import('./src/components/CvLanguageSelector.vue')['default']
+    CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
+    Dropdown: typeof import('primevue/dropdown')['default']
     Menubar: typeof import('primevue/menubar')['default']
-    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
-    TheMenubar: typeof import('./src/components/TheMenubar.vue')['default']
   }
 }
