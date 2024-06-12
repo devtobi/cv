@@ -1,27 +1,23 @@
-import { usePreferredLanguages, useStorage } from '@vueuse/core';
-import { watch } from 'vue';
+import { RemovableRef, usePreferredLanguages, useStorage } from '@vueuse/core';
 
-import type { RemovableRef } from '@vueuse/core';
-
-import { DEFAULT_LOCALE } from '@/config/constants';
+import { defaultLocale } from '@/config/constants';
 import { supportedLocales } from '@/generated/SupportedLocale';
-import { loadLanguage } from '@/plugins/i18n';
 import { SupportedLocale } from '@/types/SupportedLocale';
 
 const STORAGE_KEY = 'language';
 
-export const useLanguage = () => {
+export const useSelectedLanguage = () => {
   const browserLanguages = usePreferredLanguages();
 
   const getDefaultLanguage = () => {
-    if (browserLanguages.value.length === 0) return DEFAULT_LOCALE;
+    if (browserLanguages.value.length === 0) return defaultLocale;
 
     const foundLocale = browserLanguages.value.find((browserLanguage) => {
       const supportedLocalesStrings = supportedLocales as unknown as string[];
       return supportedLocalesStrings.includes(browserLanguage);
     });
 
-    return foundLocale ?? DEFAULT_LOCALE;
+    return foundLocale ?? defaultLocale;
   };
 
   const selectedLanguage: RemovableRef<SupportedLocale> = useStorage(
@@ -29,13 +25,7 @@ export const useLanguage = () => {
     getDefaultLanguage(),
   ) as RemovableRef<SupportedLocale>;
 
-  watch(
+  return {
     selectedLanguage,
-    async (code: SupportedLocale) => {
-      await loadLanguage(code);
-    },
-    { immediate: true },
-  );
-
-  return { selectedLanguage };
+  };
 };

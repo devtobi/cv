@@ -1,17 +1,17 @@
 <template>
   <div class="app-container flex flex-column min-h-screen">
     <the-menubar />
-    <main class="flex-1">{{ selectedLanguage }}</main>
+    <main class="flex-1"></main>
     <the-footer />
   </div>
 </template>
 
 <script lang="ts" setup>
-  import TheFooter from '@/components/TheFooter.vue';
-  import TheMenubar from '@/components/TheMenubar.vue';
-  import { useLanguage } from '@/composables/useLanguage';
+  import TheFooter from '@/components/CvFooter.vue';
+  import TheMenubar from '@/components/CvMenubar.vue';
+  import { useWatchLanguage } from '@/composables/useWatchLanguage';
 
-  const { selectedLanguage } = useLanguage();
+  useWatchLanguage();
 </script>
 
 <style>

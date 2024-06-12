@@ -1,12 +1,15 @@
 {
-  "TheMenubar": {
-    "profilePictureAltPrefix": "Profilbild von",
+  "CvMenubar": {
+    "profilePictureAltText": "Profilbild von {authorName}",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
-    "cv": "Lebenslauf",
+    "title": "{authorName} - Lebenslauf",
     "links": {
-      "projects": {
-        "label": "Meine Projekte"
+      "website": {
+        "label": "Meine Website"
       }
     }
+  },
+  "CvLanguageSelector": {
+    "placeholder": "Sprache"
   }
 }

@@ -1,32 +1,28 @@
 import { PrimeIcons } from 'primevue/api';
 
-import type { MenuItem } from 'primevue/menuitem';
+import { staticStrings } from '@/helpers/staticStrings';
+import { LocalizableMenuItem } from '@/types/LocalizableMenuItem';
 
-import { combinedStrings } from '@/helpers/combinedStrings';
-import i18n from '@/plugins/i18n';
-
-const t = i18n.global.t;
-
-const menuLinks: MenuItem[] = [
+const menuLinks: LocalizableMenuItem[] = [
   {
     icon: PrimeIcons.CODE,
-    key: 'projects',
-    label: t('TheMenubar.links.projects.label'),
-    url: combinedStrings.TheMenubar.links.projects.url,
+    key: 'website',
+    localeLabel: 'CvMenubar.links.website.label',
+    url: staticStrings.CvMenubar.links.website.url,
     color: 'primary',
   },
   {
     icon: PrimeIcons.GITHUB,
     key: 'github',
-    label: combinedStrings.TheMenubar.links.github.label,
-    url: combinedStrings.TheMenubar.links.github.url,
+    label: staticStrings.CvMenubar.links.github.label,
+    url: staticStrings.CvMenubar.links.github.url,
     color: 'contrast',
   },
   {
     icon: PrimeIcons.LINKEDIN,
     key: 'linkedin',
-    label: combinedStrings.TheMenubar.links.linkedin.label,
-    url: combinedStrings.TheMenubar.links.linkedin.url,
+    label: staticStrings.CvMenubar.links.linkedin.label,
+    url: staticStrings.CvMenubar.links.linkedin.url,
     color: 'info',
   },
 ];

@@ -1,22 +1,21 @@
 import { nextTick } from 'vue';
 import { createI18n } from 'vue-i18n';
 
-import { DEFAULT_LOCALE } from '@/config/constants';
+import { defaultLocale } from '@/config/constants';
 import { supportedLocales } from '@/generated/SupportedLocale';
-import de from '@/locales/de.json'; // WIP: Only want to en by default
 import en from '@/locales/en.json';
 import { SupportedLocale } from '@/types/SupportedLocale';
 
 type MessageSchema = typeof en;
+type DefaultLocale = typeof defaultLocale;
 
-const i18n = createI18n<[MessageSchema], SupportedLocale>({
+const i18n = createI18n<[MessageSchema], DefaultLocale>({
   legacy: false,
-  locale: DEFAULT_LOCALE,
-  fallbackLocale: DEFAULT_LOCALE,
+  locale: defaultLocale,
+  fallbackLocale: defaultLocale,
   formatFallbackMessages: true,
   messages: {
     en,
-    de,
   },
 });
 export default i18n;
@@ -27,20 +26,31 @@ const setI18nLanguage = (locale: SupportedLocale) => {
 };
 
 export const loadLanguage = async (locale: SupportedLocale) => {
-  if (!supportedLocales.includes(locale))
-    throw new Error('Language not supported');
+  if (!supportedLocales.includes(locale)) {
+    console.debug(
+      `Loading localization ${locale} failed because no CV was provided for this language. Setting to fallback language ${defaultLocale}.`,
+    );
+    setI18nLanguage(defaultLocale);
+    return nextTick();
+  }
 
   if ((i18n.global.locale as any).value === locale) return nextTick();
 
-  if (i18n.global.availableLocales.includes(locale)) {
+  if ((i18n.global.availableLocales as string[]).includes(locale)) {
     setI18nLanguage(locale);
     return nextTick();
   }
 
-  const messages = await import(`@/locales/${locale}.json`);
-  if (!messages || !messages.default) throw new Error('Language not found');
+  try {
+    const messages = await import(`@/locales/${locale}.json`);
+    i18n.global.setLocaleMessage<MessageSchema>(locale, messages.default);
+    setI18nLanguage(locale);
+  } catch {
+    console.debug(
+      `Localization file ${locale}.json not found. Setting to fallback language ${defaultLocale}.`,
+    );
+    setI18nLanguage(defaultLocale);
+  }
 
-  i18n.global.setLocaleMessage<MessageSchema>(locale, messages.default);
-  setI18nLanguage(locale);
   return nextTick();
 };

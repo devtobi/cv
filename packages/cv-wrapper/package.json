@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@vueuse/core": "10.10.1",
+    "flag-icons": "7.2.3",
     "primeflex": "3.3.1",
     "primeicons": "7.0.0",
     "primevue": "3.52.0",
