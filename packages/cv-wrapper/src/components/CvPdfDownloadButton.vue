@@ -13,7 +13,7 @@
   import { useI18n } from 'vue-i18n';
 
   import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
-  import { pdfFilename } from '@/config/constants';
+  import { authorName, pdfFilename } from '@/config/constants';
 
   const { t } = useI18n();
   const { selectedLanguage } = useSelectedLanguage();
@@ -22,11 +22,15 @@
     () => `./${selectedLanguage.value}/${pdfFilename}`,
   );
 
+  const downloadFileName = computed(
+    () => `cv-${authorName.replace(/\s/g, '')}-${selectedLanguage.value}.pdf`,
+  );
+
   const downloadPdf = () => {
     const link = document.createElement('a');
     link.href = downloadUrl.value;
     link.target = '_blank';
-    link.download = pdfFilename;
+    link.download = downloadFileName.value;
 
     document.body.appendChild(link);
     link.click();
