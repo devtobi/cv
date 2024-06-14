@@ -12,6 +12,7 @@ declare module 'vue' {
     CvFooter: typeof import('./src/components/CvFooter.vue')['default']
     CvLanguageSelector: typeof import('./src/components/CvLanguageSelector.vue')['default']
     CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
+    CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']
     Dropdown: typeof import('primevue/dropdown')['default']
     Menubar: typeof import('primevue/menubar')['default']
   }

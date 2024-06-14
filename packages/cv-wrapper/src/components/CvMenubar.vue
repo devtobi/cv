@@ -26,23 +26,23 @@
         <Button
           :icon="item.icon"
           :label="item.label as string"
-          size="small"
-          rounded
           :severity="item.color"
           class="ml-3"
         />
       </a>
     </template>
     <template #end>
+      <cv-pdf-download-button class="mr-3" />
       <cv-language-selector />
     </template>
   </menubar>
 </template>
 
 <script lang="ts" setup>
-  import { MenuItem } from 'primevue/menuitem';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
+
+  import type { MenuItem } from 'primevue/menuitem';
 
   import profilePicture from '@/assets/images/profile_picture.png';
   import CvLanguageSelector from '@/components/CvLanguageSelector.vue';

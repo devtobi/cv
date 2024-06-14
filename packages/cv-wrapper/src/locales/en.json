@@ -11,5 +11,8 @@
   },
   "CvLanguageSelector": {
     "placeholder": "Language"
+  },
+  "CvPdfDownloadButton": {
+    "label": "Download as PDF"
   }
 }
