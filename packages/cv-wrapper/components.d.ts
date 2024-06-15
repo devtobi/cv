@@ -9,7 +9,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
+    CvAppearanceToggleButton: typeof import('./src/components/CvAppearanceToggleButton.vue')['default']
     CvFooter: typeof import('./src/components/CvFooter.vue')['default']
+    CvLanguageSelectDropdown: typeof import('./src/components/CvLanguageSelectDropdown.vue')['default']
     CvLanguageSelector: typeof import('./src/components/CvLanguageSelector.vue')['default']
     CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
     CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']

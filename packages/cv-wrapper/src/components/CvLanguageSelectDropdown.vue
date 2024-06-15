@@ -4,8 +4,8 @@
     :options="languages"
     option-label="name"
     option-value="code"
-    :placeholder="t('CvLanguageSelector.placeholder')"
-    :aria-label="t('CvLanguageSelector.placeholder')"
+    :placeholder="t('CvLanguageSelectDropdown.placeholder')"
+    :aria-label="t('CvLanguageSelectDropdown.placeholder')"
   >
     <template #value="slotProps">
       <div
