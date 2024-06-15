@@ -9,10 +9,18 @@
       }
     }
   },
-  "CvLanguageSelector": {
+  "CvLanguageSelectDropdown": {
     "placeholder": "Sprache"
   },
   "CvPdfDownloadButton": {
     "label": "Als PDF herunterladen"
+  },
+  "CvAppearanceToggleButton": {
+    "label": "Erscheinungsbild: {appearance}",
+    "appearances": {
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    }
   }
 }
