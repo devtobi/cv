@@ -44,8 +44,8 @@
       "component": "Software component"
     },
     "dependencyTypeNames": {
-      "prod": "Produktion",
-      "dev": "Entwicklung"
+      "prod": "Production",
+      "dev": "Development"
     },
     "dependencyComponentNames": {
       "all": "All",
