@@ -6,6 +6,8 @@ import { defineConfig } from 'vite';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 
+import packageJson from './package.json';
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
@@ -19,6 +21,17 @@ export default defineConfig({
       ),
     }),
   ],
+  define: {
+    'import.meta.env.PACKAGE_REPOSITORY_URL': JSON.stringify(
+      packageJson.repository.url,
+    ),
+    'import.meta.env.PACKAGE_DEPENDENCIES': JSON.stringify(
+      packageJson.dependencies,
+    ),
+    'import.meta.env.PACKAGE_DEV_DEPENDENCIES': JSON.stringify(
+      packageJson.devDependencies,
+    ),
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

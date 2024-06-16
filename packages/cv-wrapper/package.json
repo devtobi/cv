@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "description": "My Vue based wrapper application for serving the CV content dynamically and providing additional features",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtobi/cv.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "bun run pre-build && vue-tsc --build --force && vite build",
