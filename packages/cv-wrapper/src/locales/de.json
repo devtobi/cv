@@ -1,4 +1,9 @@
 {
+  "PrimeVue": {
+    "aria": {
+		"close": "Schließen"
+	}
+  },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
@@ -22,5 +27,9 @@
       "dark": "Dunkel",
       "system": "System"
     }
+  },
+  "CvInformationDialogButton": {
+    "appInfo": "App-Informationen",
+    "label": "@:CvInformationDialogButton.appInfo anzeigen"
   }
 }

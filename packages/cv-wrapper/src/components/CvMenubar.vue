@@ -33,8 +33,9 @@
     </template>
     <template #end>
       <cv-pdf-download-button class="mr-3" />
+      <cv-language-selector class="mr-3" />
       <cv-appearance-toggle-button class="mr-3" />
-      <cv-language-selector />
+      <cv-information-dialog-button />
     </template>
   </menubar>
 </template>
@@ -46,6 +47,7 @@
   import type { MenuItem } from 'primevue/menuitem';
 
   import profilePicture from '@/assets/images/profile_picture.png';
+  import CvInformationDialogButton from '@/components/CvInformationDialogButton.vue';
   import CvLanguageSelector from '@/components/CvLanguageSelectDropdown.vue';
   import { authorName } from '@/config/constants';
   import menuLinks from '@/helpers/menuLinks';
