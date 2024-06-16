@@ -1,7 +1,8 @@
 {
   "PrimeVue": {
     "aria": {
-      "close": "Close"
+      "close": "Close",
+      "scrollTop": "Scroll back to top"
     }
   },
   "CvMenubar": {
