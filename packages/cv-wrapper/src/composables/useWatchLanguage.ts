@@ -21,6 +21,6 @@ export const useWatchLanguage = () => {
   );
 
   const updatePrimeVueLocalizations = () => {
-    PrimeVue.config.locale!.aria!.close = t('PrimeVue.aria');
+    PrimeVue.config.locale!.aria!.close = t('PrimeVue.aria.close');
   };
 };

@@ -14,8 +14,37 @@
     v-model:visible="showDialog"
     modal
     :header="t('CvInformationDialogButton.appInfo')"
-    :style="{ width: '25rem' }"
+    maximizable
+    :contentStyle="{ height: '30rem' }"
+    :style="{ width: '50rem' }"
   >
+    <template #header>
+      <div class="flex align-items-center">
+        <span class="font-bold white-space-nowrap ml-2 mr-5">{{
+          t('CvInformationDialogButton.appInfo')
+        }}</span>
+        <Button
+          :label="t('CvInformationDialogButton.githubLink')"
+          :icon="PrimeIcons.GITHUB"
+          severity="contrast"
+          @click="openRepository"
+        />
+      </div>
+    </template>
+    <CvDependencyDataTable />
+    <template #footer>
+      <div class="w-full flex flex-row justify-content-center">
+        <p>
+          {{ t('CvInformationDialogButton.footerText1') }}
+          <span
+            :class="PrimeIcons.HEART"
+            style="color: var(--red-500)"
+            :aria-label="t('CvInformationDialogButton.footerLoveAria')"
+          />
+          {{ t('CvInformationDialogButton.footerText2') }}
+        </p>
+      </div>
+    </template>
   </Dialog>
 </template>
 
@@ -26,7 +55,13 @@
 
   const showDialog = ref(false);
 
+  const repoUrl = import.meta.env.PACKAGE_REPOSITORY_URL;
+
   const dialogId = 'appInfoDialog';
+
+  const openRepository = () => {
+    window.open(repoUrl, '_blank')!.focus();
+  };
 
   const { t } = useI18n();
 </script>

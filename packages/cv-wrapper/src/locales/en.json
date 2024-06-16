@@ -30,6 +30,29 @@
   },
   "CvInformationDialogButton": {
     "appInfo": "App information",
-    "label": "Show @:CvInformationDialogButton.appInfo"
+    "label": "Show @:CvInformationDialogButton.appInfo",
+    "githubLink": "View on GitHub",
+    "footerText1": "Developed with",
+    "footerText2": "using Vue.js",
+    "footerLoveAria": "love"
+  },
+  "CvDependencyDataTable": {
+    "columnNames": {
+      "name": "Package name",
+      "version": "Version number",
+      "type": "Type",
+      "component": "Software component"
+    },
+    "dependencyTypeNames": {
+      "prod": "Produktion",
+      "dev": "Entwicklung"
+    },
+    "dependencyComponentNames": {
+      "all": "All",
+      "cv-content": "CV content",
+      "cv-wrapper": "Vue SPA"
+    },
+    "footerText1": "Made with",
+    "footerText2": "and Vue.js"
   }
 }
