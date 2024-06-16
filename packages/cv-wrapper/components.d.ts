@@ -9,13 +9,21 @@ declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
     Button: typeof import('primevue/button')['default']
+    Column: typeof import('primevue/column')['default']
     CvAppearanceToggleButton: typeof import('./src/components/CvAppearanceToggleButton.vue')['default']
+    CvDependencyDataTable: typeof import('./src/components/CvDependencyDataTable.vue')['default']
     CvFooter: typeof import('./src/components/CvFooter.vue')['default']
+    CvInformationDialog: typeof import('@/components/CvInformationDialogButton.vue')['default']
+    CvInformationDialogButton: typeof import('./src/components/CvInformationDialogButton.vue')['default']
     CvLanguageSelectDropdown: typeof import('./src/components/CvLanguageSelectDropdown.vue')['default']
     CvLanguageSelector: typeof import('./src/components/CvLanguageSelector.vue')['default']
     CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
     CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']
+    DataTable: typeof import('primevue/datatable')['default']
+    Dialog: typeof import('primevue/dialog')['default']
     Dropdown: typeof import('primevue/dropdown')['default']
+    InputText: typeof import('primevue/inputtext')['default']
     Menubar: typeof import('primevue/menubar')['default']
+    Tag: typeof import('primevue/tag')['default']
   }
 }

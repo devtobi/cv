@@ -1,4 +1,9 @@
 {
+  "PrimeVue": {
+    "aria": {
+      "close": "Schließen"
+    }
+  },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
@@ -21,6 +26,31 @@
       "light": "Hell",
       "dark": "Dunkel",
       "system": "System"
+    }
+  },
+  "CvInformationDialogButton": {
+    "appInfo": "App-Informationen",
+    "label": "@:CvInformationDialogButton.appInfo anzeigen",
+    "githubLink": "Auf GitHub ansehen",
+    "footerText1": "Entwickelt mit",
+    "footerText2": "und Vue.js",
+    "footerLoveAria": "Liebe"
+  },
+  "CvDependencyDataTable": {
+    "columnNames": {
+      "name": "Paketname",
+      "version": "Versionsnummer",
+      "type": "Typ",
+      "component": "Softwarekomponente"
+    },
+    "dependencyTypeNames": {
+      "prod": "Produktion",
+      "dev": "Entwicklung"
+    },
+    "dependencyComponentNames": {
+      "all": "Alle",
+      "cv-content": "CV-Inhalt",
+      "cv-wrapper": "Vue SPA"
     }
   }
 }

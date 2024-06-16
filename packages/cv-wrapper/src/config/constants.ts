@@ -9,6 +9,7 @@ const pdfFilename = 'cv.pdf';
 const lightTheme = 'aura-light-green';
 const darkTheme = 'aura-dark-green';
 const themeLinkHtml = 'theme-link';
+const npmPackageUrl = 'https://www.npmjs.com/package/';
 
 export {
   authorName,
@@ -20,4 +21,5 @@ export {
   lightTheme,
   darkTheme,
   themeLinkHtml,
+  npmPackageUrl,
 };
