@@ -16,7 +16,6 @@
     :header="t('CvInformationDialogButton.appInfo')"
     :style="{ width: '25rem' }"
   >
-
   </Dialog>
 </template>
 

@@ -1,9 +1,9 @@
 {
-	"PrimeVue": {
-		"aria": {
-			"close": "Close"
-		}
-	},
+  "PrimeVue": {
+    "aria": {
+      "close": "Close"
+    }
+  },
   "CvMenubar": {
     "profilePictureAltText": "Profile picture of {authorName}",
     "newFeaturesSoon": "New features will be added soon!",

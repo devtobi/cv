@@ -1,8 +1,8 @@
 {
   "PrimeVue": {
     "aria": {
-		"close": "Schließen"
-	}
+      "close": "Schließen"
+    }
   },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",

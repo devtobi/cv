@@ -1,10 +1,10 @@
+import { usePrimeVue } from 'primevue/config';
 import { watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
 import { loadLanguage } from '@/plugins/i18n';
 import { SupportedLocale } from '@/types/SupportedLocale';
-import { useI18n } from 'vue-i18n';
-import { usePrimeVue } from 'primevue/config';
 
 export const useWatchLanguage = () => {
   const { selectedLanguage } = useSelectedLanguage();
@@ -15,12 +15,12 @@ export const useWatchLanguage = () => {
     selectedLanguage,
     async (code: SupportedLocale) => {
       await loadLanguage(code);
-	  updatePrimeVueLocalizations()
+      updatePrimeVueLocalizations();
     },
     { immediate: true },
   );
 
   const updatePrimeVueLocalizations = () => {
-	PrimeVue.config.locale!.aria!.close = t('PrimeVue.aria');
-  }
+    PrimeVue.config.locale!.aria!.close = t('PrimeVue.aria');
+  };
 };
