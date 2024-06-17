@@ -3,7 +3,9 @@
     "aria": {
       "close": "Close",
       "scrollTop": "Scroll back to top"
-    }
+    },
+    "accept": "Yes",
+    "reject": "Cancel"
   },
   "CvMenubar": {
     "profilePictureAltText": "Profile picture of {authorName}",
@@ -55,5 +57,11 @@
     },
     "footerText1": "Made with",
     "footerText2": "and Vue.js"
+  },
+  "CvResetPreferencesButton": {
+    "label": "Reset preferences",
+    "confirmMessage": "Do you really want to reset the preferences?",
+    "toastTitle": "Settings reset",
+    "toastMessage": "The default settings have been restored."
   }
 }

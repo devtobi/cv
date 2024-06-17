@@ -10,7 +10,12 @@ export const useSelectedAppearance = () => {
     Appearance.SYSTEM,
   );
 
+  const resetAppearance = () => {
+    selectedAppearance.value = Appearance.SYSTEM;
+  };
+
   return {
+    resetAppearance,
     selectedAppearance,
   };
 };

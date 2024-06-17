@@ -1,16 +1,21 @@
 <template>
+  <Toast position="bottom-right" />
+  <ConfirmPopup />
   <div class="app-container flex flex-column min-h-screen">
-    <the-menubar />
+    <CvMenubar />
     <main class="flex-1">
       <CvScrollTop />
     </main>
-    <the-footer />
+    <CvFooter />
   </div>
 </template>
 
 <script lang="ts" setup>
-  import TheFooter from '@/components/CvFooter.vue';
-  import TheMenubar from '@/components/CvMenubar.vue';
+  import ConfirmPopup from 'primevue/confirmpopup';
+  import Toast from 'primevue/toast';
+
+  import CvFooter from '@/components/CvFooter.vue';
+  import CvMenubar from '@/components/CvMenubar.vue';
   import CvScrollTop from '@/components/CvScrollTop.vue';
   import { useWatchAppearance } from '@/composables/useWatchAppearance';
   import { useWatchLanguage } from '@/composables/useWatchLanguage';

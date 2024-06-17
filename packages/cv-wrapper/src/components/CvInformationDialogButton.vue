@@ -33,7 +33,7 @@
     </template>
     <CvDependencyDataTable />
     <template #footer>
-      <div class="w-full flex flex-row justify-content-center">
+      <div class="w-full flex flex-column align-items-center">
         <p>
           {{ t('CvInformationDialogButton.footerText1') }}
           <span
@@ -43,6 +43,7 @@
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
+        <CvResetPreferencesButton />
       </div>
     </template>
   </Dialog>

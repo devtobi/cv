@@ -3,7 +3,9 @@
     "aria": {
       "close": "Schließen",
       "scrollTop": "Zurück nach oben scrollen"
-    }
+    },
+    "accept": "Ja",
+    "reject": "Abbrechen"
   },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
@@ -53,5 +55,11 @@
       "cv-content": "CV-Inhalt",
       "cv-wrapper": "Vue SPA"
     }
+  },
+  "CvResetPreferencesButton": {
+    "label": "Einstellungen zurücksetzen",
+    "confirmMessage": "Willst du die Einstellungen wirklich zurücksetzen?",
+    "toastTitle": "Einstellungen zurückgesetzt",
+    "toastMessage": "Die Standardeinstellungen wurden wiederhergestellt."
   }
 }
