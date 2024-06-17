@@ -15,7 +15,7 @@ export const useSelectedLanguage = () => {
     const foundLocale = browserLanguages.value.find((browserLanguage) => {
       const supportedLocalesStrings = supportedLocales as unknown as string[];
       return supportedLocalesStrings.includes(browserLanguage);
-    });
+    }) as SupportedLocale;
 
     return foundLocale ?? defaultLocale;
   };
@@ -25,7 +25,12 @@ export const useSelectedLanguage = () => {
     getDefaultLanguage(),
   ) as RemovableRef<SupportedLocale>;
 
+  const resetLanguage = () => {
+    selectedLanguage.value = getDefaultLanguage();
+  };
+
   return {
+    resetLanguage,
     selectedLanguage,
   };
 };

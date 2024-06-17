@@ -17,6 +17,7 @@ declare module 'vue' {
     CvLanguageSelectDropdown: typeof import('./src/components/CvLanguageSelectDropdown.vue')['default']
     CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
     CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']
+    CvResetPreferencesButton: typeof import('./src/components/CvResetPreferencesButton.vue')['default']
     CvScrollTop: typeof import('./src/components/CvScrollTop.vue')['default']
     DataTable: typeof import('primevue/datatable')['default']
     Dialog: typeof import('primevue/dialog')['default']
