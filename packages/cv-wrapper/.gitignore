@@ -36,3 +36,4 @@ src/generated
 public/**
 !public/logo.svg
 !public/themes
+!public/robots.txt

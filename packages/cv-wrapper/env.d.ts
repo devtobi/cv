@@ -1,5 +1,7 @@
 /// <reference types="vite/client" />
 /// <reference types="user-agent-data-types" />
+/// <reference types="vite-plugin-pwa/vue" />
+/// <reference types="vite-plugin-pwa/info" />
 
 interface ImportMetaEnv {
   readonly PACKAGE_REPOSITORY_URL: string;

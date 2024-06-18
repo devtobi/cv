@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
 import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 
@@ -21,6 +22,49 @@ export default defineConfig({
         dirname(fileURLToPath(import.meta.url)),
         './src/locales/**',
       ),
+    }),
+    VitePWA({
+      registerType: 'prompt',
+      injectRegister: 'auto',
+      strategies: 'generateSW',
+      workbox: {
+        cleanupOutdatedCaches: true,
+        globPatterns: ['**/*.{js,css,html,png}'],
+        maximumFileSizeToCacheInBytes: 1024 * 1024 * 3, // 3 MB cache
+      },
+      manifest: {
+        name: 'Tobias Stadler - Curriculum Vitae',
+        short_name: 'Tobias Stadler - CV',
+        description: 'CV application of Tobias Stadler (@devtobi)',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'pwa-64x64.png',
+            sizes: '64x64',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: 'maskable-icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
+      },
+      includeAssets: ['themes/**'],
+      devOptions: {
+        enabled: true,
+      },
     }),
   ],
   define: {

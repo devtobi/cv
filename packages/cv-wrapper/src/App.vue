@@ -1,6 +1,7 @@
 <template>
   <Toast position="bottom-right" />
-  <ConfirmPopup />
+  <ConfirmDialog :group="confirmDialogGroup" />
+  <ConfirmPopup :group="confirmPopupGroup" />
   <div class="app-container flex flex-column min-h-screen">
     <CvMenubar />
     <main class="flex-1">
@@ -11,17 +12,21 @@
 </template>
 
 <script lang="ts" setup>
+  import ConfirmDialog from 'primevue/confirmdialog';
   import ConfirmPopup from 'primevue/confirmpopup';
   import Toast from 'primevue/toast';
 
   import CvFooter from '@/components/CvFooter.vue';
   import CvMenubar from '@/components/CvMenubar.vue';
   import CvScrollTop from '@/components/CvScrollTop.vue';
+  import { usePWA } from '@/composables/usePWA';
   import { useWatchAppearance } from '@/composables/useWatchAppearance';
   import { useWatchLanguage } from '@/composables/useWatchLanguage';
+  import { confirmDialogGroup, confirmPopupGroup } from '@/config/constants';
 
   useWatchLanguage();
   useWatchAppearance();
+  usePWA();
 </script>
 
 <style>
