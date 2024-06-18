@@ -15,6 +15,7 @@
 
   import { useSelectedAppearance } from '@/composables/useSelectedAppearance';
   import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
+  import { confirmPopupGroup } from '@/config/constants';
 
   const { t } = useI18n();
   const confirm = useConfirm();
@@ -25,6 +26,7 @@
 
   const confirmReset = (event: MouseEvent) => {
     confirm.require({
+      group: confirmPopupGroup,
       target: event.currentTarget as HTMLElement,
       message: t('CvResetPreferencesButton.confirmMessage'),
       icon: PrimeIcons.EXCLAMATION_CIRCLE,

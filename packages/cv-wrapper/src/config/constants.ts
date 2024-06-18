@@ -8,8 +8,11 @@ const defaultLocale: Extract<SupportedLocale, 'en'> = 'en';
 const pdfFilename = 'cv.pdf';
 const lightTheme = 'aura-light-green';
 const darkTheme = 'aura-dark-green';
+
 const themeLinkHtml = 'theme-link';
 const npmPackageUrl = 'https://www.npmjs.com/package/';
+const confirmPopupGroup = 'popup';
+const confirmDialogGroup = 'dialog;';
 
 export {
   authorName,
@@ -22,4 +25,6 @@ export {
   darkTheme,
   themeLinkHtml,
   npmPackageUrl,
+  confirmPopupGroup,
+  confirmDialogGroup,
 };

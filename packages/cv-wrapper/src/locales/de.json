@@ -7,6 +7,10 @@
     "accept": "Ja",
     "reject": "Abbrechen"
   },
+  "PWA": {
+    "newVersionMessage": "Eine neue Version der App ist verfügbar. Jetzt aktualisieren? Andernfalls wird automatisch beim nächsten Start der App aktualisiert.",
+    "newVersionTitle": "App-Update verfügbar"
+  },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",

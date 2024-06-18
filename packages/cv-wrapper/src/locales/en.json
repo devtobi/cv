@@ -7,6 +7,10 @@
     "accept": "Yes",
     "reject": "Cancel"
   },
+  "PWA": {
+    "newVersionMessage": "A new version of this app is available. Do you want to update? Otherwise, it will be updated automatically the next time the app is started.",
+    "newVersionTitle": "App update available"
+  },
   "CvMenubar": {
     "profilePictureAltText": "Profile picture of {authorName}",
     "newFeaturesSoon": "New features will be added soon!",
