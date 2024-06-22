@@ -15,9 +15,15 @@ export const usePWAStore = defineStore('pwa', () => {
     installPWAEventInternal.value = event;
   };
 
-  return { canBeInstalled, installPWAEvent, installPWAEventInternal, setEvent, setInstalled };
+  return {
+    canBeInstalled,
+    installPWAEvent,
+    installPWAEventInternal,
+    setEvent,
+    setInstalled,
+  };
 });
 
 if (import.meta.hot) {
-	import.meta.hot.accept(acceptHMRUpdate(usePWAStore, import.meta.hot));
+  import.meta.hot.accept(acceptHMRUpdate(usePWAStore, import.meta.hot));
 }

@@ -47,10 +47,10 @@ export const useInstallPWA = () => {
         acceptLabel: t('PWA.installAccept'),
         acceptIcon: PrimeIcons.DOWNLOAD,
         accept: async () => {
-			if (installPWAEvent.value) {
-				await installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
-			}
-		},
+          if (installPWAEvent.value) {
+            await installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
+          }
+        },
         reject() {
           appInstallDialogShown.value = true;
         },
