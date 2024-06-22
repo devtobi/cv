@@ -16,5 +16,5 @@
 		"^@(/.*)$",
 		"^[.]"
 	],
-	"importOrderTypeScriptVersion": "5.4.5"
+	"importOrderTypeScriptVersion": "5.5.2"
 }
