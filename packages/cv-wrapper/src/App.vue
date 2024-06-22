@@ -19,6 +19,7 @@
   import CvFooter from '@/components/CvFooter.vue';
   import CvMenubar from '@/components/CvMenubar.vue';
   import CvScrollTop from '@/components/CvScrollTop.vue';
+  import { useInstallPWA } from '@/composables/useInstallPWA';
   import { usePWA } from '@/composables/usePWA';
   import { useWatchAppearance } from '@/composables/useWatchAppearance';
   import { useWatchLanguage } from '@/composables/useWatchLanguage';
@@ -27,6 +28,7 @@
   useWatchLanguage();
   useWatchAppearance();
   usePWA();
+  useInstallPWA();
 </script>
 
 <style>

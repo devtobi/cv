@@ -43,6 +43,10 @@
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
+        <CvInstallPWAButton
+          class="mb-3"
+          v-if="canBeInstalled"
+        />
         <CvResetPreferencesButton />
       </div>
     </template>
@@ -50,15 +54,20 @@
 </template>
 
 <script setup lang="ts">
+  import { storeToRefs } from 'pinia';
   import { PrimeIcons } from 'primevue/api';
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
+
+  import { usePWAStore } from '@/stores/usePWAStore';
 
   const showDialog = ref(false);
 
   const repoUrl = import.meta.env.PACKAGE_REPOSITORY_URL;
 
   const dialogId = 'appInfoDialog';
+
+  const { canBeInstalled } = storeToRefs(usePWAStore());
 
   const openRepository = () => {
     window.open(repoUrl, '_blank')!.focus();
