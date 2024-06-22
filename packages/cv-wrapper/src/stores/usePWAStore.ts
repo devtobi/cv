@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import { acceptHMRUpdate, defineStore } from 'pinia';
 import { computed, readonly, ref } from 'vue';
 
 export const usePWAStore = defineStore('pwa', () => {
@@ -15,5 +15,9 @@ export const usePWAStore = defineStore('pwa', () => {
     installPWAEventInternal.value = event;
   };
 
-  return { canBeInstalled, installPWAEvent, setEvent, setInstalled };
+  return { canBeInstalled, installPWAEvent, installPWAEventInternal, setEvent, setInstalled };
 });
+
+if (import.meta.hot) {
+	import.meta.hot.accept(acceptHMRUpdate(usePWAStore, import.meta.hot));
+}
