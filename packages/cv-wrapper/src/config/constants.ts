@@ -12,7 +12,7 @@ const darkTheme = 'aura-dark-green';
 const themeLinkHtml = 'theme-link';
 const npmPackageUrl = 'https://www.npmjs.com/package/';
 const confirmPopupGroup = 'popup';
-const confirmDialogGroup = 'dialog;';
+const confirmDialogGroup = 'dialog';
 
 export {
   authorName,

@@ -13,6 +13,7 @@
   import { useToast } from 'primevue/usetoast';
   import { useI18n } from 'vue-i18n';
 
+  import { useInstallDialogShown } from '@/composables/useInstallDialogShown';
   import { useSelectedAppearance } from '@/composables/useSelectedAppearance';
   import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
   import { confirmPopupGroup } from '@/config/constants';
@@ -23,6 +24,7 @@
 
   const { resetLanguage } = useSelectedLanguage();
   const { resetAppearance } = useSelectedAppearance();
+  const { resetDialogShown } = useInstallDialogShown();
 
   const confirmReset = (event: MouseEvent) => {
     confirm.require({
@@ -41,6 +43,7 @@
   const resetPreferences = () => {
     resetAppearance();
     resetLanguage();
+    resetDialogShown();
     toast.add({
       severity: 'contrast',
       summary: t('CvResetPreferencesButton.toastTitle'),

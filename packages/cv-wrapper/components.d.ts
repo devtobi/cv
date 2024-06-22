@@ -14,6 +14,7 @@ declare module 'vue' {
     CvDependencyDataTable: typeof import('./src/components/CvDependencyDataTable.vue')['default']
     CvFooter: typeof import('./src/components/CvFooter.vue')['default']
     CvInformationDialogButton: typeof import('./src/components/CvInformationDialogButton.vue')['default']
+    CvInstallPWAButton: typeof import('./src/components/CvInstallPWAButton.vue')['default']
     CvLanguageSelectDropdown: typeof import('./src/components/CvLanguageSelectDropdown.vue')['default']
     CvMenubar: typeof import('./src/components/CvMenubar.vue')['default']
     CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']

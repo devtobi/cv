@@ -9,7 +9,11 @@
   },
   "PWA": {
     "newVersionMessage": "Eine neue Version der App ist verfügbar. Jetzt aktualisieren? Andernfalls wird automatisch beim nächsten Start der App aktualisiert.",
-    "newVersionTitle": "App-Update verfügbar"
+    "newVersionTitle": "App-Update verfügbar",
+    "installTitle": "App-Installation",
+    "installMessage": "Es sieht so aus als unterstützt dein Browser die Installation von Apps. Möchtest du die App installieren? Du kannst die App auch später über das Informationsmenü oben rechts installieren.",
+    "installAccept": "Installieren",
+    "installReject": "Nicht wieder anzeigen"
   },
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
@@ -65,5 +69,8 @@
     "confirmMessage": "Willst du die Einstellungen wirklich zurücksetzen?",
     "toastTitle": "Einstellungen zurückgesetzt",
     "toastMessage": "Die Standardeinstellungen wurden wiederhergestellt."
+  },
+  "CvInstallPWAButton": {
+    "label": "Als App installieren"
   }
 }
