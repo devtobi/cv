@@ -18,16 +18,18 @@
         </p>
       </div>
     </template>
-    <template #item="{ item }">
+    <template #item="{ item, props }">
+      <!-- eslint-disable-next-line vuejs-accessibility/anchor-has-content -->
       <a
         :href="item.url"
         :title="item.label as string"
+        target="_blank"
+        v-bind="props.action"
       >
         <Button
           :icon="item.icon"
           :label="item.label as string"
           :severity="item.color"
-          class="ml-3"
         />
       </a>
     </template>
