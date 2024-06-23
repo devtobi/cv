@@ -67,6 +67,9 @@ export default defineConfig({
       },
     }),
   ],
+  optimizeDeps: {
+    include: ['axe-core'],
+  },
   define: {
     'import.meta.env.PACKAGE_REPOSITORY_URL': JSON.stringify(
       packageJson.repository.url,

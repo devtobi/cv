@@ -32,13 +32,16 @@
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/tsconfig": "0.5.1",
+    "axe-core": "4.9.1",
     "eslint": "8.57.0",
     "eslint-plugin-vue": "9.26.0",
+    "eslint-plugin-vuejs-accessibility": "2.3.1",
     "typescript": "5.5.2",
     "unplugin-vue-components": "0.27.0",
     "user-agent-data-types": "0.4.2",
     "vite": "5.3.1",
     "vite-plugin-pwa": "0.20.0",
+    "vue-axe": "3.1.2",
     "vue-tsc": "2.0.22"
   }
 }
