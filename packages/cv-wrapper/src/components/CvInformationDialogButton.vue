@@ -17,7 +17,7 @@
     maximizable
     :contentStyle="{ height: '30rem' }"
     :style="{ width: '50rem' }"
-	:pt="accessibilityOptions"
+    :pt="accessibilityOptions"
   >
     <template #header>
       <div class="flex align-items-center">
@@ -57,11 +57,11 @@
 <script setup lang="ts">
   import { storeToRefs } from 'pinia';
   import { PrimeIcons } from 'primevue/api';
+  import { DialogPassThroughOptions } from 'primevue/dialog';
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import { usePWAStore } from '@/stores/usePWAStore';
-  import { DialogPassThroughOptions } from 'primevue/dialog';
 
   const showDialog = ref(false);
 
@@ -76,10 +76,10 @@
   };
 
   const accessibilityOptions: DialogPassThroughOptions = {
-	  maximizableButton: {
-		  ariaHidden: true
-	  }
-  }
+    maximizableButton: {
+      ariaHidden: true,
+    },
+  };
 
   const { t } = useI18n();
 </script>
