@@ -17,6 +17,7 @@
     maximizable
     :contentStyle="{ height: '30rem' }"
     :style="{ width: '50rem' }"
+	:pt="accessibilityOptions"
   >
     <template #header>
       <div class="flex align-items-center">
@@ -60,6 +61,7 @@
   import { useI18n } from 'vue-i18n';
 
   import { usePWAStore } from '@/stores/usePWAStore';
+  import { DialogPassThroughOptions } from 'primevue/dialog';
 
   const showDialog = ref(false);
 
@@ -72,6 +74,12 @@
   const openRepository = () => {
     window.open(repoUrl, '_blank')!.focus();
   };
+
+  const accessibilityOptions: DialogPassThroughOptions = {
+	  maximizableButton: {
+		  ariaHidden: true
+	  }
+  }
 
   const { t } = useI18n();
 </script>

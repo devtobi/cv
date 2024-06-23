@@ -2,6 +2,7 @@
   <menubar
     :model="menuLinksLocalized"
     class="px-3"
+	role="navigation"
   >
     <template #start>
       <div class="flex flex-row justify-content-center mr-8">
@@ -25,6 +26,7 @@
         :title="item.label as string"
         target="_blank"
         v-bind="props.action"
+		aria-hidden="false"
       >
         <Button
           :icon="item.icon"
