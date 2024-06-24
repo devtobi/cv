@@ -1,8 +1,9 @@
 <template>
   <Button
-    :icon="PrimeIcons.INFO_CIRCLE"
+    :icon="PrimeIcons.COG"
     severity="secondary"
     outlined
+    v-tooltip.bottom="tooltipObject"
     @click="showDialog = true"
     :aria-label="t('CvInformationDialogButton.label')"
     :aria-controls="showDialog ? dialogId : undefined"
@@ -44,6 +45,10 @@
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
+        <CvLanguageSelectDropdown
+          v-if="showLanguageSelection"
+          class="mb-3"
+        />
         <CvInstallPWAButton
           class="mb-3"
           v-if="canBeInstalled"
@@ -55,13 +60,18 @@
 </template>
 
 <script setup lang="ts">
+  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
   import { storeToRefs } from 'pinia';
   import { PrimeIcons } from 'primevue/api';
   import { DialogPassThroughOptions } from 'primevue/dialog';
-  import { ref } from 'vue';
+  import { computed, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
+  import { useThemedTooltip } from '@/composables/useThemedTooltip';
   import { usePWAStore } from '@/stores/usePWAStore';
+
+  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const showLanguageSelection = breakpoints.smaller('lg');
 
   const showDialog = ref(false);
 
@@ -70,6 +80,12 @@
   const dialogId = 'appInfoDialog';
 
   const { canBeInstalled } = storeToRefs(usePWAStore());
+
+  const { t } = useI18n();
+
+  const tooltipLabel = computed(() => t('CvInformationDialogButton.tooltip'));
+
+  const tooltipObject = useThemedTooltip(tooltipLabel, 'Bottom');
 
   const openRepository = () => {
     window.open(repoUrl, '_blank')!.focus();
@@ -80,6 +96,4 @@
       ariaHidden: true,
     },
   };
-
-  const { t } = useI18n();
 </script>
