@@ -30,7 +30,7 @@
       >
         <Button
           :icon="item.icon"
-          :label="item.label as string"
+          :label="hideLinkLabels ? '' : (item.label as string)"
           :severity="item.color"
         />
       </a>
@@ -61,6 +61,7 @@
 
   const breakpoints = useBreakpoints(breakpointsPrimeFlex);
   const isMobile = breakpoints.smaller('sm');
+  const hideLinkLabels = computed(() => breakpoints.active().value == 'lg');
 
   const label = computed(() =>
     isMobile.value
@@ -74,10 +75,13 @@
         'flex flex-row justify-content-center align-items-center md:mr-8 flex-order-0',
     },
     end: {
-      class: 'flex-order mr-3 lg:mr-0',
+      class: 'flex flex-row flex-order-1 mr-3 lg:mr-0',
     },
     button: {
       class: 'flex-order-2',
+    },
+    menuitem: {
+      class: 'm-0',
     },
   };
 

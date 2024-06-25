@@ -27,10 +27,12 @@
   const ariaLabel = computed(() => t('CvPdfDownloadButton.label'));
   const tooltipObject = useThemedTooltip(ariaLabel, 'Bottom');
 
-  const isMobile = breakpoints.smaller('md');
-  const label = computed(() => (isMobile.value ? '' : ariaLabel.value));
+  const hideLabel = breakpoints.smaller('xl');
+  const label = computed(() => (hideLabel.value ? '' : ariaLabel.value));
 
-  const toolTip = computed(() => (isMobile.value ? tooltipObject.value : null));
+  const toolTip = computed(() =>
+    hideLabel.value ? tooltipObject.value : null,
+  );
 
   const downloadUrl = computed(
     () => `./${selectedLanguage.value}/${pdfFilename}`,
