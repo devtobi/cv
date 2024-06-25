@@ -1,6 +1,8 @@
 <template>
   <Button
-    :label="t('CvPdfDownloadButton.label')"
+    :label="label"
+    :aria-label="ariaLabel"
+    v-tooltip.bottom="toolTip"
     :icon="PrimeIcons.FILE_PDF"
     severity="danger"
     @click="downloadPdf"
@@ -8,15 +10,29 @@
 </template>
 
 <script setup lang="ts">
+  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
   import { PrimeIcons } from 'primevue/api';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
+  import { useThemedTooltip } from '@/composables/useThemedTooltip';
   import { authorName, pdfFilename } from '@/config/constants';
 
   const { t } = useI18n();
   const { selectedLanguage } = useSelectedLanguage();
+
+  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+
+  const ariaLabel = computed(() => t('CvPdfDownloadButton.label'));
+  const tooltipObject = useThemedTooltip(ariaLabel, 'Bottom');
+
+  const hideLabel = breakpoints.smaller('xl');
+  const label = computed(() => (hideLabel.value ? '' : ariaLabel.value));
+
+  const toolTip = computed(() =>
+    hideLabel.value ? tooltipObject.value : null,
+  );
 
   const downloadUrl = computed(
     () => `./${selectedLanguage.value}/${pdfFilename}`,

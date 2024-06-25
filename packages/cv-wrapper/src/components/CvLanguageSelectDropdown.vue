@@ -15,7 +15,7 @@
         <span
           class="mr-2 fi"
           :class="`fi-${getFlag(slotProps.value)}`"
-        ></span>
+        />
         <div>{{ getDisplayName(slotProps.value) }}</div>
       </div>
       <span v-else>

@@ -18,6 +18,7 @@
   "CvMenubar": {
     "profilePictureAltText": "Profilbild von {authorName}",
     "newFeaturesSoon": "Neue Funktionen werden bald hinzugefügt!",
+    "titleShort": "TS - CV",
     "title": "{authorName} - Lebenslauf",
     "links": {
       "website": {
@@ -45,7 +46,8 @@
     "githubLink": "Auf GitHub ansehen",
     "footerText1": "Entwickelt mit",
     "footerText2": "und Vue.js",
-    "footerLoveAria": "Liebe"
+    "footerLoveAria": "Liebe",
+    "tooltip": "App-Informationen und Einstellungen"
   },
   "CvDependencyDataTable": {
     "columnNames": {
