@@ -3,7 +3,7 @@
     :icon="PrimeIcons.INFO_CIRCLE"
     severity="secondary"
     outlined
-    v-tooltip.bottom="tooltipObject"
+    v-tooltip.left="tooltipObject"
     @click="showDialog = true"
     :aria-label="t('CvInformationDialogButton.label')"
     :aria-controls="showDialog ? dialogId : undefined"
@@ -17,8 +17,10 @@
     :header="t('CvInformationDialogButton.appInfo')"
     maximizable
     :contentStyle="{ height: '30rem' }"
-    :style="{ width: '50rem' }"
     :pt="accessibilityOptions"
+    :class="maximized ? 'm-0' : 'm-3'"
+    @maximize="maximized = true"
+    @unmaximize="maximized = false"
   >
     <template #header>
       <div class="flex align-items-center">
@@ -26,10 +28,11 @@
           t('CvInformationDialogButton.appInfo')
         }}</span>
         <Button
-          :label="t('CvInformationDialogButton.githubLink')"
+          :label="gitHubLabel"
           :icon="PrimeIcons.GITHUB"
           severity="contrast"
           @click="openRepository"
+          class="mr-3"
         />
       </div>
     </template>
@@ -72,6 +75,13 @@
 
   const breakpoints = useBreakpoints(breakpointsPrimeFlex);
   const showLanguageSelection = breakpoints.smaller('lg');
+  const hideGitHubLabel = breakpoints.smaller('sm');
+
+  const maximized = ref(false);
+
+  const gitHubLabel = computed(() =>
+    hideGitHubLabel.value ? '' : t('CvInformationDialogButton.githubLink'),
+  );
 
   const showDialog = ref(false);
 
@@ -85,7 +95,7 @@
 
   const tooltipLabel = computed(() => t('CvInformationDialogButton.tooltip'));
 
-  const tooltipObject = useThemedTooltip(tooltipLabel, 'Bottom');
+  const tooltipObject = useThemedTooltip(tooltipLabel, 'Left');
 
   const openRepository = () => {
     window.open(repoUrl, '_blank')!.focus();

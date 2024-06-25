@@ -36,6 +36,7 @@
       </template>
     </Column>
     <Column
+      v-if="!hideSoftwareComponentColumn"
       field="component"
       :header="t('CvDependencyDataTable.columnNames.component')"
     >
@@ -55,6 +56,7 @@
 </template>
 
 <script setup lang="ts">
+  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
@@ -66,6 +68,9 @@
   } from '@/types/PackageDependency';
 
   const { t } = useI18n();
+
+  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const hideSoftwareComponentColumn = breakpoints.smaller('sm');
 
   const devDependenciesData = import.meta.env.PACKAGE_DEV_DEPENDENCIES;
   const contentDevDependenciesData = import.meta.env

@@ -1,6 +1,9 @@
 <template>
   <Toast position="bottom-right" />
-  <ConfirmDialog :group="confirmDialogGroup" />
+  <ConfirmDialog
+    :group="confirmDialogGroup"
+    class="m-3"
+  />
   <ConfirmPopup :group="confirmPopupGroup" />
   <div class="app-container flex flex-column min-h-screen">
     <CvMenubar />
