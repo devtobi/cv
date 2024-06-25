@@ -1,7 +1,7 @@
 <template>
   <menubar
     :model="menuLinksLocalized"
-    class="pr-3 md:pr-0 md:px-3 flex flex-row justify-content-between align-items-center"
+    class="pr-3 md:pr-0 md:px-3"
     role="navigation"
     :pt="passThroughOptions"
     :breakpoints="breakpointsPrimeFlex.lg"

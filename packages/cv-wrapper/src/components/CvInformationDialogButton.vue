@@ -1,6 +1,6 @@
 <template>
   <Button
-    :icon="PrimeIcons.COG"
+    :icon="PrimeIcons.INFO_CIRCLE"
     severity="secondary"
     outlined
     v-tooltip.bottom="tooltipObject"
