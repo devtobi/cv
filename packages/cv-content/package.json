@@ -5,7 +5,7 @@
   "description": "My CV content built with JSONResume schema using resumed and puppeteer",
   "scripts": {
     "setup": "puppeteer browsers install chrome",
-    "build": "node scripts/buildHtml.js && node scripts/minify.js && node scripts/generatePdfs.js",
+    "build": "node scripts/buildHtml.js && node scripts/optimizeForWebComponents.js && node scripts/minify.js && node scripts/generatePdfs.js",
     "format": "prettier ../../data/ --write",
     "validate": "node scripts/validate.js",
     "lint": "concurrently --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint .'",

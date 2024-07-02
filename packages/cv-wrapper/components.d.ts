@@ -11,6 +11,7 @@ declare module 'vue' {
     Button: typeof import('primevue/button')['default']
     Column: typeof import('primevue/column')['default']
     CvAppearanceToggleButton: typeof import('./src/components/CvAppearanceToggleButton.vue')['default']
+    CvContentRenderer: typeof import('./src/components/CvContentRenderer.vue')['default']
     CvDependencyDataTable: typeof import('./src/components/CvDependencyDataTable.vue')['default']
     CvFooter: typeof import('./src/components/CvFooter.vue')['default']
     CvInformationDialogButton: typeof import('./src/components/CvInformationDialogButton.vue')['default']
