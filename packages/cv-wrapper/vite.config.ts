@@ -15,7 +15,13 @@ import cvWrapperPackageJson from './package.json';
 export default defineConfig({
   base: './',
   plugins: [
-    vue(),
+    vue({
+		template: {
+			compilerOptions: {
+				isCustomElement: (tag => ['html-include'].includes(tag)),
+			}
+		}
+	}),
     Components({ resolvers: [PrimeVueResolver()] }),
     VueI18nPlugin({
       include: resolve(

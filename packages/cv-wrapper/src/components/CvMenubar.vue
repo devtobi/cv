@@ -12,7 +12,7 @@
         size="large"
         shape="circle"
         role="img"
-        :aria-label="t('CvMenubar.profilePictureAltText', { authorName })"
+        :aria-label="t('CvMenubar.profilePictureAltText', { authorName: authorName })"
         class="mr-3"
       />
       <p>
@@ -47,7 +47,6 @@
 <script lang="ts" setup>
   import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
   import { MenubarPassThroughOptions } from 'primevue/menubar';
-  import { PassThrough } from 'primevue/ts-helpers';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 
@@ -69,7 +68,7 @@
       : t('CvMenubar.title', { authorName }),
   );
 
-  const passThroughOptions: PassThrough<MenubarPassThroughOptions> = {
+  const passThroughOptions: MenubarPassThroughOptions = {
     start: {
       class:
         'flex flex-row justify-content-center align-items-center md:mr-8 flex-order-0',
