@@ -16,12 +16,12 @@ export default defineConfig({
   base: './',
   plugins: [
     vue({
-		template: {
-			compilerOptions: {
-				isCustomElement: (tag => ['html-include'].includes(tag)),
-			}
-		}
-	}),
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => ['html-include'].includes(tag),
+        },
+      },
+    }),
     Components({ resolvers: [PrimeVueResolver()] }),
     VueI18nPlugin({
       include: resolve(

@@ -12,7 +12,9 @@
         size="large"
         shape="circle"
         role="img"
-        :aria-label="t('CvMenubar.profilePictureAltText', { authorName: authorName })"
+        :aria-label="
+          t('CvMenubar.profilePictureAltText', { authorName: authorName })
+        "
         class="mr-3"
       />
       <p>

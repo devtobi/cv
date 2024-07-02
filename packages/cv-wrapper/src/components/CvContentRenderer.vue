@@ -1,16 +1,15 @@
 <template>
-	<html-include
-		:src="contentSrc"
-	/>
+  <html-include :src="contentSrc" />
 </template>
 
 <script setup lang="ts">
   import 'html-include-element';
 
-  import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
   import { computed } from 'vue';
+
+  import { useSelectedLanguage } from '@/composables/useSelectedLanguage';
 
   const { selectedLanguage } = useSelectedLanguage();
 
-  const contentSrc = computed(() => `./${selectedLanguage.value}/`)
+  const contentSrc = computed(() => `./${selectedLanguage.value}/`);
 </script>

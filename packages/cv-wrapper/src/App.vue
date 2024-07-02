@@ -8,7 +8,7 @@
   <div class="app-container flex flex-column min-h-screen">
     <CvMenubar />
     <main class="flex-1">
-	  <CvContentRenderer/>
+      <CvContentRenderer />
       <CvScrollTop />
     </main>
     <CvFooter />
