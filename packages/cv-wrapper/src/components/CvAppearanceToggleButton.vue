@@ -1,8 +1,8 @@
 <template>
   <Button
+    v-tooltip.bottom="tooltipObject"
     :icon="appearanceIcon"
     :aria-label="ariaLabel"
-    v-tooltip.bottom="tooltipObject"
     severity="contrast"
     @click="toggleTheme"
   />

@@ -1,8 +1,8 @@
 <template>
   <Button
+    v-tooltip.bottom="toolTip"
     :label="label"
     :aria-label="ariaLabel"
-    v-tooltip.bottom="toolTip"
     :icon="PrimeIcons.FILE_PDF"
     severity="danger"
     @click="downloadPdf"

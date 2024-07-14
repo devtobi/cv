@@ -1,13 +1,13 @@
 <template>
   <Button
+    v-tooltip.left="tooltipObject"
     :icon="PrimeIcons.INFO_CIRCLE"
     severity="secondary"
     outlined
-    v-tooltip.left="tooltipObject"
-    @click="showDialog = true"
     :aria-label="t('CvInformationDialogButton.label')"
     :aria-controls="showDialog ? dialogId : undefined"
     :aria-expanded="showDialog"
+    @click="showDialog = true"
   />
 
   <Dialog
@@ -16,7 +16,7 @@
     modal
     :header="t('CvInformationDialogButton.appInfo')"
     maximizable
-    :contentStyle="{ height: '30rem' }"
+    :content-style="{ height: '30rem' }"
     :pt="accessibilityOptions"
     :class="maximized ? 'm-0' : 'm-3'"
     @maximize="maximized = true"
@@ -31,8 +31,8 @@
           :label="gitHubLabel"
           :icon="PrimeIcons.GITHUB"
           severity="contrast"
-          @click="openRepository"
           class="mr-3"
+          @click="openRepository"
         />
       </div>
     </template>
@@ -53,8 +53,8 @@
           class="mb-3"
         />
         <CvInstallPWAButton
-          class="mb-3"
           v-if="canBeInstalled"
+          class="mb-3"
         />
         <CvResetPreferencesButton />
       </div>
