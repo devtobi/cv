@@ -8,8 +8,8 @@
     "dev": "vite",
     "build": "bun run pre-build && vue-tsc --build --force && vite build",
     "pre-build": "node scripts/generateSupportedTypes.cjs && pwa-assets-generator",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint,type-check 'prettier . --check' 'eslint .' 'vue-tsc --noEmit'",
-    "fix": "prettier . --write && eslint . --fix"
+    "lint": "concurrently --kill-others-on-fail -n prettier,eslint,type-check 'prettier . --check' 'export ESLINT_USE_FLAT_CONFIG=false && eslint .' 'vue-tsc --noEmit'",
+    "fix": "prettier . --write && export ESLINT_USE_FLAT_CONFIG=false && eslint . --fix"
   },
   "dependencies": {
     "@vueuse/core": "10.11.0",
@@ -34,7 +34,7 @@
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/tsconfig": "0.5.1",
     "axe-core": "4.9.1",
-    "eslint": "8.57.0",
+    "eslint": "9.7.0",
     "eslint-plugin-vue": "9.27.0",
     "eslint-plugin-vuejs-accessibility": "2.3.1",
     "typescript": "5.5.3",
