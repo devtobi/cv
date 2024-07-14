@@ -10,7 +10,7 @@
     "concurrently": "8.2.2",
     "globals": "15.8.0",
     "ncp": "2.0.0",
-    "prettier": "3.3.2"
+    "prettier": "3.3.3"
   },
   "description": "My CV application as a monorepo built using Vue.js and resumed",
   "private": true,
