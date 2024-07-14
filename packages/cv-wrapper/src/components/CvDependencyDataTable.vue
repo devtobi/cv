@@ -3,13 +3,13 @@
     v-model:selection="selectedRow"
     :value="dependencies"
     size="small"
-    @row-click="openNpmPage"
     table-style="min-width: 50%"
     sort-field="type"
     :sort-order="-1"
     scrollable
     scroll-height="flex"
     selection-mode="single"
+    @row-click="openNpmPage"
   >
     <Column
       field="name"
@@ -57,6 +57,7 @@
 
 <script setup lang="ts">
   import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { DataTableRowClickEvent } from 'primevue/datatable';
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
@@ -132,7 +133,7 @@
     }
   };
 
-  const openNpmPage = (event: any) => {
+  const openNpmPage = (event: DataTableRowClickEvent) => {
     const packageName = event.data.name;
     const url = `${npmPackageUrl}${packageName}`;
     window.open(url, '_blank')!.focus();

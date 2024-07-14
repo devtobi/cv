@@ -1,4 +1,4 @@
-import { nextTick } from 'vue';
+import { nextTick, Ref } from 'vue';
 import { createI18n } from 'vue-i18n';
 
 import { defaultLocale } from '@/config/constants';
@@ -21,7 +21,7 @@ const i18n = createI18n<[MessageSchema], DefaultLocale>({
 export default i18n;
 
 const setI18nLanguage = (locale: SupportedLocale) => {
-  (i18n.global.locale as any).value = locale;
+  (i18n.global.locale as unknown as Ref<string>).value = locale;
   document.querySelector('html')!.setAttribute('lang', locale);
 };
 
@@ -34,7 +34,8 @@ export const loadLanguage = async (locale: SupportedLocale) => {
     return nextTick();
   }
 
-  if ((i18n.global.locale as any).value === locale) return nextTick();
+  if ((i18n.global.locale as unknown as Ref<string>).value === locale)
+    return nextTick();
 
   if ((i18n.global.availableLocales as string[]).includes(locale)) {
     setI18nLanguage(locale);
