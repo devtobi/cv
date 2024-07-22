@@ -5,7 +5,7 @@
     "customManagers:githubActionsVersions",
     "helpers:pinGitHubActionDigestsToSemver",
     "security:openssf-scorecard",
-    "schedule:earlyMondays",
+    "schedule:monthly",
     ":approveMajorUpdates",
     ":assignAndReview(devtobi)",
     ":disableRateLimiting",
