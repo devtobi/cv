@@ -33,7 +33,7 @@
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/tsconfig": "0.5.1",
-    "axe-core": "4.9.1",
+    "axe-core": "4.10.0",
     "eslint-plugin-vue": "9.27.0",
     "eslint-plugin-vuejs-accessibility": "2.4.1",
     "typescript": "5.5.4",
