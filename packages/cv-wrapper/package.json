@@ -20,7 +20,7 @@
     "primeicons": "7.0.0",
     "primevue": "3.53.0",
     "vue": "3.4.38",
-    "vue-i18n": "9.13.1"
+    "vue-i18n": "9.14.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.1.0",
