@@ -20,7 +20,7 @@ export default defineConfig({
         compilerOptions: {
           isCustomElement: (tag) => ['html-include'].includes(tag),
         },
-      }
+      },
     }),
     Components({ resolvers: [PrimeVueResolver()] }),
     VueI18nPlugin({
