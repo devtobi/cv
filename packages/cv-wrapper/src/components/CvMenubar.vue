@@ -1,7 +1,7 @@
 <template>
   <menubar
     :model="menuLinksLocalized"
-    class="pr-3 md:pr-0 md:px-3"
+    class="pr-4 md:pr-0 md:px-4"
     role="navigation"
     :pt="passThroughOptions"
     :breakpoints="breakpointsPrimeFlex.lg"
@@ -15,7 +15,7 @@
         :aria-label="
           t('CvMenubar.profilePictureAltText', { authorName: authorName })
         "
-        class="mr-3"
+        class="mr-4"
       />
       <p>
         {{ label }}
@@ -38,9 +38,9 @@
       </a>
     </template>
     <template #end>
-      <cv-pdf-download-button class="mr-3" />
-      <cv-language-select class="hidden lg:flex mr-3" />
-      <cv-appearance-toggle-button class="mr-3" />
+      <cv-pdf-download-button class="mr-4" />
+      <cv-language-select class="hidden lg:flex mr-4" />
+      <cv-appearance-toggle-button class="mr-4" />
       <cv-information-dialog-button />
     </template>
   </menubar>
@@ -73,13 +73,13 @@
   const passThroughOptions: MenubarPassThroughOptions = {
     start: {
       class:
-        'flex flex-row justify-content-center align-items-center md:mr-8 flex-order-0',
+        'flex flex-row justify-center items-center md:mr-20 order-none',
     },
     end: {
-      class: 'flex flex-row flex-order-1 mr-3 lg:mr-0',
+      class: 'flex flex-row order-1 mr-4 lg:mr-0',
     },
     button: {
-      class: 'flex-order-2',
+      class: 'order-2',
     },
     item: {
       class: 'm-0',

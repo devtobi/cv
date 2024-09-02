@@ -23,22 +23,22 @@
     @unmaximize="maximized = false"
   >
     <template #header>
-      <div class="flex align-items-center">
-        <span class="font-bold white-space-nowrap ml-2 mr-5">{{
+      <div class="flex items-center">
+        <span class="font-bold whitespace-nowrap ml-2 mr-8">{{
           t('CvInformationDialogButton.appInfo')
         }}</span>
         <Button
           :label="gitHubLabel"
           :icon="PrimeIcons.GITHUB"
           severity="contrast"
-          class="mr-3"
+          class="mr-4"
           @click="openRepository"
         />
       </div>
     </template>
     <CvDependencyDataTable />
     <template #footer>
-      <div class="w-full flex flex-column align-items-center">
+      <div class="w-full flex flex-col items-center">
         <p>
           {{ t('CvInformationDialogButton.footerText1') }}
           <span
@@ -50,11 +50,11 @@
         </p>
         <CvLanguageSelect
           v-if="showLanguageSelection"
-          class="mb-3"
+          class="mb-4"
         />
         <CvInstallPWAButton
           v-if="canBeInstalled"
-          class="mb-3"
+          class="mb-4"
         />
         <CvResetPreferencesButton />
       </div>

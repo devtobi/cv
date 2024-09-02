@@ -10,7 +10,7 @@
     <template #value="slotProps">
       <div
         v-if="slotProps.value"
-        class="flex align-items-center"
+        class="flex items-center"
       >
         <span
           class="mr-2 fi"
@@ -23,7 +23,7 @@
       </span>
     </template>
     <template #option="slotProps">
-      <div class="flex align-items-center">
+      <div class="flex items-center">
         <span
           class="mr-2 fi"
           :class="`fi-${getFlag(slotProps.option.code)}`"

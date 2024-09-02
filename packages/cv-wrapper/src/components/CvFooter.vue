@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="text-center bg-transparent border-top-1 p-1"
+    class="text-center bg-transparent border-t p-1"
     :class="borderClass"
   >
     <p :class="textClass">

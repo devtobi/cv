@@ -26,7 +26,7 @@
 
   const passThroughOptions = computed(() => {
     return {
-      root: `border-round-md ${backgroundColor.value}`,
+      root: `rounded-md ${backgroundColor.value}`,
       icon: {
         style: iconStyle.value,
       },
