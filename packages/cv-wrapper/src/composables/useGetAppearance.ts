@@ -8,13 +8,14 @@ export const useGetAppearance = () => {
   const prefersDark = usePreferredDark();
   const { selectedAppearance } = useSelectedAppearance();
 
-  const appearance = computed(() =>
-    selectedAppearance.value === Appearance.SYSTEM
-      ? prefersDark.value
-        ? Appearance.DARK
-        : Appearance.LIGHT
-      : selectedAppearance.value,
-  );
+  const appearance = computed(() => {
+    const preferredTheme = prefersDark.value
+      ? Appearance.DARK
+      : Appearance.LIGHT;
+    return selectedAppearance.value === Appearance.SYSTEM
+      ? preferredTheme
+      : selectedAppearance.value;
+  });
 
   return {
     appearance,
