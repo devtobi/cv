@@ -48,7 +48,7 @@
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
-        <CvLanguageSelectDropdown
+        <CvLanguageSelect
           v-if="showLanguageSelection"
           class="mb-3"
         />
@@ -63,9 +63,9 @@
 </template>
 
 <script setup lang="ts">
+  import { PrimeIcons } from '@primevue/core/api';
   import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
   import { storeToRefs } from 'pinia';
-  import { PrimeIcons } from 'primevue/api';
   import { DialogPassThroughOptions } from 'primevue/dialog';
   import { computed, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
@@ -102,8 +102,10 @@
   };
 
   const accessibilityOptions: DialogPassThroughOptions = {
-    maximizableButton: {
-      ariaHidden: true,
+    pcMaximizeButton: {
+      icon: {
+		  ariaHidden: true
+	  }
     },
   };
 </script>

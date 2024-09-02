@@ -1,11 +1,11 @@
 <template>
-  <Dropdown
+  <Select
     v-model="selectedLanguage"
     :options="languages"
     option-label="name"
     option-value="code"
-    :placeholder="t('CvLanguageSelectDropdown.placeholder')"
-    :aria-label="t('CvLanguageSelectDropdown.placeholder')"
+    :placeholder="t('CvLanguageSelect.placeholder')"
+    :aria-label="t('CvLanguageSelect.placeholder')"
   >
     <template #value="slotProps">
       <div
@@ -31,7 +31,7 @@
         <div>{{ slotProps.option.name }}</div>
       </div>
     </template>
-  </Dropdown>
+  </Select>
 </template>
 
 <script setup lang="ts">
