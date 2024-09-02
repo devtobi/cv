@@ -4,7 +4,6 @@
     :value="dependencies"
     size="small"
     table-style="min-width: 50%"
-    sort-field="type"
     :sort-order="-1"
     scrollable
     scroll-height="flex"

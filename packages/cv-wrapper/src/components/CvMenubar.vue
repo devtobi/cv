@@ -1,7 +1,7 @@
 <template>
   <menubar
     :model="menuLinksLocalized"
-    class="pr-4 md:pr-0 md:px-4"
+    class="pr-4 md:px-4"
     role="navigation"
     :pt="passThroughOptions"
     :breakpoints="breakpointsTailwind.lg"

@@ -43,7 +43,7 @@
           {{ t('CvInformationDialogButton.footerText1') }}
           <span
             :class="PrimeIcons.HEART"
-            style="color: var(--red-500)"
+			class="text-primary mb-4"
             :aria-label="t('CvInformationDialogButton.footerLoveAria')"
           />
           {{ t('CvInformationDialogButton.footerText2') }}
