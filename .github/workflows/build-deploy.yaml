@@ -1,4 +1,4 @@
-name: "Build and Deploy"
+name: 'Build and Deploy'
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 on:
@@ -6,29 +6,29 @@ on:
     inputs:
       theme:
         type: string
-        description: "Theme to use for building website and/or PDF document (jsonresume-theme-<theme>)"
+        description: 'Theme to use for building website and/or PDF document (jsonresume-theme-<theme>)'
         required: true
         default: macchiato-plus
       deploy:
         type: boolean
-        description: "Whether to deploy or not"
+        description: 'Whether to deploy or not'
         required: true
         default: false
       node-version:
         type: string
-        description: "NodeJS version to use"
+        description: 'NodeJS version to use'
         required: false
-        default: "lts/*"
+        default: 'lts/*'
       bun-version:
         type: string
-        description: "Bun version to use"
+        description: 'Bun version to use'
         required: false
-        default: "latest"
+        default: 'latest'
       chrome-version:
         type: string
-        description: "Chrome version to use"
+        description: 'Chrome version to use'
         required: false
-        default: "stable"
+        default: 'stable'
 env:
   artifact-key: deployment-${{ github.sha }}
   deployment-directory: dist
@@ -46,7 +46,7 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
           bun-version: ${{ inputs.bun-version }}
-          use-chrome: "true"
+          use-chrome: 'true'
           chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
         working-directory: ${{ env.content-package-path }}
@@ -54,7 +54,7 @@ jobs:
       - name: Build website
         env:
           THEME: ${{ env.full-theme-name }}
-          PUPPETEER_BROWSER_REVISION: ${{ steps.setup-tooling.outputs.chrome-version }}
+          PUPPETEER_CHROME_VERSION: ${{ steps.setup-tooling.outputs.chrome-version }}
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-tooling.outputs.chrome-path }}
         run: bun run build
       - name: Create deployable artifact
