@@ -1,4 +1,4 @@
-import { PrimeIcons } from 'primevue/api';
+import { PrimeIcons } from '@primevue/core/api';
 import { useConfirm } from 'primevue/useconfirm';
 import { useRegisterSW } from 'virtual:pwa-register/vue';
 import { watch } from 'vue';

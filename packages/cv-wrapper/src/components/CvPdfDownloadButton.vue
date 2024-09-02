@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
+  import { PrimeIcons } from '@primevue/core/api';
   import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
-  import { PrimeIcons } from 'primevue/api';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 

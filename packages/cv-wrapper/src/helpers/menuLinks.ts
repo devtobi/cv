@@ -1,4 +1,4 @@
-import { PrimeIcons } from 'primevue/api';
+import { PrimeIcons } from '@primevue/core/api';
 
 import { staticStrings } from '@/helpers/staticStrings';
 import { LocalizableMenuItem } from '@/types/LocalizableMenuItem';

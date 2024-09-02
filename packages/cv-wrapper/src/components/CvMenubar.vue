@@ -39,7 +39,7 @@
     </template>
     <template #end>
       <cv-pdf-download-button class="mr-3" />
-      <cv-language-selector class="hidden lg:flex mr-3" />
+      <cv-language-select class="hidden lg:flex mr-3" />
       <cv-appearance-toggle-button class="mr-3" />
       <cv-information-dialog-button />
     </template>
@@ -56,7 +56,7 @@
 
   import profilePicture from '@/assets/images/profile_picture.png';
   import CvInformationDialogButton from '@/components/CvInformationDialogButton.vue';
-  import CvLanguageSelector from '@/components/CvLanguageSelectDropdown.vue';
+  import CvLanguageSelect from '@/components/CvLanguageSelect.vue';
   import { authorName } from '@/config/constants';
   import menuLinks from '@/helpers/menuLinks';
 
@@ -81,7 +81,7 @@
     button: {
       class: 'flex-order-2',
     },
-    menuitem: {
+    item: {
       class: 'm-0',
     },
   };
