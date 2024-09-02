@@ -1,10 +1,10 @@
 <template>
   <menubar
     :model="menuLinksLocalized"
-    class="pr-3 md:pr-0 md:px-3"
+    class="pr-4 md:px-4"
     role="navigation"
     :pt="passThroughOptions"
-    :breakpoints="breakpointsPrimeFlex.lg"
+    :breakpoints="breakpointsTailwind.lg"
   >
     <template #start>
       <Avatar
@@ -15,7 +15,7 @@
         :aria-label="
           t('CvMenubar.profilePictureAltText', { authorName: authorName })
         "
-        class="mr-3"
+        class="mr-4"
       />
       <p>
         {{ label }}
@@ -38,16 +38,16 @@
       </a>
     </template>
     <template #end>
-      <cv-pdf-download-button class="mr-3" />
-      <cv-language-selector class="hidden lg:flex mr-3" />
-      <cv-appearance-toggle-button class="mr-3" />
+      <cv-pdf-download-button class="mr-4" />
+      <cv-language-select class="hidden lg:flex mr-4" />
+      <cv-appearance-toggle-button class="mr-4" />
       <cv-information-dialog-button />
     </template>
   </menubar>
 </template>
 
 <script lang="ts" setup>
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { MenubarPassThroughOptions } from 'primevue/menubar';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
@@ -56,11 +56,11 @@
 
   import profilePicture from '@/assets/images/profile_picture.png';
   import CvInformationDialogButton from '@/components/CvInformationDialogButton.vue';
-  import CvLanguageSelector from '@/components/CvLanguageSelectDropdown.vue';
+  import CvLanguageSelect from '@/components/CvLanguageSelect.vue';
   import { authorName } from '@/config/constants';
   import menuLinks from '@/helpers/menuLinks';
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
   const isMobile = breakpoints.smaller('sm');
   const hideLinkLabels = computed(() => breakpoints.active().value == 'lg');
 
@@ -72,16 +72,15 @@
 
   const passThroughOptions: MenubarPassThroughOptions = {
     start: {
-      class:
-        'flex flex-row justify-content-center align-items-center md:mr-8 flex-order-0',
+      class: 'flex flex-row justify-center items-center md:mr-20 order-none',
     },
     end: {
-      class: 'flex flex-row flex-order-1 mr-3 lg:mr-0',
+      class: 'flex flex-row order-1 mr-4 lg:mr-0',
     },
     button: {
-      class: 'flex-order-2',
+      class: 'order-2',
     },
-    menuitem: {
+    item: {
       class: 'm-0',
     },
   };

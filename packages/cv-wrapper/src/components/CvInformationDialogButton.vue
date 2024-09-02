@@ -23,38 +23,38 @@
     @unmaximize="maximized = false"
   >
     <template #header>
-      <div class="flex align-items-center">
-        <span class="font-bold white-space-nowrap ml-2 mr-5">{{
+      <div class="flex items-center">
+        <span class="font-bold whitespace-nowrap ml-2 mr-8">{{
           t('CvInformationDialogButton.appInfo')
         }}</span>
         <Button
           :label="gitHubLabel"
           :icon="PrimeIcons.GITHUB"
           severity="contrast"
-          class="mr-3"
+          class="mr-4"
           @click="openRepository"
         />
       </div>
     </template>
     <CvDependencyDataTable />
     <template #footer>
-      <div class="w-full flex flex-column align-items-center">
+      <div class="w-full flex flex-col items-center">
         <p>
           {{ t('CvInformationDialogButton.footerText1') }}
           <span
             :class="PrimeIcons.HEART"
-            style="color: var(--red-500)"
+            class="text-primary mb-4"
             :aria-label="t('CvInformationDialogButton.footerLoveAria')"
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
-        <CvLanguageSelectDropdown
+        <CvLanguageSelect
           v-if="showLanguageSelection"
-          class="mb-3"
+          class="mb-4"
         />
         <CvInstallPWAButton
           v-if="canBeInstalled"
-          class="mb-3"
+          class="mb-4"
         />
         <CvResetPreferencesButton />
       </div>
@@ -63,9 +63,9 @@
 </template>
 
 <script setup lang="ts">
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { PrimeIcons } from '@primevue/core/api';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { storeToRefs } from 'pinia';
-  import { PrimeIcons } from 'primevue/api';
   import { DialogPassThroughOptions } from 'primevue/dialog';
   import { computed, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
@@ -73,7 +73,7 @@
   import { useThemedTooltip } from '@/composables/useThemedTooltip';
   import { usePWAStore } from '@/stores/usePWAStore';
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
   const showLanguageSelection = breakpoints.smaller('lg');
   const hideGitHubLabel = breakpoints.smaller('sm');
 
@@ -102,8 +102,10 @@
   };
 
   const accessibilityOptions: DialogPassThroughOptions = {
-    maximizableButton: {
-      ariaHidden: true,
+    pcMaximizeButton: {
+      icon: {
+        ariaHidden: true,
+      },
     },
   };
 </script>

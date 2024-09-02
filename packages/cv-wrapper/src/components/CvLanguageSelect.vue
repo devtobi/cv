@@ -1,16 +1,16 @@
 <template>
-  <Dropdown
+  <Select
     v-model="selectedLanguage"
     :options="languages"
     option-label="name"
     option-value="code"
-    :placeholder="t('CvLanguageSelectDropdown.placeholder')"
-    :aria-label="t('CvLanguageSelectDropdown.placeholder')"
+    :placeholder="t('CvLanguageSelect.placeholder')"
+    :aria-label="t('CvLanguageSelect.placeholder')"
   >
     <template #value="slotProps">
       <div
         v-if="slotProps.value"
-        class="flex align-items-center"
+        class="flex items-center"
       >
         <span
           class="mr-2 fi"
@@ -23,7 +23,7 @@
       </span>
     </template>
     <template #option="slotProps">
-      <div class="flex align-items-center">
+      <div class="flex items-center">
         <span
           class="mr-2 fi"
           :class="`fi-${getFlag(slotProps.option.code)}`"
@@ -31,10 +31,11 @@
         <div>{{ slotProps.option.name }}</div>
       </div>
     </template>
-  </Dropdown>
+  </Select>
 </template>
 
 <script setup lang="ts">
+  import Select from 'primevue/select';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 

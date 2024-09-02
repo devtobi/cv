@@ -21,9 +21,6 @@ export default defineConfig({
           isCustomElement: (tag) => ['html-include'].includes(tag),
         },
       },
-      features: {
-        optionsAPI: false,
-      },
     }),
     Components({ resolvers: [PrimeVueResolver()] }),
     VueI18nPlugin({

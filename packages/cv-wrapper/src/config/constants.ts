@@ -6,10 +6,8 @@ const linkedinName = 'tobias-stadler';
 const websiteUrl = 'https://devtobi.de';
 const defaultLocale: Extract<SupportedLocale, 'en'> = 'en';
 const pdfFilename = 'cv.pdf';
-const lightTheme = 'aura-light-green';
-const darkTheme = 'aura-dark-green';
 
-const themeLinkHtml = 'theme-link';
+const darkModeClass = 'app-dark';
 const npmPackageUrl = 'https://www.npmjs.com/package/';
 const confirmPopupGroup = 'popup';
 const confirmDialogGroup = 'dialog';
@@ -21,9 +19,7 @@ export {
   websiteUrl,
   defaultLocale,
   pdfFilename,
-  lightTheme,
-  darkTheme,
-  themeLinkHtml,
+  darkModeClass,
   npmPackageUrl,
   confirmPopupGroup,
   confirmDialogGroup,

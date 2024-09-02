@@ -1,4 +1,4 @@
-import { PrimeIcons } from 'primevue/api';
+import { PrimeIcons } from '@primevue/core/api';
 
 import { getOperatingSystem } from '@/helpers/getOperatingSystem';
 import { OperatingSystem } from '@/types/OperatingSystem';

@@ -2,10 +2,10 @@
   <Toast position="bottom-right" />
   <ConfirmDialog
     :group="confirmDialogGroup"
-    class="m-3"
+    class="m-4"
   />
   <ConfirmPopup :group="confirmPopupGroup" />
-  <div class="app-container flex flex-column min-h-screen">
+  <div class="app-container flex flex-col min-h-screen">
     <CvMenubar />
     <main class="flex-1">
       <CvContentRenderer />

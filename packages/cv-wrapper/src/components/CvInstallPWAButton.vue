@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
+  import { PrimeIcons } from '@primevue/core/api';
   import { storeToRefs } from 'pinia';
-  import { PrimeIcons } from 'primevue/api';
   import { useI18n } from 'vue-i18n';
 
   import { installPWA } from '@/helpers/installPWA';

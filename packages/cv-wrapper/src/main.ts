@@ -4,6 +4,8 @@ import { App, createApp, Fragment, h } from 'vue';
 import { registerPlugins } from '@/plugins';
 import AppComponent from './App.vue';
 
+import '@/assets/style.css';
+
 let app = null;
 
 const setupApp = (app: App) => {

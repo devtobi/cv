@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-  import { PrimeIcons } from 'primevue/api';
+  import { PrimeIcons } from '@primevue/core/api';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 
@@ -26,7 +26,7 @@
 
   const passThroughOptions = computed(() => {
     return {
-      root: `border-round-md ${backgroundColor.value}`,
+      root: `rounded-md ${backgroundColor.value}`,
       icon: {
         style: iconStyle.value,
       },
