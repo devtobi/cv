@@ -1,5 +1,4 @@
 import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
 
 import Aura from '@primevue/themes/aura';
 import PrimeVue, { PrimeVueConfiguration } from 'primevue/config';
@@ -14,13 +13,13 @@ const primeVueOptions: PrimeVueConfiguration = {
   theme: {
     preset: Aura,
     options: {
-		darkModeSelector: `.${darkModeClass}`,
-		cssLayer: {
-			name: 'primevue',
-			order: 'tailwind-base, primevue, tailwind-utilities',
-		}
-	}
-  }
+      darkModeSelector: `.${darkModeClass}`,
+      cssLayer: {
+        name: 'primevue',
+        order: 'tailwind-base, primevue, tailwind-utilities',
+      },
+    },
+  },
 };
 
 export { primeVue, primeVueOptions, ConfirmationService, ToastService };

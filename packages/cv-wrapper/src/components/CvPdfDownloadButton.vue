@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
   import { PrimeIcons } from '@primevue/core/api';
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 
@@ -22,7 +22,7 @@
   const { t } = useI18n();
   const { selectedLanguage } = useSelectedLanguage();
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
 
   const ariaLabel = computed(() => t('CvPdfDownloadButton.label'));
   const tooltipObject = useThemedTooltip(ariaLabel, 'Bottom');

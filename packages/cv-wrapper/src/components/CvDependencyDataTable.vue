@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang="ts">
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { DataTableRowClickEvent } from 'primevue/datatable';
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
@@ -70,7 +70,7 @@
 
   const { t } = useI18n();
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
   const hideSoftwareComponentColumn = breakpoints.smaller('sm');
 
   const devDependenciesData = import.meta.env.PACKAGE_DEV_DEPENDENCIES;

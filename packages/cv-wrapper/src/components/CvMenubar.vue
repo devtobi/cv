@@ -4,7 +4,7 @@
     class="pr-4 md:pr-0 md:px-4"
     role="navigation"
     :pt="passThroughOptions"
-    :breakpoints="breakpointsPrimeFlex.lg"
+    :breakpoints="breakpointsTailwind.lg"
   >
     <template #start>
       <Avatar
@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { MenubarPassThroughOptions } from 'primevue/menubar';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
@@ -60,7 +60,7 @@
   import { authorName } from '@/config/constants';
   import menuLinks from '@/helpers/menuLinks';
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
   const isMobile = breakpoints.smaller('sm');
   const hideLinkLabels = computed(() => breakpoints.active().value == 'lg');
 
@@ -72,8 +72,7 @@
 
   const passThroughOptions: MenubarPassThroughOptions = {
     start: {
-      class:
-        'flex flex-row justify-center items-center md:mr-20 order-none',
+      class: 'flex flex-row justify-center items-center md:mr-20 order-none',
     },
     end: {
       class: 'flex flex-row order-1 mr-4 lg:mr-0',

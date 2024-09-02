@@ -64,7 +64,7 @@
 
 <script setup lang="ts">
   import { PrimeIcons } from '@primevue/core/api';
-  import { breakpointsPrimeFlex, useBreakpoints } from '@vueuse/core';
+  import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
   import { storeToRefs } from 'pinia';
   import { DialogPassThroughOptions } from 'primevue/dialog';
   import { computed, ref } from 'vue';
@@ -73,7 +73,7 @@
   import { useThemedTooltip } from '@/composables/useThemedTooltip';
   import { usePWAStore } from '@/stores/usePWAStore';
 
-  const breakpoints = useBreakpoints(breakpointsPrimeFlex);
+  const breakpoints = useBreakpoints(breakpointsTailwind);
   const showLanguageSelection = breakpoints.smaller('lg');
   const hideGitHubLabel = breakpoints.smaller('sm');
 
@@ -104,8 +104,8 @@
   const accessibilityOptions: DialogPassThroughOptions = {
     pcMaximizeButton: {
       icon: {
-		  ariaHidden: true
-	  }
+        ariaHidden: true,
+      },
     },
   };
 </script>
