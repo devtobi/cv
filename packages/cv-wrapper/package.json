@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@primevue/themes": "4.0.7",
-    "@vueuse/core": "11.0.3",
+    "@vueuse/core": "11.1.0",
     "flag-icons": "7.2.3",
     "html-include-element": "0.3.0",
     "pinia": "2.2.2",
