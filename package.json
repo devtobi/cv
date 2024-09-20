@@ -9,7 +9,7 @@
     "eslint": "9.10.0",
     "@eslint/js": "9.10.0",
     "@ianvs/prettier-plugin-sort-imports": "4.3.1",
-    "concurrently": "8.2.2",
+    "concurrently": "9.0.1",
     "globals": "15.9.0",
     "ncp": "2.0.0",
     "prettier": "3.3.3"
@@ -18,7 +18,7 @@
   "private": true,
   "scripts": {
     "build": "bun --filter '*' build && bun post-build",
-    "post-build": "mkdir -p dist && concurrently --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist/' 'ncp packages/cv-wrapper/dist dist/'",
+    "post-build": "mkdir -p dist && concurrently --pad-prefix --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist/' 'ncp packages/cv-wrapper/dist dist/'",
     "setup": "bun --filter cv-content setup",
     "format": "bun --filter cv-content format",
     "validate": "bun --filter cv-content validate",
