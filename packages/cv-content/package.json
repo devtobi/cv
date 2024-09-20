@@ -8,7 +8,7 @@
     "build": "node scripts/buildHtml.js && node scripts/optimizeForWebComponents.js && node scripts/minify.js && node scripts/generatePdfs.js",
     "format": "prettier ../../data/ --write",
     "validate": "node scripts/validate.js",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint'",
+    "lint": "concurrently --pad-prefix --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint'",
     "fix": "prettier . --write && eslint --fix"
   },
   "keywords": [],

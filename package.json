@@ -18,7 +18,7 @@
   "private": true,
   "scripts": {
     "build": "bun --filter '*' build && bun post-build",
-    "post-build": "mkdir -p dist && concurrently --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist/' 'ncp packages/cv-wrapper/dist dist/'",
+    "post-build": "mkdir -p dist && concurrently --pad-prefix --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist/' 'ncp packages/cv-wrapper/dist dist/'",
     "setup": "bun --filter cv-content setup",
     "format": "bun --filter cv-content format",
     "validate": "bun --filter cv-content validate",

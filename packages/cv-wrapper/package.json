@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "bun run pre-build && vue-tsc --build --force && vite build",
     "pre-build": "node scripts/generateSupportedTypes.cjs && pwa-assets-generator",
-    "lint": "concurrently --kill-others-on-fail -n prettier,eslint,type-check 'prettier . --check' 'eslint' 'vue-tsc --noEmit'",
+    "lint": "concurrently --pad-prefix --kill-others-on-fail -n prettier,eslint,type-check 'prettier . --check' 'eslint' 'vue-tsc --noEmit'",
     "fix": "prettier . --write && eslint --fix"
   },
   "dependencies": {
