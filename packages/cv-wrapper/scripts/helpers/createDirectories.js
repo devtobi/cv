@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 
 import { GENERATED_DIRECTORY } from './constants.js';
 
