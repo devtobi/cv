@@ -60,11 +60,11 @@
     return code === 'en' ? 'gb' : code;
   };
 
-  const getDisplayName = (code: string) => {
+  const getDisplayName = (code: string): string => {
     const languageNames = new Intl.DisplayNames([code], {
       type: 'language',
     });
-    return toFirstUppercase(languageNames.of(code)!);
+    return toFirstUppercase(languageNames.of(code) ?? '');
   };
 
   const toFirstUppercase = (str: string): string => {

@@ -9,17 +9,21 @@ export const useWatchAppearance = () => {
 
   const setPrimeVueAppearance = (appearance: string) => {
     const isLightTheme = appearance === Appearance.LIGHT;
-    isLightTheme ? disableDarkMode() : enableDarkMode();
+    if (isLightTheme) {
+      disableDarkMode();
+    } else {
+      enableDarkMode();
+    }
   };
 
   const enableDarkMode = () => {
-    const element = document.querySelector('html')!;
-    element.classList.add(darkModeClass);
+    const element = document.querySelector('html');
+    element?.classList.add(darkModeClass);
   };
 
   const disableDarkMode = () => {
-    const element = document.querySelector('html')!;
-    element.classList.remove(darkModeClass);
+    const element = document.querySelector('html');
+    element?.classList.remove(darkModeClass);
   };
 
   watch(

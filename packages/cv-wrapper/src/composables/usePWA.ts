@@ -14,7 +14,7 @@ export const usePWA = () => {
 
   const { needRefresh, updateServiceWorker } = useRegisterSW({
     onRegisteredSW(swUrl, r) {
-      r &&
+      if (r) {
         setInterval(async () => {
           if (!(!r.installing && navigator)) return;
 
@@ -30,6 +30,7 @@ export const usePWA = () => {
 
           if (resp?.status === 200) await r.update();
         }, intervalMS);
+      }
     },
   });
 

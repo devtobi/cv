@@ -22,7 +22,7 @@ export default i18n;
 
 const setI18nLanguage = (locale: SupportedLocale) => {
   (i18n.global.locale as unknown as Ref<string>).value = locale;
-  document.querySelector('html')!.setAttribute('lang', locale);
+  document.querySelector('html')?.setAttribute('lang', locale);
 };
 
 export const loadLanguage = async (locale: SupportedLocale) => {

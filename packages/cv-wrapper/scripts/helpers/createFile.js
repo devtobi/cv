@@ -1,4 +1,4 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
 function createFile(filePath, content) {
   try {
@@ -8,4 +8,4 @@ function createFile(filePath, content) {
   }
 }
 
-module.exports = createFile;
+export default createFile;

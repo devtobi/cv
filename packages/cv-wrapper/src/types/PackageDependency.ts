@@ -9,9 +9,9 @@ export enum PackageDependencyComponentType {
   ALL = 'all',
 }
 
-export type PackageDependency = {
+export interface PackageDependency {
   name: string;
   version: string;
   type: PackageDependencyType;
   component: PackageDependencyComponentType;
-};
+}

@@ -1,6 +1,6 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
-const { GENERATED_DIRECTORY } = require('./constants.cjs');
+import { GENERATED_DIRECTORY } from './constants.js';
 
 const createDirectories = () => {
   try {
@@ -10,4 +10,4 @@ const createDirectories = () => {
   }
 };
 
-module.exports = createDirectories;
+export default createDirectories;
