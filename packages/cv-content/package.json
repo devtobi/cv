@@ -18,7 +18,7 @@
     "eslint-config-prettier": "9.1.0",
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
-    "puppeteer": "23.4.0",
+    "puppeteer": "23.5.0",
     "resumed": "4.0.0"
   }
 }
