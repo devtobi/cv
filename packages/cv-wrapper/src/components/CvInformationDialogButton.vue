@@ -98,7 +98,7 @@
   const tooltipObject = useThemedTooltip(tooltipLabel, 'Left');
 
   const openRepository = () => {
-    window.open(repoUrl, '_blank')!.focus();
+    window.open(repoUrl, '_blank')?.focus();
   };
 
   const accessibilityOptions: DialogPassThroughOptions = {

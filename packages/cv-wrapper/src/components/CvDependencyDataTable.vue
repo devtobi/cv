@@ -135,6 +135,6 @@
   const openNpmPage = (event: DataTableRowClickEvent) => {
     const packageName = event.data.name;
     const url = `${npmPackageUrl}${packageName}`;
-    window.open(url, '_blank')!.focus();
+    window.open(url, '_blank')?.focus();
   };
 </script>

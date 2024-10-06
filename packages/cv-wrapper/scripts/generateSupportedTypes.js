@@ -1,13 +1,14 @@
-const util = require('util');
-const createDirectories = require('./helpers/createDirectories.cjs');
-const createFile = require('./helpers/createFile.cjs');
-const getFiles = require('./helpers/getFiles.cjs');
-const {
+import util from 'util';
+
+import {
   DATA_DIRECTORY,
-  SUPPORTED_LOCALE_FILE_TEMPLATE,
   GENERATED_DIRECTORY,
   SUPPORTED_LOCALE_FILE_NAME,
-} = require('./helpers/constants.cjs');
+  SUPPORTED_LOCALE_FILE_TEMPLATE,
+} from './helpers/constants.js';
+import createDirectories from './helpers/createDirectories.js';
+import createFile from './helpers/createFile.js';
+import getFiles from './helpers/getFiles.js';
 
 createDirectories();
 

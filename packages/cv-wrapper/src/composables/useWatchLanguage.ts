@@ -21,9 +21,13 @@ export const useWatchLanguage = () => {
   );
 
   const updatePrimeVueLocalizations = () => {
-    PrimeVue.config.locale!.aria!.close = t('PrimeVue.aria.close');
-    PrimeVue.config.locale!.aria!.scrollTop = t('PrimeVue.aria.scrollTop');
-    PrimeVue.config.locale!.accept = t('PrimeVue.accept');
-    PrimeVue.config.locale!.reject = t('PrimeVue.reject');
+    if (PrimeVue.config.locale) {
+      PrimeVue.config.locale.accept = t('PrimeVue.accept');
+      PrimeVue.config.locale.reject = t('PrimeVue.reject');
+    }
+    if (PrimeVue.config.locale?.aria) {
+      PrimeVue.config.locale.aria.close = t('PrimeVue.aria.close');
+      PrimeVue.config.locale.aria.scrollTop = t('PrimeVue.aria.scrollTop');
+    }
   };
 };
