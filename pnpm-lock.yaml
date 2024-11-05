@@ -73,7 +73,7 @@ importers:
         version: 4.0.7(vue@3.5.12(typescript@5.5.4))
       tailwindcss-primeui:
         specifier: 0.3.4
-        version: 0.3.4(tailwindcss@3.4.13)
+        version: 0.3.4(tailwindcss@3.4.14)
       vue:
         specifier: 3.5.12
         version: 3.5.12(typescript@5.5.4)
@@ -124,8 +124,8 @@ importers:
         specifier: 8.4.47
         version: 8.4.47
       tailwindcss:
-        specifier: 3.4.13
-        version: 3.4.13
+        specifier: 3.4.14
+        version: 3.4.14
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -3042,8 +3042,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.1.0'
 
-  tailwindcss@3.4.13:
-    resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
+  tailwindcss@3.4.14:
+    resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -6703,11 +6703,11 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.8.1
 
-  tailwindcss-primeui@0.3.4(tailwindcss@3.4.13):
+  tailwindcss-primeui@0.3.4(tailwindcss@3.4.14):
     dependencies:
-      tailwindcss: 3.4.13
+      tailwindcss: 3.4.14
 
-  tailwindcss@3.4.13:
+  tailwindcss@3.4.14:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
