@@ -17,15 +17,12 @@
   "description": "My CV application as a monorepo built using Vue.js and resumed",
   "private": true,
   "scripts": {
-    "build": "bun --filter '*' build && bun post-build",
+    "build": "pnpm run -r build && pnpm run post-build",
     "post-build": "mkdir -p dist && concurrently --pad-prefix --kill-others-on-fail -n copy-content,copy-wrapper 'ncp packages/cv-content/dist dist/' 'ncp packages/cv-wrapper/dist dist/'",
-    "setup": "bun --filter cv-content setup",
-    "format": "bun --filter cv-content format",
-    "validate": "bun --filter cv-content validate",
-    "lint": "bun --filter '*' lint",
-    "fix": "bun --filter '*' fix"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+    "setup": "pnpm run --filter cv-content setup",
+    "format": "pnpm run --filter cv-content format",
+    "validate": "pnpm run --filter cv-content validate",
+    "lint": "pnpm run -r lint",
+    "fix": "pnpm run -r fix"
+  }
 }
