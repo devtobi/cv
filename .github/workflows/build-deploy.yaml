@@ -19,9 +19,9 @@ on:
         description: 'NodeJS version to use'
         required: false
         default: 'lts/*'
-      bun-version:
+      pnpm-version:
         type: string
-        description: 'Bun version to use'
+        description: 'pnpm version to use'
         required: false
         default: 'latest'
       chrome-version:
@@ -45,18 +45,18 @@ jobs:
         uses: ./.github/actions/setup-tooling
         with:
           node-version: ${{ inputs.node-version }}
-          bun-version: ${{ inputs.bun-version }}
+          pnpm-version: ${{ inputs.pnpm-version }}
           use-chrome: 'true'
           chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
         working-directory: ${{ env.content-package-path }}
-        run: bun add ${{ env.full-theme-name }} -d -E
+        run: pnpm install --frozen-lockfile -D ${{ env.full-theme-name }}
       - name: Build website
         env:
           THEME: ${{ env.full-theme-name }}
           PUPPETEER_CHROME_VERSION: ${{ steps.setup-tooling.outputs.chrome-version }}
           PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-tooling.outputs.chrome-path }}
-        run: bun run build
+        run: pnpm run build
       - name: Create deployable artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
