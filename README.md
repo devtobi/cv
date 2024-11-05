@@ -82,9 +82,9 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-This project requires [Node.js](https://nodejs.org/) to run. It uses [bun](https://bun.io) to manage dependencies. You need to have both tools installed.
+This project requires [Node.js](https://nodejs.org/) to run. It uses [pnpm](https://pnpm.io) to manage dependencies. You need to have both tools installed.
 
-**Info**: If you want to use `npm` as alternative to `bun`, just replace all commands in this guide with `npm` instead of `bun`.
+**Info**: If you want to use `npm` as alternative to `pnpm`, just replace all commands in this guide with `npm` instead of `pnpm`.
 
 ### Installation
 
@@ -97,13 +97,13 @@ git clone https://github.com/devtobi/cv.git
 2. Install dependencies
 
 ```sh
-bun install
+pnpm install
 ```
 
 3. **Optional**: Install puppeteer Chrome browser on your machine (only required `.pdf` generation)
 
 ```sh
-bun run prepare
+pnpm run setup
 ```
 
 ## Usage
@@ -116,16 +116,16 @@ To get started using this repository, you need to edit the `.json` files inside 
 
 ### Local Usage
 
-**Info**: Please note your `.json` files need to be written in JSONResume schema. You can use `bun run format` to format your files and `bun run validate` to check if your edits are valid, according to JSONResume.
+**Info**: Please note your `.json` files need to be written in JSONResume schema. You can use `pnpm run format` to format your files and `pnpm run validate` to check if your edits are valid, according to JSONResume.
 
 If you want to build your CV locally, you need to install a theme onto your system, as this repository does not come with one by default. Themes are published as npm packages in the format `jsonresume-theme-*`. Take a look at the available themes [here](https://www.npmjs.com/search?q=jsonresume-theme-).
 
-Install your desired theme as development dependency using `bun install -D jsonresume-theme-*` (or `npm install -D jsonresume-theme-*`).
+Install your desired theme as development dependency using `pnpm install -D jsonresume-theme-*` (or `npm install -D jsonresume-theme-*`).
 Then set your theme by exporting an environment variable named `THEME` to the name of your theme (e.g. `export THEME=jsonresume-theme-basic`).
 
 **Info**: Keep in note the commands for exporting environment variables might differ depending on your operating system.
 
-To build the whole monorepo use the command `bun run build`.
+To build the whole monorepo use the command `pnpm run build`.
 The command builds an `.html` version and a `.pdf` version and places those files into specific subdirectories for each language your CV was written in. On top of that, it builds the Vue based wrapper application. In the end both build folders are combined into a single `dist` folder. This folder can be served as is.
 
 ### Usage with GitHub actions
@@ -134,7 +134,7 @@ This repository provides custom workflows to validate or build and deploy your C
 
 The validation will run on every push to any branch. Build and deployment can only be triggered on your `main` branch via a manual trigger through the GitHub Actions GUI.
 
-The workflows use a custom action to set up required tooling for running inside CI/CD environments. It uses caching to speed up execution time when no changes inside `bun.lockb` were found.
+The workflows use a custom action to set up required tooling for running inside CI/CD environments. It uses caching to speed up execution time when no changes inside `pnpm-lock.yaml` were found.
 
 **Info**: As you will not change any dependencies as a normal user of this repository, you will greatly benefit from the caching mechanism.
 
