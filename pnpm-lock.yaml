@@ -51,8 +51,8 @@ importers:
   packages/cv-wrapper:
     dependencies:
       '@primevue/themes':
-        specifier: 4.0.7
-        version: 4.0.7
+        specifier: 4.2.1
+        version: 4.2.1
       '@vueuse/core':
         specifier: 11.2.0
         version: 11.2.0(vue@3.5.12(typescript@5.5.4))
@@ -990,16 +990,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@primeuix/styled@0.0.5':
-    resolution: {integrity: sha512-pVoGn/uPkVm/DyF3TR3EmH/pL/dP4nR42FcYbVduFq9VfO3KVeOEqvcCULHXos66RZO9MCbCFUoLy6ctf9GUGQ==}
-    engines: {node: '>=12.11.0'}
-
   '@primeuix/styled@0.3.0':
     resolution: {integrity: sha512-XsLbmyM1u50A0EDATIHyqm5O/zOCSyNKPk4pNN8HFvEPehbsjf4tkXcRZAyaVvntSCLpV4XGAj7v5EDCQkBRlg==}
-    engines: {node: '>=12.11.0'}
-
-  '@primeuix/utils@0.0.5':
-    resolution: {integrity: sha512-ntUiUgtRtkF8KuaxHffzhYxQxoXk6LAPHm7CVlFjdqS8Rx8xRkLkZVyo84E+pO2hcNFkOGVP/GxHhQ2s94O8zA==}
     engines: {node: '>=12.11.0'}
 
   '@primeuix/utils@0.3.0':
@@ -1016,8 +1008,8 @@ packages:
     resolution: {integrity: sha512-TOhxgkcmgBqmlHlf2x+gs4874iHopkow0gRAC5FztZTgTZQrqy8hPIA9b4O1lW7P6GOjGuVIwSH8y2lw6Q8koA==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/themes@4.0.7':
-    resolution: {integrity: sha512-ZbDUrpBmtuqdeegNwUaJTubaLDBBJWOc4Z6UoQM3DG2c7EAE19wQbuh+cG9zqA7sT/Xsp+ACC/Z9e4FnfqB55g==}
+  '@primevue/themes@4.2.1':
+    resolution: {integrity: sha512-byp4YejyVdrOpRRbq5vBtaDBFHUq7Wc0aGWwII1fliYbwQ+WXn/hCAYhaXwRrwweHpTiobiWWsS+PRLWJ7fBRw==}
     engines: {node: '>=12.11.0'}
 
   '@puppeteer/browsers@2.4.1':
@@ -4460,15 +4452,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@primeuix/styled@0.0.5':
-    dependencies:
-      '@primeuix/utils': 0.0.5
-
   '@primeuix/styled@0.3.0':
     dependencies:
       '@primeuix/utils': 0.3.0
-
-  '@primeuix/utils@0.0.5': {}
 
   '@primeuix/utils@0.3.0': {}
 
@@ -4485,9 +4471,9 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@primevue/themes@4.0.7':
+  '@primevue/themes@4.2.1':
     dependencies:
-      '@primeuix/styled': 0.0.5
+      '@primeuix/styled': 0.3.0
 
   '@puppeteer/browsers@2.4.1':
     dependencies:
