@@ -11,14 +11,14 @@ on:
         description: 'NodeJS version to use'
         required: false
         default: 'lts/*'
-      bun-version:
+      pnpm-version:
         type: string
-        description: 'Bun version to use'
+        description: 'pnpm version to use'
         required: false
         default: 'latest'
 env:
   NODE_VERSION: ${{ inputs.node-version || 'lts/*' }}
-  BUN_VERSION: ${{ inputs.bun-version || 'latest' }}
+  PNPM_VERSION: ${{ inputs.pnpm-version || 'latest' }}
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
         uses: ./.github/actions/setup-tooling
         with:
           node-version: ${{ env.NODE_VERSION }}
-          bun-version: ${{ env.BUN_VERSION }}
+          pnpm-version: ${{ env.PNPM_VERSION }}
       - name: Validate resume
-        run: bun run validate
+        run: pnpm run validate
       - name: Lint source files
-        run: bun run lint
+        run: pnpm run lint
