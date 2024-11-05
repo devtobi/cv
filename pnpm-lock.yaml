@@ -112,8 +112,8 @@ importers:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.47)
       axe-core:
-        specifier: 4.10.0
-        version: 4.10.0
+        specifier: 4.10.2
+        version: 4.10.2
       eslint-plugin-vue:
         specifier: 9.28.0
         version: 9.28.0(eslint@9.12.0(jiti@1.21.6))
@@ -143,7 +143,7 @@ importers:
         version: 0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.8(@types/node@20.16.10)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vue-axe:
         specifier: 3.1.2
-        version: 3.1.2(axe-core@4.10.0)(vue@3.5.11(typescript@5.5.4))
+        version: 3.1.2(axe-core@4.10.2)(vue@3.5.11(typescript@5.5.4))
       vue-tsc:
         specifier: 2.1.6
         version: 2.1.6(typescript@5.5.4)
@@ -1456,8 +1456,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.10.0:
-    resolution: {integrity: sha512-Mr2ZakwQ7XUAjp7pAwQWRhhK8mQQ6JAaNWSjmjxil0R8BPioMtQsTLOolGYkji1rcL++3dCqZA3zWqpT+9Ew6g==}
+  axe-core@4.10.2:
+    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
     engines: {node: '>=4'}
 
   b4a@1.6.7:
@@ -4982,7 +4982,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.10.0: {}
+  axe-core@4.10.2: {}
 
   b4a@1.6.7: {}
 
@@ -7008,9 +7008,9 @@ snapshots:
 
   vscode-uri@3.0.8: {}
 
-  vue-axe@3.1.2(axe-core@4.10.0)(vue@3.5.11(typescript@5.5.4)):
+  vue-axe@3.1.2(axe-core@4.10.2)(vue@3.5.11(typescript@5.5.4)):
     dependencies:
-      axe-core: 4.10.0
+      axe-core: 4.10.2
       prismjs: 1.29.0
       vue: 3.5.11(typescript@5.5.4)
 
