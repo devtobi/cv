@@ -51,8 +51,8 @@ importers:
   packages/cv-wrapper:
     dependencies:
       '@primevue/themes':
-        specifier: 4.2.1
-        version: 4.2.1
+        specifier: 4.3.3
+        version: 4.3.3
       '@vueuse/core':
         specifier: 11.2.0
         version: 11.2.0(vue@3.5.12(typescript@5.5.4))
@@ -998,8 +998,19 @@ packages:
     resolution: {integrity: sha512-XsLbmyM1u50A0EDATIHyqm5O/zOCSyNKPk4pNN8HFvEPehbsjf4tkXcRZAyaVvntSCLpV4XGAj7v5EDCQkBRlg==}
     engines: {node: '>=12.11.0'}
 
+  '@primeuix/styled@0.5.0':
+    resolution: {integrity: sha512-k5CTQ+10cXIXxZTep7sktmYe8lJkjmUaFVDAc1OCsWTJR+bhBy/s6zWIatGljVtuf3RmTSxtlrHQeFLjPmdUNQ==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/themes@1.0.0':
+    resolution: {integrity: sha512-fxUgcAP9H6FeytbE8c4QvRt8aBnoyZJqvtnnVwHT8PHr1dNSnC1nYKGrXpebcx3SpNy9Hp9oVidGsl6u61+pXQ==}
+
   '@primeuix/utils@0.3.0':
     resolution: {integrity: sha512-d6ymWez1n+iqwzAVhyOTmrOHl5qnSX2oGlTy97qGuA15gLai+MQaxONHFNdDia8Q7o396v7KK9IvhAx9VET/+A==}
+    engines: {node: '>=12.11.0'}
+
+  '@primeuix/utils@0.5.2':
+    resolution: {integrity: sha512-fHL0DGnyhL/9toBoV0cO6L+Xg/uaxmOHJW4SrDNMq6GQ7cDXR3Y0vDLvX5j/8kIsaC7LB3329sQLNHgtEETnWw==}
     engines: {node: '>=12.11.0'}
 
   '@primevue/core@4.2.1':
@@ -1012,10 +1023,9 @@ packages:
     resolution: {integrity: sha512-TOhxgkcmgBqmlHlf2x+gs4874iHopkow0gRAC5FztZTgTZQrqy8hPIA9b4O1lW7P6GOjGuVIwSH8y2lw6Q8koA==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/themes@4.2.1':
-    resolution: {integrity: sha512-byp4YejyVdrOpRRbq5vBtaDBFHUq7Wc0aGWwII1fliYbwQ+WXn/hCAYhaXwRrwweHpTiobiWWsS+PRLWJ7fBRw==}
+  '@primevue/themes@4.3.3':
+    resolution: {integrity: sha512-LiYlSXsHeA8DFm8+yGyiDFQc3SEQwHcESTN1/rV+rrZ+UPuPisHY9fNIGRFQKA5XUQPDTQDQjtwYGx25Jikwhg==}
     engines: {node: '>=12.11.0'}
-    deprecated: This package is deprecated. Use @primeuix/themes instead.
 
   '@puppeteer/browsers@2.4.1':
     resolution: {integrity: sha512-0kdAbmic3J09I6dT8e9vE2JOCSt13wHCW5x/ly8TSt2bDtuIWe2TgLZZDHdcziw9AVCzflMAXCrVyRIhIs44Ng==}
@@ -4463,7 +4473,17 @@ snapshots:
     dependencies:
       '@primeuix/utils': 0.3.0
 
+  '@primeuix/styled@0.5.0':
+    dependencies:
+      '@primeuix/utils': 0.5.2
+
+  '@primeuix/themes@1.0.0':
+    dependencies:
+      '@primeuix/styled': 0.5.0
+
   '@primeuix/utils@0.3.0': {}
+
+  '@primeuix/utils@0.5.2': {}
 
   '@primevue/core@4.2.1(vue@3.5.12(typescript@5.5.4))':
     dependencies:
@@ -4478,9 +4498,10 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@primevue/themes@4.2.1':
+  '@primevue/themes@4.3.3':
     dependencies:
-      '@primeuix/styled': 0.3.0
+      '@primeuix/styled': 0.5.0
+      '@primeuix/themes': 1.0.0
 
   '@puppeteer/browsers@2.4.1':
     dependencies:
