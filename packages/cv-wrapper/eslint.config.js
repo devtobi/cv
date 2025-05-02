@@ -41,5 +41,8 @@ export default [
         messageSyntaxVersion: '10.0.1',
       },
     },
+    linterOptions: {
+      reportUnusedDisableDirectives: 'off',
+    },
   },
 ];
