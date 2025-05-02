@@ -98,7 +98,7 @@ importers:
         version: 0.2.6
       '@vitejs/plugin-vue':
         specifier: 5.1.4
-        version: 5.1.4(vite@5.4.16(@types/node@20.17.6)(terser@5.36.0))(vue@3.5.12(typescript@5.5.4))
+        version: 5.1.4(vite@5.4.19(@types/node@20.17.6)(terser@5.36.0))(vue@3.5.12(typescript@5.5.4))
       '@vue/eslint-config-prettier':
         specifier: 10.1.0
         version: 10.1.0(eslint@9.14.0(jiti@1.21.6))(prettier@3.3.3)
@@ -112,8 +112,8 @@ importers:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.47)
       axe-core:
-        specifier: 4.10.2
-        version: 4.10.2
+        specifier: 4.10.3
+        version: 4.10.3
       eslint-plugin-vue:
         specifier: 9.30.0
         version: 9.30.0(eslint@9.14.0(jiti@1.21.6))
@@ -136,14 +136,14 @@ importers:
         specifier: 0.4.2
         version: 0.4.2
       vite:
-        specifier: 5.4.16
-        version: 5.4.16(@types/node@20.17.6)(terser@5.36.0)
+        specifier: 5.4.19
+        version: 5.4.19(@types/node@20.17.6)(terser@5.36.0)
       vite-plugin-pwa:
         specifier: 0.20.5
-        version: 0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.16(@types/node@20.17.6)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.19(@types/node@20.17.6)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vue-axe:
         specifier: 3.1.2
-        version: 3.1.2(axe-core@4.10.2)(vue@3.5.12(typescript@5.5.4))
+        version: 3.1.2(axe-core@4.10.3)(vue@3.5.12(typescript@5.5.4))
       vue-tsc:
         specifier: 2.1.10
         version: 2.1.10(typescript@5.5.4)
@@ -1469,8 +1469,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.10.2:
-    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
+  axe-core@4.10.3:
+    resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
   b4a@1.6.7:
@@ -3314,8 +3314,8 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
 
-  vite@5.4.16:
-    resolution: {integrity: sha512-Y5gnfp4NemVfgOTDQAunSD4346fal44L9mszGGY/e+qxsRT5y1sMlS/8tiQ8AFAp+MFgYNSINdfEchJiPm41vQ==}
+  vite@5.4.19:
+    resolution: {integrity: sha512-qO3aKv3HoQC8QKiNSTuUM1l9o/XX3+c+VTgLHbJWHZGeTPVAg2XwazI9UWzoxjIJCGCV2zU60uqMzjeLZuULqA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4797,9 +4797,9 @@ snapshots:
       sharp-ico: 0.1.5
       unconfig: 0.3.13
 
-  '@vitejs/plugin-vue@5.1.4(vite@5.4.16(@types/node@20.17.6)(terser@5.36.0))(vue@3.5.12(typescript@5.5.4))':
+  '@vitejs/plugin-vue@5.1.4(vite@5.4.19(@types/node@20.17.6)(terser@5.36.0))(vue@3.5.12(typescript@5.5.4))':
     dependencies:
-      vite: 5.4.16(@types/node@20.17.6)(terser@5.36.0)
+      vite: 5.4.19(@types/node@20.17.6)(terser@5.36.0)
       vue: 3.5.12(typescript@5.5.4)
 
   '@volar/language-core@2.4.8':
@@ -5025,7 +5025,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.10.2: {}
+  axe-core@4.10.3: {}
 
   b4a@1.6.7: {}
 
@@ -7056,12 +7056,12 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-pwa@0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.16(@types/node@20.17.6)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.19(@types/node@20.17.6)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.3.7
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.10
-      vite: 5.4.16(@types/node@20.17.6)(terser@5.36.0)
+      vite: 5.4.19(@types/node@20.17.6)(terser@5.36.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     optionalDependencies:
@@ -7069,7 +7069,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.16(@types/node@20.17.6)(terser@5.36.0):
+  vite@5.4.19(@types/node@20.17.6)(terser@5.36.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
@@ -7081,9 +7081,9 @@ snapshots:
 
   vscode-uri@3.0.8: {}
 
-  vue-axe@3.1.2(axe-core@4.10.2)(vue@3.5.12(typescript@5.5.4)):
+  vue-axe@3.1.2(axe-core@4.10.3)(vue@3.5.12(typescript@5.5.4)):
     dependencies:
-      axe-core: 4.10.2
+      axe-core: 4.10.3
       prismjs: 1.29.0
       vue: 3.5.12(typescript@5.5.4)
 

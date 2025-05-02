@@ -34,7 +34,7 @@
     "@vue/eslint-config-typescript": "14.1.3",
     "@vue/tsconfig": "0.5.1",
     "autoprefixer": "10.4.20",
-    "axe-core": "4.10.2",
+    "axe-core": "4.10.3",
     "eslint-plugin-vue": "9.30.0",
     "eslint-plugin-vuejs-accessibility": "2.4.1",
     "postcss": "8.4.47",
@@ -42,7 +42,7 @@
     "typescript": "5.5.4",
     "unplugin-vue-components": "0.28.0",
     "user-agent-data-types": "0.4.2",
-    "vite": "5.4.16",
+    "vite": "5.4.19",
     "vite-plugin-pwa": "0.20.5",
     "vue-axe": "3.1.2",
     "vue-tsc": "2.1.10"
