@@ -112,8 +112,8 @@ importers:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.47)
       axe-core:
-        specifier: 4.10.2
-        version: 4.10.2
+        specifier: 4.10.3
+        version: 4.10.3
       eslint-plugin-vue:
         specifier: 9.30.0
         version: 9.30.0(eslint@9.14.0(jiti@1.21.6))
@@ -143,7 +143,7 @@ importers:
         version: 0.20.5(@vite-pwa/assets-generator@0.2.6)(vite@5.4.16(@types/node@20.17.6)(terser@5.36.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vue-axe:
         specifier: 3.1.2
-        version: 3.1.2(axe-core@4.10.2)(vue@3.5.12(typescript@5.5.4))
+        version: 3.1.2(axe-core@4.10.3)(vue@3.5.12(typescript@5.5.4))
       vue-tsc:
         specifier: 2.1.10
         version: 2.1.10(typescript@5.5.4)
@@ -1469,8 +1469,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.10.2:
-    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
+  axe-core@4.10.3:
+    resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
   b4a@1.6.7:
@@ -3625,7 +3625,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-compilation-targets': 7.25.9
       '@babel/helper-plugin-utils': 7.25.9
-      debug: 4.3.7
+      debug: 4.4.0
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -4545,7 +4545,7 @@ snapshots:
 
   '@rollup/plugin-node-resolve@15.3.0(rollup@2.79.2)':
     dependencies:
-      '@rollup/pluginutils': 5.1.3(rollup@2.79.2)
+      '@rollup/pluginutils': 5.1.4(rollup@2.79.2)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
       is-module: 1.0.0
@@ -5021,7 +5021,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.10.2: {}
+  axe-core@4.10.3: {}
 
   b4a@1.6.7: {}
 
@@ -7074,9 +7074,9 @@ snapshots:
 
   vscode-uri@3.0.8: {}
 
-  vue-axe@3.1.2(axe-core@4.10.2)(vue@3.5.12(typescript@5.5.4)):
+  vue-axe@3.1.2(axe-core@4.10.3)(vue@3.5.12(typescript@5.5.4)):
     dependencies:
-      axe-core: 4.10.2
+      axe-core: 4.10.3
       prismjs: 1.29.0
       vue: 3.5.12(typescript@5.5.4)
 
