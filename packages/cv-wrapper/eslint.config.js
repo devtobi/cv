@@ -21,6 +21,7 @@ export default [
       'dev-dist',
       'node_modules',
       'src/generated',
+      'components.d.ts',
       '**/**.json',
     ],
   },
