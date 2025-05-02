@@ -45,8 +45,8 @@ importers:
         specifier: 23.7.0
         version: 23.7.0(typescript@5.5.4)
       resumed:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.1.0
+        version: 4.1.0
 
   packages/cv-wrapper:
     dependencies:
@@ -2871,8 +2871,8 @@ packages:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
 
-  resumed@4.0.0:
-    resolution: {integrity: sha512-K7offFV1MbTgcmv5J8rQBZoOMqfLZ7jRgSOTYhvXz2FBmKI5KNKl6HbeRDxLjr0p0nuuczBdzgegqULPYOn4Zw==}
+  resumed@4.1.0:
+    resolution: {integrity: sha512-8RmPjn7MMm0uI4rR5xFKImTTp3zpWhHik+oAAl3252wIxPERBPF2u2nxJfvAUX03kHzwl1wXr+A+5cjo7TSDDQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3059,6 +3059,10 @@ packages:
   strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+
+  strip-json-comments@5.0.1:
+    resolution: {integrity: sha512-0fk9zBqO67Nq5M/m45qHCJxylV/DhBlIOVExqgOMiCCrzrhU6tCibRXNqE3jwJLftzE9SNuZtYbpzcO+i9FiKw==}
+    engines: {node: '>=14.16'}
 
   sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
@@ -6517,10 +6521,11 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@4.0.0:
+  resumed@4.1.0:
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
+      strip-json-comments: 5.0.1
       yoctocolors: 2.1.1
 
   reusify@1.0.4: {}
@@ -6763,6 +6768,8 @@ snapshots:
   strip-json-comments@2.0.1: {}
 
   strip-json-comments@3.1.1: {}
+
+  strip-json-comments@5.0.1: {}
 
   sucrase@3.35.0:
     dependencies:
