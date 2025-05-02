@@ -1,4 +1,5 @@
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
+import tailwindcss from '@tailwindcss/vite';
 import vue from '@vitejs/plugin-vue';
 import { PrimeVueResolver } from 'unplugin-vue-components/resolvers';
 import Components from 'unplugin-vue-components/vite';
@@ -15,6 +16,7 @@ import cvWrapperPackageJson from './package.json';
 export default defineConfig({
   base: './',
   plugins: [
+    tailwindcss(),
     vue({
       template: {
         compilerOptions: {
