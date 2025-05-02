@@ -51,8 +51,8 @@ importers:
   packages/cv-wrapper:
     dependencies:
       '@primevue/themes':
-        specifier: 4.2.1
-        version: 4.2.1
+        specifier: 4.3.3
+        version: 4.3.3
       '@vueuse/core':
         specifier: 11.3.0
         version: 11.3.0(vue@3.5.13(typescript@5.8.3))
@@ -998,10 +998,6 @@ packages:
     resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@primeuix/styled@0.3.0':
-    resolution: {integrity: sha512-XsLbmyM1u50A0EDATIHyqm5O/zOCSyNKPk4pNN8HFvEPehbsjf4tkXcRZAyaVvntSCLpV4XGAj7v5EDCQkBRlg==}
-    engines: {node: '>=12.11.0'}
-
   '@primeuix/styled@0.5.1':
     resolution: {integrity: sha512-5Ftw/KSauDPClQ8F2qCyCUF7cIUEY4yLNikf0rKV7Vsb8zGYNK0dahQe7CChaR6M2Kn+NA2DSBSk76ZXqj6Uog==}
     engines: {node: '>=12.11.0'}
@@ -1009,9 +1005,8 @@ packages:
   '@primeuix/styles@1.0.3':
     resolution: {integrity: sha512-yHj/Q+fosJ1736Ty5lRbpqhKa9piou+xZPPppNHUDshq0+XhrFwDGggvPGmDAJyUIM+ChM/Nj8lPY/AwTNXAkg==}
 
-  '@primeuix/utils@0.3.0':
-    resolution: {integrity: sha512-d6ymWez1n+iqwzAVhyOTmrOHl5qnSX2oGlTy97qGuA15gLai+MQaxONHFNdDia8Q7o396v7KK9IvhAx9VET/+A==}
-    engines: {node: '>=12.11.0'}
+  '@primeuix/themes@1.0.3':
+    resolution: {integrity: sha512-f/1qadrv5TFMHfvtVv4Y9zjrkeDP2BO/cuzbHBO9DYxKL6YBIPT9BjKec2K4Kg8PcfGm6CAvxAvICadJSWejRw==}
 
   '@primeuix/utils@0.5.3':
     resolution: {integrity: sha512-7SGh7734wcF1/uK6RzO6Z6CBjGQ97GDHfpyl2F1G/c7R0z9hkT/V72ypDo82AWcCS7Ta07oIjDpOCTkSVZuEGQ==}
@@ -1027,10 +1022,9 @@ packages:
     resolution: {integrity: sha512-ouQaxHyeFB6MSfEGGbjaK5Qv9efS1xZGetZoU5jcPm090MSYLFtroP1CuK3lZZAQals06TZ6T6qcoNukSHpK5w==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/themes@4.2.1':
-    resolution: {integrity: sha512-byp4YejyVdrOpRRbq5vBtaDBFHUq7Wc0aGWwII1fliYbwQ+WXn/hCAYhaXwRrwweHpTiobiWWsS+PRLWJ7fBRw==}
+  '@primevue/themes@4.3.3':
+    resolution: {integrity: sha512-LiYlSXsHeA8DFm8+yGyiDFQc3SEQwHcESTN1/rV+rrZ+UPuPisHY9fNIGRFQKA5XUQPDTQDQjtwYGx25Jikwhg==}
     engines: {node: '>=12.11.0'}
-    deprecated: This package is deprecated. Use @primeuix/themes instead.
 
   '@puppeteer/browsers@2.6.1':
     resolution: {integrity: sha512-aBSREisdsGH890S2rQqK82qmQYU3uFpSH8wcZWHgHzl3LfzsxAKbLNiAG9mO8v1Y0UICBeClICxPJvyr0rcuxg==}
@@ -4523,10 +4517,6 @@ snapshots:
 
   '@pkgr/core@0.2.4': {}
 
-  '@primeuix/styled@0.3.0':
-    dependencies:
-      '@primeuix/utils': 0.3.0
-
   '@primeuix/styled@0.5.1':
     dependencies:
       '@primeuix/utils': 0.5.3
@@ -4535,7 +4525,9 @@ snapshots:
     dependencies:
       '@primeuix/styled': 0.5.1
 
-  '@primeuix/utils@0.3.0': {}
+  '@primeuix/themes@1.0.3':
+    dependencies:
+      '@primeuix/styled': 0.5.1
 
   '@primeuix/utils@0.5.3': {}
 
@@ -4552,9 +4544,10 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@primevue/themes@4.2.1':
+  '@primevue/themes@4.3.3':
     dependencies:
-      '@primeuix/styled': 0.3.0
+      '@primeuix/styled': 0.5.1
+      '@primeuix/themes': 1.0.3
 
   '@puppeteer/browsers@2.6.1':
     dependencies:
