@@ -2,10 +2,9 @@
   "name": "cv-content",
   "private": true,
   "version": "1.0.0",
-  "description": "My CV content built with JSONResume schema using resumed and puppeteer",
+  "description": "My CV content built with JSONResume schema using resumed",
   "scripts": {
-    "setup": "puppeteer browsers install chrome",
-    "build": "node scripts/buildHtml.js && node scripts/optimizeForWebComponents.js && node scripts/minify.js && node scripts/generatePdfs.js",
+    "build": "node scripts/buildHtml.js && node scripts/optimizeForWebComponents.js && node scripts/minify.js && node scripts/buildPdf.js",
     "format": "prettier ../../data/ --write",
     "validate": "node scripts/validate.js",
     "lint": "concurrently --pad-prefix --kill-others-on-fail -n prettier,eslint 'prettier . --check' 'eslint'",
@@ -18,7 +17,6 @@
     "eslint-config-prettier": "10.1.2",
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
-    "puppeteer": "24.8.0",
-    "resumed": "4.1.0"
+    "resumed": "5.0.0"
   }
 }
