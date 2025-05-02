@@ -39,7 +39,7 @@ export default [
     settings: {
       'vue-i18n': {
         localeDir: './src/locales/*.json',
-        messageSyntaxVersion: '10.0.1',
+        messageSyntaxVersion: '11.1.3',
       },
     },
     linterOptions: {
