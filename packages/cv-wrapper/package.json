@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "3.2.0",
-    "@intlify/unplugin-vue-i18n": "5.2.0",
+    "@intlify/unplugin-vue-i18n": "5.3.1",
     "@tsconfig/node20": "20.1.5",
     "@types/node": "20.17.32",
     "@vite-pwa/assets-generator": "0.2.6",
