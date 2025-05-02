@@ -19,6 +19,6 @@
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
     "puppeteer": "24.8.0",
-    "resumed": "4.1.0"
+    "resumed": "5.0.0"
   }
 }

@@ -45,8 +45,8 @@ importers:
         specifier: 24.8.0
         version: 24.8.0(typescript@5.8.3)
       resumed:
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 5.0.0
+        version: 5.0.0(puppeteer@24.8.0(typescript@5.8.3))
 
   packages/cv-wrapper:
     dependencies:
@@ -2963,10 +2963,15 @@ packages:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
     hasBin: true
 
-  resumed@4.1.0:
-    resolution: {integrity: sha512-8RmPjn7MMm0uI4rR5xFKImTTp3zpWhHik+oAAl3252wIxPERBPF2u2nxJfvAUX03kHzwl1wXr+A+5cjo7TSDDQ==}
+  resumed@5.0.0:
+    resolution: {integrity: sha512-6h1ybWudo8OzIP9kR2d4Ff9U49ra773XqIkLjHk3FAcIEJGb4iH6L/96qiMbSkOG7MZrnCWLSZd1OHzdtgPuIA==}
     engines: {node: '>=20'}
     hasBin: true
+    peerDependencies:
+      puppeteer: ^24.0.0
+    peerDependenciesMeta:
+      puppeteer:
+        optional: true
 
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
@@ -6609,12 +6614,14 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@4.1.0:
+  resumed@5.0.0(puppeteer@24.8.0(typescript@5.8.3)):
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
       strip-json-comments: 5.0.1
       yoctocolors: 2.1.1
+    optionalDependencies:
+      puppeteer: 24.8.0(typescript@5.8.3)
 
   reusify@1.0.4: {}
 
