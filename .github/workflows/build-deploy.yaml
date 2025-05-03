@@ -50,7 +50,7 @@ jobs:
           chrome-version: ${{ inputs.chrome-version }}
       - name: Install selected theme
         working-directory: ${{ env.content-package-path }}
-        run: pnpm install --frozen-lockfile -D ${{ env.full-theme-name }}
+        run: pnpm install -D ${{ env.full-theme-name }}
       - name: Build website
         env:
           THEME: ${{ env.full-theme-name }}
