@@ -1,5 +1,5 @@
 <template>
-  <button
+  <Button
     :label="t('CvInstallPWAButton.label')"
     :icon="PrimeIcons.DOWNLOAD"
     @click="install"
