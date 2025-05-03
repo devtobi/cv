@@ -29,7 +29,7 @@ export default defineConfigWithVueTs(
       'no-console': ['error', { allow: ['debug', 'error'] }],
       'vue/component-name-in-template-casing': [
         'error',
-        'kebab-case',
+        'PascalCase',
         { registeredComponentsOnly: false },
       ],
       '@typescript-eslint/ban-ts-comment': 'off',

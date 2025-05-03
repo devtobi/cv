@@ -1,5 +1,5 @@
 <template>
-  <button
+  <Button
     v-tooltip.left="tooltipObject"
     :icon="PrimeIcons.INFO_CIRCLE"
     severity="secondary"
@@ -10,7 +10,7 @@
     @click="showDialog = true"
   />
 
-  <dialog
+  <Dialog
     :id="dialogId"
     v-model:visible="showDialog"
     modal
@@ -36,7 +36,7 @@
         />
       </div>
     </template>
-    <cv-dependency-data-table />
+    <CvDependencyDataTable />
     <template #footer>
       <div class="w-full flex flex-col items-center">
         <p>
@@ -48,18 +48,18 @@
           />
           {{ t('CvInformationDialogButton.footerText2') }}
         </p>
-        <cv-language-select
+        <CvLanguageSelect
           v-if="showLanguageSelection"
           class="mb-4"
         />
-        <cv-install-p-w-a-button
+        <CvInstallPWAButton
           v-if="canBeInstalled"
           class="mb-4"
         />
-        <cv-reset-preferences-button />
+        <CvResetPreferencesButton />
       </div>
     </template>
-  </dialog>
+  </Dialog>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <select
+  <Select
     v-model="selectedLanguage"
     :options="languages"
     option-label="name"
@@ -31,7 +31,7 @@
         <div>{{ slotProps.option.name }}</div>
       </div>
     </template>
-  </select>
+  </Select>
 </template>
 
 <script setup lang="ts">
