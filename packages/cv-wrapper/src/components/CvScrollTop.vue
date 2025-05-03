@@ -1,5 +1,5 @@
 <template>
-  <ScrollTop
+  <scroll-top
     v-tooltip.left="tooltipObject"
     :pt="passThroughOptions"
     :icon="PrimeIcons.CHEVRON_UP"

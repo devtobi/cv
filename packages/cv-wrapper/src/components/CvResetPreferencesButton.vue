@@ -1,5 +1,5 @@
 <template>
-  <Button
+  <button
     :label="t('CvResetPreferencesButton.label')"
     :icon="PrimeIcons.REFRESH"
     severity="danger"

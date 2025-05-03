@@ -1,5 +1,5 @@
 <template>
-  <Button
+  <button
     v-tooltip.bottom="tooltipObject"
     :icon="appearanceIcon"
     :aria-label="ariaLabel"

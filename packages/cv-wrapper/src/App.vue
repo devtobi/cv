@@ -1,17 +1,17 @@
 <template>
-  <Toast position="bottom-right" />
-  <ConfirmDialog
+  <toast position="bottom-right" />
+  <confirm-dialog
     :group="confirmDialogGroup"
     class="m-4"
   />
-  <ConfirmPopup :group="confirmPopupGroup" />
+  <confirm-popup :group="confirmPopupGroup" />
   <div class="app-container flex flex-col min-h-screen">
-    <CvMenubar />
+    <cv-menubar />
     <main class="flex-1">
-      <CvContentRenderer />
-      <CvScrollTop />
+      <cv-content-renderer />
+      <cv-scroll-top />
     </main>
-    <CvFooter />
+    <cv-footer />
   </div>
 </template>
 

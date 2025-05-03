@@ -1,18 +1,24 @@
+import { OS } from 'ua-parser-js/enums';
+
 export enum OperatingSystem {
-  MACOS,
-  WINDOWS,
-  LINUX,
-  IOS,
+  APPLE,
+  MICROSOFT,
   ANDROID,
   OTHER,
 }
 
-export const macOSPlatforms = [
-  'macOS',
-  'Macintosh',
-  'MacIntel',
-  'MacPPC',
-  'Mac68K',
-];
-export const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
-export const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
+export const appleList = [OS.IOS, OS.MACOS, OS.WATCHOS] as string[];
+
+export const microsoftListList = [
+  OS.WINDOWS,
+  OS.WINDOWS_PHONE,
+  OS.WINDOWS_IOT,
+  OS.WINDOWS_MOBILE,
+  OS.XBOX,
+] as string[];
+
+export const androidList = [
+  OS.ANDROID,
+  OS.ANDROID_X86,
+  OS.CHROMECAST_ANDROID,
+] as string[];

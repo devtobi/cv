@@ -7,7 +7,7 @@
     :breakpoints="breakpointsTailwind.lg"
   >
     <template #start>
-      <Avatar
+      <avatar
         :image="profilePicture"
         size="large"
         shape="circle"
@@ -30,7 +30,7 @@
         v-bind="props.action"
         aria-hidden="false"
       >
-        <Button
+        <button
           :icon="item.icon"
           :label="hideLinkLabels ? '' : (item.label as string)"
           :severity="item.color"

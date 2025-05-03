@@ -1,5 +1,5 @@
 <template>
-  <Button
+  <button
     :label="t('CvInstallPWAButton.label')"
     :icon="PrimeIcons.DOWNLOAD"
     @click="install"
@@ -20,6 +20,6 @@
 
   const install = () => {
     if (installPWAEvent.value)
-      installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
+      void installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
   };
 </script>

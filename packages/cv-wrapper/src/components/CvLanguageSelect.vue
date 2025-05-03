@@ -1,5 +1,5 @@
 <template>
-  <Select
+  <select
     v-model="selectedLanguage"
     :options="languages"
     option-label="name"
@@ -31,11 +31,10 @@
         <div>{{ slotProps.option.name }}</div>
       </div>
     </template>
-  </Select>
+  </select>
 </template>
 
 <script setup lang="ts">
-  import Select from 'primevue/select';
   import { computed } from 'vue';
   import { useI18n } from 'vue-i18n';
 

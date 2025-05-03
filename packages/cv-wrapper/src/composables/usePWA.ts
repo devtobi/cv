@@ -15,8 +15,10 @@ export const usePWA = () => {
   const { needRefresh, updateServiceWorker } = useRegisterSW({
     onRegisteredSW(swUrl, r) {
       if (r) {
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         setInterval(async () => {
-          if (!(!r.installing && navigator)) return;
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+          if (r.installing || !navigator) return;
 
           if ('connection' in navigator && !navigator.onLine) return;
 
@@ -28,7 +30,7 @@ export const usePWA = () => {
             },
           });
 
-          if (resp?.status === 200) await r.update();
+          if (resp.status === 200) await r.update();
         }, intervalMS);
       }
     },
@@ -50,7 +52,7 @@ export const usePWA = () => {
           acceptClass: 'p-button-primary',
           rejectClass: 'p-button-primary p-button-text',
           accept: () => {
-            updateServiceWorker();
+            void updateServiceWorker();
           },
           onHide() {
             reset();

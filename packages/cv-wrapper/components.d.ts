@@ -9,8 +9,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('primevue/avatar')['default']
-    Button: typeof import('primevue/button')['default']
-    Column: typeof import('primevue/column')['default']
     CvAppearanceToggleButton: typeof import('./src/components/CvAppearanceToggleButton.vue')['default']
     CvContentRenderer: typeof import('./src/components/CvContentRenderer.vue')['default']
     CvDependencyDataTable: typeof import('./src/components/CvDependencyDataTable.vue')['default']
@@ -22,10 +20,11 @@ declare module 'vue' {
     CvPdfDownloadButton: typeof import('./src/components/CvPdfDownloadButton.vue')['default']
     CvResetPreferencesButton: typeof import('./src/components/CvResetPreferencesButton.vue')['default']
     CvScrollTop: typeof import('./src/components/CvScrollTop.vue')['default']
-    DataTable: typeof import('primevue/datatable')['default']
-    Dialog: typeof import('primevue/dialog')['default']
     Menubar: typeof import('primevue/menubar')['default']
     ScrollTop: typeof import('primevue/scrolltop')['default']
-    Tag: typeof import('primevue/tag')['default']
+    Select: typeof import('primevue/select')['default']
+  }
+  export interface ComponentCustomProperties {
+    Tooltip: typeof import('primevue/tooltip')['default']
   }
 }

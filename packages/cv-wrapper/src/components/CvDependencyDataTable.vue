@@ -1,5 +1,5 @@
 <template>
-  <DataTable
+  <data-table
     v-model:selection="selectedRow"
     :value="dependencies"
     size="small"
@@ -10,20 +10,20 @@
     selection-mode="single"
     @row-click="openNpmPage"
   >
-    <Column
+    <column
       field="name"
       :header="t('CvDependencyDataTable.columnNames.name')"
     />
-    <Column
+    <column
       field="version"
       :header="t('CvDependencyDataTable.columnNames.version')"
     />
-    <Column
+    <column
       field="type"
       :header="t('CvDependencyDataTable.columnNames.type')"
     >
       <template #body="slotProps">
-        <Tag
+        <tag
           :value="
             t(
               `CvDependencyDataTable.dependencyTypeNames.${slotProps.data.type}`,
@@ -33,14 +33,14 @@
           class="flex flex-row"
         />
       </template>
-    </Column>
-    <Column
+    </column>
+    <column
       v-if="!hideSoftwareComponentColumn"
       field="component"
       :header="t('CvDependencyDataTable.columnNames.component')"
     >
       <template #body="slotProps">
-        <Tag
+        <tag
           :value="
             t(
               `CvDependencyDataTable.dependencyComponentNames.${slotProps.data.component}`,
@@ -50,8 +50,8 @@
           class="flex flex-row"
         />
       </template>
-    </Column>
-  </DataTable>
+    </column>
+  </data-table>
 </template>
 
 <script setup lang="ts">

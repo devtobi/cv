@@ -15,7 +15,7 @@ export const useSelectedLanguage = () => {
     const foundLocale = browserLanguages.value.find((browserLanguage) => {
       const supportedLocalesStrings = supportedLocales as unknown as string[];
       return supportedLocalesStrings.includes(browserLanguage);
-    }) as SupportedLocale;
+    }) as SupportedLocale | undefined;
 
     return foundLocale ?? defaultLocale;
   };
