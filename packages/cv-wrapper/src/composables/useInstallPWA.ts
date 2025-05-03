@@ -46,9 +46,9 @@ export const useInstallPWA = () => {
         rejectLabel: t('PWA.installReject'),
         acceptLabel: t('PWA.installAccept'),
         acceptIcon: PrimeIcons.DOWNLOAD,
-        accept: async () => {
+        accept: () => {
           if (installPWAEvent.value) {
-            await installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
+            void installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
           }
         },
         reject() {

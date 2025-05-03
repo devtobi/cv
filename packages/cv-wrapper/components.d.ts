@@ -26,6 +26,10 @@ declare module 'vue' {
     Dialog: typeof import('primevue/dialog')['default']
     Menubar: typeof import('primevue/menubar')['default']
     ScrollTop: typeof import('primevue/scrolltop')['default']
+    Select: typeof import('primevue/select')['default']
     Tag: typeof import('primevue/tag')['default']
+  }
+  export interface ComponentCustomProperties {
+    Tooltip: typeof import('primevue/tooltip')['default']
   }
 }

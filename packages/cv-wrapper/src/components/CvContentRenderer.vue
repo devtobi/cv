@@ -1,5 +1,5 @@
 <template>
-  <html-include :src="contentSrc" />
+  <HtmlInclude :src="contentSrc" />
 </template>
 
 <script setup lang="ts">

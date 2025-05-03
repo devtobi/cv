@@ -1,5 +1,5 @@
 <template>
-  <menubar
+  <Menubar
     :model="menuLinksLocalized"
     class="pr-4 md:px-4"
     role="navigation"
@@ -38,12 +38,12 @@
       </a>
     </template>
     <template #end>
-      <cv-pdf-download-button class="mr-4" />
-      <cv-language-select class="hidden lg:flex mr-4" />
-      <cv-appearance-toggle-button class="mr-4" />
-      <cv-information-dialog-button />
+      <CvPdfDownloadButton class="mr-4" />
+      <CvLanguageSelect class="hidden lg:flex mr-4" />
+      <CvAppearanceToggleButton class="mr-4" />
+      <CvInformationDialogButton />
     </template>
-  </menubar>
+  </Menubar>
 </template>
 
 <script lang="ts" setup>

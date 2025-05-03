@@ -20,6 +20,6 @@
 
   const install = () => {
     if (installPWAEvent.value)
-      installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
+      void installPWA(installPWAEvent.value as BeforeInstallPromptEvent);
   };
 </script>

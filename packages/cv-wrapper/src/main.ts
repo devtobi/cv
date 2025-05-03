@@ -15,7 +15,7 @@ const setupApp = (app: App) => {
 };
 
 if (import.meta.env.MODE === 'development') {
-  import('vue-axe').then((res) => {
+  await import('vue-axe').then((res) => {
     const VueAxe = res.default;
     const VueAxePopup = res.VueAxePopup;
 

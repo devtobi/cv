@@ -17,7 +17,7 @@ export const useSelectedLanguage = () => {
       return supportedLocalesStrings.includes(browserLanguage);
     }) as SupportedLocale;
 
-    return foundLocale ?? defaultLocale;
+    return foundLocale;
   };
 
   const selectedLanguage: RemovableRef<SupportedLocale> = useStorage(
