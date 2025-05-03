@@ -40,6 +40,7 @@ export default defineConfigWithVueTs(
         { allowNumber: true },
       ],
       '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+      '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     },
     languageOptions: {
       parserOptions: {
