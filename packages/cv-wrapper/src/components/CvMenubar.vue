@@ -30,7 +30,7 @@
         v-bind="props.action"
         aria-hidden="false"
       >
-        <button
+        <Button
           :icon="item.icon"
           :label="hideLinkLabels ? '' : (item.label as string)"
           :severity="item.color"

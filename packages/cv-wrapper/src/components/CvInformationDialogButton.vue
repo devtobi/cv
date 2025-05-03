@@ -27,7 +27,7 @@
         <span class="font-bold whitespace-nowrap ml-2 mr-8">{{
           t('CvInformationDialogButton.appInfo')
         }}</span>
-        <button
+        <Button
           :label="gitHubLabel"
           :icon="PrimeIcons.GITHUB"
           severity="contrast"
