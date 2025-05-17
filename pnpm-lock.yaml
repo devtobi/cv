@@ -100,8 +100,8 @@ importers:
         specifier: 6.0.8
         version: 6.0.8(@vue/compiler-dom@3.5.14)(eslint@9.27.0(jiti@2.4.2))(rollup@2.79.2)(typescript@5.8.3)(vue-i18n@11.1.3(vue@3.5.14(typescript@5.8.3)))(vue@3.5.14(typescript@5.8.3))
       '@primevue/auto-import-resolver':
-        specifier: 4.3.3
-        version: 4.3.3
+        specifier: 4.3.4
+        version: 4.3.4
       '@tsconfig/node-lts':
         specifier: 22.0.1
         version: 22.0.1
@@ -1115,8 +1115,8 @@ packages:
     resolution: {integrity: sha512-7SGh7734wcF1/uK6RzO6Z6CBjGQ97GDHfpyl2F1G/c7R0z9hkT/V72ypDo82AWcCS7Ta07oIjDpOCTkSVZuEGQ==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/auto-import-resolver@4.3.3':
-    resolution: {integrity: sha512-CwQPlG8IzDySOwF8N0Q0rLv76awCH7SzYt+RHu1AO/HZEsdCorclIoJO6TrJYevenlhxialprRqpIV52McoRpw==}
+  '@primevue/auto-import-resolver@4.3.4':
+    resolution: {integrity: sha512-SWgYQ+XC6g2PjxMa3UGCcQucE8l6pcDMJ4EVKjkDVtPMmdqMZSzN8v9T9rsEapoMjB7m3tDIxUCfBB/WTTfuXQ==}
     engines: {node: '>=12.11.0'}
 
   '@primevue/core@4.3.4':
@@ -1129,8 +1129,8 @@ packages:
     resolution: {integrity: sha512-pCDOBl9LrGdEKsfCOzqzTDimSHa0ijn3p4QTeGCqKEoN0DjtxwsfejTFisiEkVQq6es3EA2oatAFT4gD2CJZDQ==}
     engines: {node: '>=12.11.0'}
 
-  '@primevue/metadata@4.3.3':
-    resolution: {integrity: sha512-R1IBTGsYsmOlAy4/dytJW699Iie9B8p8PqbIxDY0GWiMGk8O0tVBYfuCs50w0QtHqmThhLRtSS+eCSOP1ybwSg==}
+  '@primevue/metadata@4.3.4':
+    resolution: {integrity: sha512-jlb7ZQCb27xxZa6bGpHZOIFMUIOdt9lUAFCGG6obkJ/bhZP5nb8XG7kND5giP7Znk90bvVEWgVwuNEQU1Blmkg==}
     engines: {node: '>=12.11.0'}
 
   '@primevue/themes@4.3.4':
@@ -4824,9 +4824,9 @@ snapshots:
 
   '@primeuix/utils@0.5.3': {}
 
-  '@primevue/auto-import-resolver@4.3.3':
+  '@primevue/auto-import-resolver@4.3.4':
     dependencies:
-      '@primevue/metadata': 4.3.3
+      '@primevue/metadata': 4.3.4
 
   '@primevue/core@4.3.4(vue@3.5.14(typescript@5.8.3))':
     dependencies:
@@ -4841,7 +4841,7 @@ snapshots:
     transitivePeerDependencies:
       - vue
 
-  '@primevue/metadata@4.3.3': {}
+  '@primevue/metadata@4.3.4': {}
 
   '@primevue/themes@4.3.4':
     dependencies:
