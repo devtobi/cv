@@ -12,7 +12,7 @@
     "fix": "prettier . --write && eslint --fix"
   },
   "dependencies": {
-    "@primevue/core": "4.3.3",
+    "@primevue/core": "4.3.4",
     "@primevue/themes": "4.3.3",
     "@tailwindcss/vite": "4.1.7",
     "@vueuse/core": "13.2.0",

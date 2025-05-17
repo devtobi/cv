@@ -51,8 +51,8 @@ importers:
   packages/cv-wrapper:
     dependencies:
       '@primevue/core':
-        specifier: 4.3.3
-        version: 4.3.3(vue@3.5.14(typescript@5.8.3))
+        specifier: 4.3.4
+        version: 4.3.4(vue@3.5.14(typescript@5.8.3))
       '@primevue/themes':
         specifier: 4.3.3
         version: 4.3.3
@@ -1122,12 +1122,6 @@ packages:
   '@primevue/auto-import-resolver@4.3.3':
     resolution: {integrity: sha512-CwQPlG8IzDySOwF8N0Q0rLv76awCH7SzYt+RHu1AO/HZEsdCorclIoJO6TrJYevenlhxialprRqpIV52McoRpw==}
     engines: {node: '>=12.11.0'}
-
-  '@primevue/core@4.3.3':
-    resolution: {integrity: sha512-kSkN5oourG7eueoFPIqiNX3oDT/f0I5IRK3uOY/ytz+VzTZp5yuaCN0Nt42ZQpVXjDxMxDvUhIdaXVrjr58NhQ==}
-    engines: {node: '>=12.11.0'}
-    peerDependencies:
-      vue: ^3.5.0
 
   '@primevue/core@4.3.4':
     resolution: {integrity: sha512-SIwQ8CqL/tiDYRW2ShiwO3LeFV5gWfymwzwbI7kn2p8BFPCklqGbJfIqSdvAQgUTFR2fEsI7EKtPBksTX8MlEg==}
@@ -4841,12 +4835,6 @@ snapshots:
   '@primevue/auto-import-resolver@4.3.3':
     dependencies:
       '@primevue/metadata': 4.3.3
-
-  '@primevue/core@4.3.3(vue@3.5.14(typescript@5.8.3))':
-    dependencies:
-      '@primeuix/styled': 0.5.1
-      '@primeuix/utils': 0.5.3
-      vue: 3.5.14(typescript@5.8.3)
 
   '@primevue/core@4.3.4(vue@3.5.14(typescript@5.8.3))':
     dependencies:
