@@ -58,7 +58,7 @@ importers:
         version: 4.3.4
       '@tailwindcss/vite':
         specifier: 4.1.7
-        version: 4.1.7(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))
+        version: 4.1.7(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))
       '@vueuse/core':
         specifier: 13.2.0
         version: 13.2.0(vue@3.5.14(typescript@5.8.3))
@@ -106,14 +106,14 @@ importers:
         specifier: 22.0.1
         version: 22.0.1
       '@types/node':
-        specifier: 22.15.18
-        version: 22.15.18
+        specifier: 22.15.21
+        version: 22.15.21
       '@vite-pwa/assets-generator':
         specifier: 1.0.0
         version: 1.0.0
       '@vitejs/plugin-vue':
         specifier: 5.2.4
-        version: 5.2.4(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))
+        version: 5.2.4(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.27.0(jiti@2.4.2))(prettier@3.5.3)
@@ -143,10 +143,10 @@ importers:
         version: 0.4.2
       vite:
         specifier: 6.3.5
-        version: 6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
+        version: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 1.0.0
-        version: 1.0.0(@vite-pwa/assets-generator@1.0.0)(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.0(@vite-pwa/assets-generator@1.0.0)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vue-axe:
         specifier: 3.1.2
         version: 3.1.2(axe-core@4.10.3)(vue@3.5.14(typescript@5.8.3))
@@ -1406,8 +1406,8 @@ packages:
   '@types/node-fetch@2.6.12':
     resolution: {integrity: sha512-8nneRWKCg3rMtF69nLQJnOYUcbafYeFSjqkw3jCRLsqkWFlHaoQrr5mXmofFGOx3DKn7UfmBMyov8ySvLRVldA==}
 
-  '@types/node@22.15.18':
-    resolution: {integrity: sha512-v1DKRfUdyW+jJhZNEI1PYy29S2YRxMV5AOO/x/SjKmW0acCIOqmbj6Haf9eHAhsPmrhlHSxEhv/1WszcLWV4cg==}
+  '@types/node@22.15.21':
+    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -3835,7 +3835,7 @@ snapshots:
       '@babel/traverse': 7.27.1
       '@babel/types': 7.27.1
       convert-source-map: 2.0.0
-      debug: 4.4.0
+      debug: 4.4.1
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -3887,7 +3887,7 @@ snapshots:
       '@babel/core': 7.27.1
       '@babel/helper-compilation-targets': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
-      debug: 4.4.0
+      debug: 4.4.1
       lodash.debounce: 4.0.8
       resolve: 1.22.10
     transitivePeerDependencies:
@@ -5058,12 +5058,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.7
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.7
 
-  '@tailwindcss/vite@4.1.7(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))':
+  '@tailwindcss/vite@4.1.7(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))':
     dependencies:
       '@tailwindcss/node': 4.1.7
       '@tailwindcss/oxide': 4.1.7
       tailwindcss: 4.1.7
-      vite: 6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
+      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
@@ -5077,10 +5077,10 @@ snapshots:
 
   '@types/node-fetch@2.6.12':
     dependencies:
-      '@types/node': 22.15.18
+      '@types/node': 22.15.21
       form-data: 4.0.2
 
-  '@types/node@22.15.18':
+  '@types/node@22.15.21':
     dependencies:
       undici-types: 6.21.0
 
@@ -5092,7 +5092,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.18
+      '@types/node': 22.15.21
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.31.1(@typescript-eslint/parser@8.31.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)':
@@ -5181,9 +5181,9 @@ snapshots:
       sharp-ico: 0.1.5
       unconfig: 7.3.2
 
-  '@vitejs/plugin-vue@5.2.4(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))':
+  '@vitejs/plugin-vue@5.2.4(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.14(typescript@5.8.3))':
     dependencies:
-      vite: 6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
+      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
       vue: 3.5.14(typescript@5.8.3)
 
   '@volar/language-core@2.4.13':
@@ -7489,12 +7489,12 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-pwa@1.0.0(@vite-pwa/assets-generator@1.0.0)(vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.0(@vite-pwa/assets-generator@1.0.0)(vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.0
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.13
-      vite: 6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
+      vite: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     optionalDependencies:
@@ -7502,7 +7502,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.3.5(@types/node@22.15.18)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1):
+  vite@6.3.5(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1):
     dependencies:
       esbuild: 0.25.3
       fdir: 6.4.4(picomatch@4.0.2)
@@ -7511,7 +7511,7 @@ snapshots:
       rollup: 4.40.1
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.18
+      '@types/node': 22.15.21
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.30.1
