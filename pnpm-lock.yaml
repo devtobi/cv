@@ -45,8 +45,8 @@ importers:
         specifier: 24.9.0
         version: 24.9.0(typescript@5.8.3)
       resumed:
-        specifier: 5.0.0
-        version: 5.0.0(puppeteer@24.9.0(typescript@5.8.3))
+        specifier: 6.0.0
+        version: 6.0.0(puppeteer@24.9.0(typescript@5.8.3))
 
   packages/cv-wrapper:
     dependencies:
@@ -3130,9 +3130,9 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  resumed@5.0.0:
-    resolution: {integrity: sha512-6h1ybWudo8OzIP9kR2d4Ff9U49ra773XqIkLjHk3FAcIEJGb4iH6L/96qiMbSkOG7MZrnCWLSZd1OHzdtgPuIA==}
-    engines: {node: '>=20'}
+  resumed@6.0.0:
+    resolution: {integrity: sha512-Flyyl5f87vuHs7lbwEPHQy+1kKZhEcdghdRWieuXSVFRmpNKCtwGDXBP1wtARrya44wV3tHODpFx3x7xis0/JA==}
+    engines: {node: ^20.12 || >=21.7}
     hasBin: true
     peerDependencies:
       puppeteer: ^24.0.0
@@ -3812,10 +3812,6 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  yoctocolors@2.1.1:
-    resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
-    engines: {node: '>=18'}
 
   zod@3.24.3:
     resolution: {integrity: sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==}
@@ -6980,12 +6976,11 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@5.0.0(puppeteer@24.9.0(typescript@5.8.3)):
+  resumed@6.0.0(puppeteer@24.9.0(typescript@5.8.3)):
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
       strip-json-comments: 5.0.1
-      yoctocolors: 2.1.1
     optionalDependencies:
       puppeteer: 24.9.0(typescript@5.8.3)
 
@@ -7843,7 +7838,5 @@ snapshots:
       fd-slicer: 1.1.0
 
   yocto-queue@0.1.0: {}
-
-  yoctocolors@2.1.1: {}
 
   zod@3.24.3: {}
