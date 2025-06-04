@@ -41,5 +41,16 @@
       "matchCurrentVersion": "/^0\\./",
       "automerge": false
     },
+    {
+      "groupName": "PrimeVue packages",
+      "groupSlug": "primevue",
+      "matchDatasources": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "primevue",
+        "@primevue/*"
+      ]
+    }
   ]
 }
