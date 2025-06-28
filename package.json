@@ -6,8 +6,8 @@
     "url": "https://github.com/devtobi/cv.git"
   },
   "devDependencies": {
-    "eslint": "9.29.0",
-    "@eslint/js": "9.29.0",
+    "eslint": "9.30.0",
+    "@eslint/js": "9.30.0",
     "@ianvs/prettier-plugin-sort-imports": "4.4.2",
     "concurrently": "9.2.0",
     "globals": "16.2.0",
