@@ -15,7 +15,7 @@
     "@primevue/core": "4.3.5",
     "@primevue/themes": "4.3.5",
     "@tailwindcss/vite": "4.1.11",
-    "@vueuse/core": "13.4.0",
+    "@vueuse/core": "13.5.0",
     "flag-icons": "7.5.0",
     "html-include-element": "0.3.0",
     "pinia": "3.0.3",
