@@ -42,11 +42,11 @@ importers:
         specifier: 1.2.8
         version: 1.2.8
       puppeteer:
-        specifier: 24.11.0
-        version: 24.11.0(typescript@5.8.3)
+        specifier: 24.12.0
+        version: 24.12.0(typescript@5.8.3)
       resumed:
         specifier: 6.0.0
-        version: 6.0.0(puppeteer@24.11.0(typescript@5.8.3))
+        version: 6.0.0(puppeteer@24.12.0(typescript@5.8.3))
 
   packages/cv-wrapper:
     dependencies:
@@ -3122,12 +3122,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.11.0:
-    resolution: {integrity: sha512-ncLty0wRjCX67UxzXemmD1mOxb6y1Xzrx1nym8SAQ6cYrcypOVf77CfcZru6P+EiMA9gNDeQNscowKSE9xvhMw==}
+  puppeteer-core@24.12.0:
+    resolution: {integrity: sha512-VrPXPho5Q90Ao86FwJVb+JeAF2Tf41wOTGg8k2SyQJePiJ6hJ5iujYpmP+bmhlb6o+J26bQYRDPOYXP7ALWcxQ==}
     engines: {node: '>=18'}
 
-  puppeteer@24.11.0:
-    resolution: {integrity: sha512-7XFpexeYIMen/pfGiDjUpIV7BB9EuVQBtXeQ0cUOmVJTkAuQD3oPHVU7iYeA/mrIJyk79sfOmT20a6SEDwGTLQ==}
+  puppeteer@24.12.0:
+    resolution: {integrity: sha512-MJtM71qex8h03bDBZTyPfSC7tfvDLILnWWl4rNdo3+HODiFZX+3yj/qLVwVu/gXoxQ7U8dNDKyFz4e8VBHdcmw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3823,8 +3823,8 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  ws@8.18.2:
-    resolution: {integrity: sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==}
+  ws@8.18.3:
+    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -7007,27 +7007,27 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.11.0:
+  puppeteer-core@24.12.0:
     dependencies:
       '@puppeteer/browsers': 2.10.5
       chromium-bidi: 5.1.0(devtools-protocol@0.0.1464554)
       debug: 4.4.1
       devtools-protocol: 0.0.1464554
       typed-query-selector: 2.12.0
-      ws: 8.18.2
+      ws: 8.18.3
     transitivePeerDependencies:
       - bare-buffer
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  puppeteer@24.11.0(typescript@5.8.3):
+  puppeteer@24.12.0(typescript@5.8.3):
     dependencies:
       '@puppeteer/browsers': 2.10.5
       chromium-bidi: 5.1.0(devtools-protocol@0.0.1464554)
       cosmiconfig: 9.0.0(typescript@5.8.3)
       devtools-protocol: 0.0.1464554
-      puppeteer-core: 24.11.0
+      puppeteer-core: 24.12.0
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-buffer
@@ -7103,13 +7103,13 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@6.0.0(puppeteer@24.11.0(typescript@5.8.3)):
+  resumed@6.0.0(puppeteer@24.12.0(typescript@5.8.3)):
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
       strip-json-comments: 5.0.1
     optionalDependencies:
-      puppeteer: 24.11.0(typescript@5.8.3)
+      puppeteer: 24.12.0(typescript@5.8.3)
 
   reusify@1.1.0: {}
 
@@ -7929,7 +7929,7 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  ws@8.18.2: {}
+  ws@8.18.3: {}
 
   xml-name-validator@4.0.0: {}
 
