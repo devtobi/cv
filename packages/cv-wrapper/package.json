@@ -12,15 +12,15 @@
     "fix": "prettier . --write && eslint --fix"
   },
   "dependencies": {
-    "@primevue/core": "4.3.5",
-    "@primevue/themes": "4.3.5",
+    "@primevue/core": "4.3.6",
+    "@primevue/themes": "4.3.6",
     "@tailwindcss/vite": "4.1.11",
     "@vueuse/core": "13.5.0",
     "flag-icons": "7.5.0",
     "html-include-element": "0.3.0",
     "pinia": "3.0.3",
     "primeicons": "7.0.0",
-    "primevue": "4.3.5",
+    "primevue": "4.3.6",
     "tailwindcss": "4.1.11",
     "tailwindcss-primeui": "0.6.1",
     "ua-parser-js": "2.0.4",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "4.0.1",
     "@intlify/unplugin-vue-i18n": "6.0.8",
-    "@primevue/auto-import-resolver": "4.3.5",
+    "@primevue/auto-import-resolver": "4.3.6",
     "@tsconfig/node-lts": "22.0.2",
     "@types/node": "22.16.2",
     "@vite-pwa/assets-generator": "1.0.0",
