@@ -14,7 +14,7 @@
   "author": "Tobias Stadler",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-prettier": "10.1.5",
+    "eslint-config-prettier": "10.1.8",
     "html-minifier-terser": "7.2.0",
     "minimist": "1.2.8",
     "puppeteer": "24.15.0",
