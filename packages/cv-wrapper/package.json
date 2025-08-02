@@ -25,7 +25,7 @@
     "tailwindcss-primeui": "0.6.1",
     "ua-parser-js": "2.0.4",
     "vue": "3.5.18",
-    "vue-i18n": "11.1.10"
+    "vue-i18n": "11.1.11"
   },
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "4.1.0",
