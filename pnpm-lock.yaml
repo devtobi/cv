@@ -109,8 +109,8 @@ importers:
         specifier: 22.17.2
         version: 22.17.2
       '@vite-pwa/assets-generator':
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: 1.0.2
+        version: 1.0.2
       '@vitejs/plugin-vue':
         specifier: 6.0.1
         version: 6.0.1(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.3))
@@ -146,7 +146,7 @@ importers:
         version: 7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1)
       vite-plugin-pwa:
         specifier: 1.0.3
-        version: 1.0.3(@vite-pwa/assets-generator@1.0.1)(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.3(@vite-pwa/assets-generator@1.0.2)(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vue-axe:
         specifier: 3.1.2
         version: 3.1.2(axe-core@4.10.3)(vue@3.5.22(typescript@5.8.3))
@@ -1539,8 +1539,8 @@ packages:
     resolution: {integrity: sha512-VRwixir4zBWCSTP/ljEo091lbpypz57PoeAQ9imjG+vbeof9LplljsL1mos4ccG6H9IjfrVGM359RozUnuFhpw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@vite-pwa/assets-generator@1.0.1':
-    resolution: {integrity: sha512-p2KHvsyuv/njmLSwDjpok0CFYKmAdV5ckWjVSxktNXbKAuHX3+WCTy4X3LuwWl0RGsCWBPerSUVNvE/02D565w==}
+  '@vite-pwa/assets-generator@1.0.2':
+    resolution: {integrity: sha512-MCbrb508JZHqe7bUibmZj/lyojdhLRnfkmyXnkrCM2zVrjTgL89U8UEfInpKTvPeTnxsw2hmyZxnhsdNR6yhwg==}
     engines: {node: '>=16.14.0'}
     hasBin: true
 
@@ -2667,10 +2667,6 @@ packages:
   jake@10.9.2:
     resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
     engines: {node: '>=10'}
-    hasBin: true
-
-  jiti@2.4.2:
-    resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
 
   jiti@2.6.1:
@@ -5337,7 +5333,7 @@ snapshots:
       '@typescript-eslint/types': 8.35.1
       eslint-visitor-keys: 4.2.1
 
-  '@vite-pwa/assets-generator@1.0.1':
+  '@vite-pwa/assets-generator@1.0.2':
     dependencies:
       cac: 6.7.14
       colorette: 2.0.20
@@ -6608,8 +6604,6 @@ snapshots:
       filelist: 1.0.4
       minimatch: 3.1.2
 
-  jiti@2.4.2: {}
-
   jiti@2.6.1: {}
 
   js-tokens@4.0.0: {}
@@ -7599,7 +7593,7 @@ snapshots:
     dependencies:
       '@quansync/fs': 0.1.2
       defu: 6.1.4
-      jiti: 2.4.2
+      jiti: 2.6.1
       quansync: 0.2.10
 
   undici-types@6.21.0: {}
@@ -7669,7 +7663,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-pwa@1.0.3(@vite-pwa/assets-generator@1.0.1)(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.3(@vite-pwa/assets-generator@1.0.2)(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.7.1))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.1
       pretty-bytes: 6.1.1
@@ -7678,7 +7672,7 @@ snapshots:
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     optionalDependencies:
-      '@vite-pwa/assets-generator': 1.0.1
+      '@vite-pwa/assets-generator': 1.0.2
     transitivePeerDependencies:
       - supports-color
 
