@@ -18,7 +18,7 @@
     "@vueuse/core": "13.6.0",
     "flag-icons": "7.5.0",
     "html-include-element": "0.3.0",
-    "pinia": "3.0.3",
+    "pinia": "3.0.4",
     "primeicons": "7.0.0",
     "primevue": "4.3.9",
     "tailwindcss": "4.1.16",
