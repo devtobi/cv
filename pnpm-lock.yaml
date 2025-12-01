@@ -112,8 +112,8 @@ importers:
         specifier: 1.0.2
         version: 1.0.2
       '@vitejs/plugin-vue':
-        specifier: 6.0.1
-        version: 6.0.1(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.3))
+        specifier: 6.0.2
+        version: 6.0.2(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.3))
       '@vue/eslint-config-prettier':
         specifier: 10.2.0
         version: 10.2.0(eslint@9.32.0(jiti@2.6.1))(prettier@3.6.2)
@@ -1171,8 +1171,8 @@ packages:
     resolution: {integrity: sha512-ezIadUb1aFhwJLd++WVqVpi9rnlX8vnd4ju7saPhwLHJN1mJgOv0puePTGV+FbtSnWtwoHDT8lAm4kagDZmpCg==}
     engines: {node: '>=20.0.0'}
 
-  '@rolldown/pluginutils@1.0.0-beta.29':
-    resolution: {integrity: sha512-NIJgOsMjbxAXvoGq/X0gD7VPMQ8j9g0BiDaNjVNVjvl+iKXxL3Jre0v31RmBYeLEmkbj2s02v8vFTbUXi5XS2Q==}
+  '@rolldown/pluginutils@1.0.0-beta.50':
+    resolution: {integrity: sha512-5e76wQiQVeL1ICOZVUg4LSOVYg9jyhGCin+icYozhsUzM+fHE7kddi1bdiE0jwVqTfkjba3jUFbEkoC9WkdvyA==}
 
   '@rollup/plugin-babel@5.3.1':
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
@@ -1531,8 +1531,8 @@ packages:
     engines: {node: '>=16.14.0'}
     hasBin: true
 
-  '@vitejs/plugin-vue@6.0.1':
-    resolution: {integrity: sha512-+MaE752hU0wfPFJEUAIxqw18+20euHHdxVtMvbFcOEpjEyfqXH/5DCoTHiVJ0J29EhTJdoTkjEv5YBKU9dnoTw==}
+  '@vitejs/plugin-vue@6.0.2':
+    resolution: {integrity: sha512-iHmwV3QcVGGvSC1BG5bZ4z6iwa1SOpAPWmnjOErd4Ske+lZua5K9TtAVdx0gMBClJ28DViCbSmZitjWZsWO3LA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0
@@ -4947,7 +4947,7 @@ snapshots:
     dependencies:
       quansync: 0.2.10
 
-  '@rolldown/pluginutils@1.0.0-beta.29': {}
+  '@rolldown/pluginutils@1.0.0-beta.50': {}
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.27.1)(rollup@2.79.2)':
     dependencies:
@@ -5289,9 +5289,9 @@ snapshots:
       sharp-ico: 0.1.5
       unconfig: 7.3.2
 
-  '@vitejs/plugin-vue@6.0.1(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.3))':
+  '@vitejs/plugin-vue@6.0.2(vite@7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.22(typescript@5.8.3))':
     dependencies:
-      '@rolldown/pluginutils': 1.0.0-beta.29
+      '@rolldown/pluginutils': 1.0.0-beta.50
       vite: 7.0.8(@types/node@22.17.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.39.0)(yaml@2.7.1)
       vue: 3.5.22(typescript@5.8.3)
 
