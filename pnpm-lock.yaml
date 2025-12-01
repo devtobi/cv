@@ -103,8 +103,8 @@ importers:
         specifier: 4.3.9
         version: 4.3.9
       '@tsconfig/node-lts':
-        specifier: 22.0.2
-        version: 22.0.2
+        specifier: 22.0.4
+        version: 22.0.4
       '@types/node':
         specifier: 22.17.2
         version: 22.17.2
@@ -1419,8 +1419,8 @@ packages:
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
 
-  '@tsconfig/node-lts@22.0.2':
-    resolution: {integrity: sha512-Kgq5yXTvnUnvlhob0xJpOH4na9PWtuFhHSf94MpDwnENWgiFeJKDNANQV2MT1WpXZYkK2WSWfVYKhVkR7bc8TA==}
+  '@tsconfig/node-lts@22.0.4':
+    resolution: {integrity: sha512-5eAeCX6l/EYe6H2UAw5nBgjfAgdlsR+lSp8YNNGwz+ixoi7JfJ5bOQvsiEhxGm5bOZFVF+cJSIj4tanpCCRMIw==}
 
   '@types/estree@0.0.39':
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -5134,7 +5134,7 @@ snapshots:
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
-  '@tsconfig/node-lts@22.0.2': {}
+  '@tsconfig/node-lts@22.0.4': {}
 
   '@types/estree@0.0.39': {}
 
