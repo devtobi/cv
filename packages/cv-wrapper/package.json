@@ -41,7 +41,7 @@
     "axe-core": "4.10.3",
     "eslint-plugin-vue": "10.4.0",
     "eslint-plugin-vuejs-accessibility": "2.4.1",
-    "typescript": "5.8.3",
+    "typescript": "5.9.3",
     "unplugin-vue-components": "28.8.0",
     "user-agent-data-types": "0.4.2",
     "vite": "7.0.8",
