@@ -130,8 +130,8 @@ importers:
         specifier: 10.4.0
         version: 10.4.0(@typescript-eslint/parser@8.35.1(eslint@9.32.0(jiti@2.6.1))(typescript@5.8.3))(eslint@9.32.0(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.32.0(jiti@2.6.1)))
       eslint-plugin-vuejs-accessibility:
-        specifier: 2.4.1
-        version: 2.4.1(eslint@9.32.0(jiti@2.6.1))
+        specifier: 2.4.2
+        version: 2.4.2(eslint@9.32.0(jiti@2.6.1))(globals@16.3.0)
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -2076,9 +2076,6 @@ packages:
   electron-to-chromium@1.5.149:
     resolution: {integrity: sha512-UyiO82eb9dVOx8YO3ajDf9jz2kKyt98DEITRdeLPstOEuTlLzDA4Gyq5K9he71TQziU5jUVu2OAu5N48HmQiyQ==}
 
-  emoji-regex@10.4.0:
-    resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
-
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
@@ -2190,11 +2187,12 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-vuejs-accessibility@2.4.1:
-    resolution: {integrity: sha512-ZRZhPdslplZXSF71MtSG+zXYRAT5KiHR4JVuo/DERQf9noAkDvi5W418VOE1qllmJd7wTenndxi1q8XeDMxdHw==}
+  eslint-plugin-vuejs-accessibility@2.4.2:
+    resolution: {integrity: sha512-5IvE0QnRj7nFZBm00V+nB+VtXIW5E4CkNg0m6vFyCapTFcTeMxU87zX39Yy2UZZ+GClJYfppEzoX07WrSFoPqQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
+      globals: '>= 13.12.1'
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -5484,10 +5482,6 @@ snapshots:
     dependencies:
       vue: 3.5.27(typescript@5.8.3)
 
-  acorn-jsx@5.3.2(acorn@8.14.1):
-    dependencies:
-      acorn: 8.14.1
-
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
       acorn: 8.15.0
@@ -5880,8 +5874,6 @@ snapshots:
 
   electron-to-chromium@1.5.149: {}
 
-  emoji-regex@10.4.0: {}
-
   emoji-regex@8.0.0: {}
 
   emoji-regex@9.2.2: {}
@@ -6053,11 +6045,11 @@ snapshots:
     optionalDependencies:
       '@typescript-eslint/parser': 8.35.1(eslint@9.32.0(jiti@2.6.1))(typescript@5.8.3)
 
-  eslint-plugin-vuejs-accessibility@2.4.1(eslint@9.32.0(jiti@2.6.1)):
+  eslint-plugin-vuejs-accessibility@2.4.2(eslint@9.32.0(jiti@2.6.1))(globals@16.3.0):
     dependencies:
       aria-query: 5.3.2
-      emoji-regex: 10.4.0
       eslint: 9.32.0(jiti@2.6.1)
+      globals: 16.3.0
       vue-eslint-parser: 9.4.3(eslint@9.32.0(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
@@ -6126,8 +6118,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.14.1
-      acorn-jsx: 5.3.2(acorn@8.14.1)
+      acorn: 8.15.0
+      acorn-jsx: 5.3.2(acorn@8.15.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
