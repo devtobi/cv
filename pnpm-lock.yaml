@@ -45,8 +45,8 @@ importers:
         specifier: 24.15.0
         version: 24.15.0(typescript@5.8.3)
       resumed:
-        specifier: 6.0.0
-        version: 6.0.0(puppeteer@24.15.0(typescript@5.8.3))
+        specifier: 6.1.0
+        version: 6.1.0(puppeteer@24.15.0(typescript@5.8.3))
 
   packages/cv-wrapper:
     dependencies:
@@ -3222,8 +3222,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  resumed@6.0.0:
-    resolution: {integrity: sha512-Flyyl5f87vuHs7lbwEPHQy+1kKZhEcdghdRWieuXSVFRmpNKCtwGDXBP1wtARrya44wV3tHODpFx3x7xis0/JA==}
+  resumed@6.1.0:
+    resolution: {integrity: sha512-VZbgG+auJZkpSKIzeDibu1q9w/XgMNNzGC8NLU9P3fH0YjiY4V2hq0knFemoBer1xR2wW8B3SagVkhHTpcBI7Q==}
     engines: {node: ^20.12 || >=21.7}
     hasBin: true
     peerDependencies:
@@ -3923,10 +3923,10 @@ snapshots:
       '@babel/helper-compilation-targets': 7.27.1
       '@babel/helper-module-transforms': 7.27.1(@babel/core@7.27.1)
       '@babel/helpers': 7.27.1
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.29.0
       '@babel/template': 7.27.1
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
       convert-source-map: 2.0.0
       debug: 4.4.1
       gensync: 1.0.0-beta.2
@@ -3945,7 +3945,7 @@ snapshots:
 
   '@babel/helper-annotate-as-pure@7.27.1':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/helper-compilation-targets@7.27.1':
     dependencies:
@@ -3989,14 +3989,14 @@ snapshots:
   '@babel/helper-member-expression-to-functions@7.27.1':
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-module-imports@7.27.1':
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -4011,7 +4011,7 @@ snapshots:
 
   '@babel/helper-optimise-call-expression@7.27.1':
     dependencies:
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/helper-plugin-utils@7.27.1': {}
 
@@ -4036,7 +4036,7 @@ snapshots:
   '@babel/helper-skip-transparent-expression-wrappers@7.27.1':
     dependencies:
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
@@ -4052,14 +4052,14 @@ snapshots:
     dependencies:
       '@babel/template': 7.27.1
       '@babel/traverse': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helpers@7.27.1':
     dependencies:
       '@babel/template': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
 
   '@babel/parser@7.27.5':
     dependencies:
@@ -4525,7 +4525,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/types': 7.28.5
+      '@babel/types': 7.29.0
       esutils: 2.0.3
 
   '@babel/runtime@7.27.1': {}
@@ -7105,7 +7105,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@6.0.0(puppeteer@24.15.0(typescript@5.8.3)):
+  resumed@6.1.0(puppeteer@24.15.0(typescript@5.8.3)):
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
