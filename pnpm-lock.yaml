@@ -45,8 +45,8 @@ importers:
         specifier: 24.15.0
         version: 24.15.0(typescript@5.8.3)
       resumed:
-        specifier: 6.0.0
-        version: 6.0.0(puppeteer@24.15.0(typescript@5.8.3))
+        specifier: 6.1.0
+        version: 6.1.0(puppeteer@24.15.0(typescript@5.8.3))
 
   packages/cv-wrapper:
     dependencies:
@@ -3239,8 +3239,8 @@ packages:
     engines: {node: '>= 0.4'}
     hasBin: true
 
-  resumed@6.0.0:
-    resolution: {integrity: sha512-Flyyl5f87vuHs7lbwEPHQy+1kKZhEcdghdRWieuXSVFRmpNKCtwGDXBP1wtARrya44wV3tHODpFx3x7xis0/JA==}
+  resumed@6.1.0:
+    resolution: {integrity: sha512-VZbgG+auJZkpSKIzeDibu1q9w/XgMNNzGC8NLU9P3fH0YjiY4V2hq0knFemoBer1xR2wW8B3SagVkhHTpcBI7Q==}
     engines: {node: ^20.12 || >=21.7}
     hasBin: true
     peerDependencies:
@@ -7156,7 +7156,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resumed@6.0.0(puppeteer@24.15.0(typescript@5.8.3)):
+  resumed@6.1.0(puppeteer@24.15.0(typescript@5.8.3)):
     dependencies:
       '@jsonresume/schema': 1.2.1
       sade: 1.8.1
