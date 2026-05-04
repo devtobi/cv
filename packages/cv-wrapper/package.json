@@ -43,7 +43,7 @@
     "eslint-plugin-vuejs-accessibility": "2.4.2",
     "typescript": "5.8.3",
     "unplugin-vue-components": "28.8.0",
-    "user-agent-data-types": "0.4.2",
+    "user-agent-data-types": "0.4.3",
     "vite": "7.0.8",
     "vite-plugin-pwa": "1.0.3",
     "vue-axe": "3.1.2",
